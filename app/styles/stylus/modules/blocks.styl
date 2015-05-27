@@ -1,0 +1,759 @@
+//
+// Blocks
+// -------------------------------------------------- //
+
+
+// Promo slider
+
+.promo-slider {
+  width 100%
+  height 400px
+  overflow hidden
+
+  @media (max-width: screen-sm-max) {
+    display none
+  }
+
+  .gallery {
+    height 400px
+    width 100%
+
+    .gallery-cell {
+      width 100%
+      height 400px
+    }
+  }
+  .slide-text-wrap {
+    position relative
+    background-color rgba(79,209,235,.7)
+    width 452px
+    height 400px
+    padding 51px 25px 0 35px
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      width 470px
+      padding-left 45px
+    }
+
+    .slide-title {
+      color #fff
+      margin 0
+      text-transform uppercase
+      font-size 60px
+      line-height 1
+      font-weight 300
+
+      small {
+        font-weight bold
+        font-size 20px
+        letter-spacing 0
+        color #fff
+        display block
+        margin-bottom 14px
+      }
+    }
+  }
+  .slide-image {
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+  }
+
+  .flickity-page-dots {
+    position absolute
+    width screen-lg
+    bottom 67px
+    padding 0
+    margin 0 0 0 (screen-lg / 2 * -1)
+    left 50%
+    text-align right
+    line-height 7px
+
+    .dot {
+      width 18px
+      height 7px
+      border-radius 0
+      background-color #fff
+      opacity 1
+      margin 0 1px
+
+      &.is-selected {
+        background-color brand-primary
+      }
+    }
+  }
+}
+
+
+// Main nav
+
+.main-nav {
+  position relative
+  margin -24px auto 12px
+  width screen-lg
+  height 158px
+  box-shadow 0 1px 3px rgba(0,0,0,.13)
+
+  @media (max-width: screen-sm-max) {
+    display none
+  }
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    width (screen-md - 20px)
+  }
+
+  ul {
+    list-style none
+    margin 0
+    padding-left 0
+    display table
+    width 100%
+    border-collapse collapse
+
+    li {
+      display table-cell
+      width 25%
+      height 158px
+      border 1px solid #d9d9d9
+      text-align center
+      vertical-align middle
+
+      a {
+        position relative
+        color #4c4c4c
+        text-transform uppercase
+        font-size 16px
+        font-family font-family-alt
+        text-decoration none
+        display inline-flex
+        justify-content center
+        align-items center
+        flex-direction column
+        width 100%
+        height 100%
+        background-image linear-gradient(to top, #fff 87%, rgba(255,255,255,.68) 100%)
+        overflow hidden
+
+        &:after {
+          position absolute
+          content ''
+          bottom 0
+          left 0
+          right 0
+          height 7px
+          background-color brand-primary
+          transition transform .15s ease-in-out
+          transform translateY(7px)
+        }
+
+        &:hover {
+          background-image linear-gradient(to top, rgba(0,0,0,.05) 0, rgba(255,255,255,.05) 100%), linear-gradient(to top, #fff 87%, rgba(255,255,255,.68) 100%)
+
+          .main-nav-icon {
+            background-position 0 -74px
+          }
+
+          &:after {
+            transform translateY(0)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Our advantages slider
+
+.our-advantages-slider {
+  width screen-lg
+  height 400px
+  margin 0 auto
+  position relative
+  background url(../img/our-advantages-slider-bg.jpg) no-repeat center/100%
+
+  @media (max-width: screen-sm-max) {
+    display none
+  }
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    width (screen-md - 20px)
+    height 312px
+  }
+
+  .block-header {
+    width 485px
+    padding 50px 0 0 48px
+    text-transform uppercase
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      padding 40px 0 0 38px
+    }
+
+    h2 {
+      font-size 48px
+      line-height 1.2
+      color #fff
+      margin 0 0 24px
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        font-size 38px
+        margin-bottom 17px
+      }
+    }
+    .sub-header {
+      font-family font-family-alt
+      font-weight bold
+      font-size 24px
+      color #fff
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        font-size 18px
+      }
+    }
+  }
+  .slider-wrap {
+    position absolute
+    width 600px
+    height 400px
+    top 0
+    right 0
+    overflow hidden
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      width 470px
+      height 312px
+    }
+  }
+  .slide-content {
+    padding 49px 0 0 52px
+    height 400px
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      padding 40px 0 0 40px
+    }
+
+    img {
+      display block
+      margin-bottom 42px
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        max-width 319px
+        height auto
+        margin-bottom 33px
+      }
+    }
+    .slide-text {
+      font-family font-family-alt
+      font-weight 300
+      font-size 28px
+      line-height 1.2
+      text-transform uppercase
+      color #484848
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        font-size 22px
+      }
+
+      p:last-child {
+        margin-bottom 0
+      }
+    }
+  }
+  .slider-nav {
+    position absolute
+    left 48px
+    bottom 55px
+    list-style none
+    margin 0
+    padding-left 0
+    clearfix()
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      left 38px
+      bottom 41px
+    }
+
+    li {
+      float left
+      margin-right 20px
+      opacity .5
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        margin-right 16px
+      }
+
+      &:last-child {
+        margin-right 0
+      }
+      &.active {
+        opacity 1
+      }
+    }
+    a,
+    i {
+      display inline-block
+      width 79px
+      height 79px
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        width 62px
+        height 62px
+      }
+
+      &:hover,
+      &:focus {
+        outline 0
+      }
+    }
+    i {
+      background-position 0 0
+      background-repeat no-repeat
+      background-size 100%
+    }
+
+    .our-advantages-slider-nav-icon-01 {
+      background-image url(../img/our-advantages-nav-icon-01.png)
+    }
+    .our-advantages-slider-nav-icon-02 {
+      background-image url(../img/our-advantages-nav-icon-02.png)
+    }
+    .our-advantages-slider-nav-icon-03 {
+      background-image url(../img/our-advantages-nav-icon-03.png)
+    }
+  }
+}
+
+
+// Signin Promo
+
+.signin-promo {
+  width 100%
+  margin 0 auto
+  padding 50px 0
+  text-align center
+
+  @media (min-width: screen-md-min) {
+    width (screen-md - 20px)
+    padding 50px 0 61px
+  }
+  @media (min-width: (screen-lg - 1)) {
+    width screen-lg
+    padding 110px 0 93px
+  }
+
+  .block-header {
+    margin-bottom 35px
+
+    @media (min-width: screen-md-min) {
+      margin-bottom 61px
+    }
+    @media (min-width: (screen-lg - 1)) {
+      margin-bottom 71px
+    }
+
+    h2 {
+      font-size 23px
+      line-height 35px
+
+      text-transform uppercase
+      color #15accb
+      margin 0
+
+      @media (min-width: screen-sm-min) {
+        font-size 46px
+        line-height 60px
+      }
+      @media (min-width: screen-md-min) {
+        font-size 48px
+      }
+    }
+  }
+}
+
+
+// Preparations categories
+
+.preparations-categories {
+  width 100%
+  margin 0 auto
+
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    width (screen-md - 20px)
+  }
+  @media (min-width: (screen-lg - 1)) {
+    width screen-lg
+  }
+
+  .block-header {
+    position relative
+    background url(../img/preparations-categories-header-arrow.png) no-repeat 16px 20px brand-primary
+    height 74px
+    padding-left 70px
+    box-shadow 0 1px 1px 0 rgba(0,0,0,.25)
+    z-index 3
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      background-position 30px 20px
+      padding-left 84px
+    }
+
+    h2 {
+      color #fff
+      text-transform uppercase
+      margin 0
+      font-size 20px
+      line-height 74px
+      font-weight bold
+    }
+  }
+  .category-row {
+    position relative
+    width 100%
+    clearfix()
+
+    @media (min-width: screen-md-min) {
+      height 250px
+      overflow hidden
+    }
+
+    &.show-preparates-col {
+      .preparates-col {
+        transform: translateX(0);
+      }
+    }
+
+    .overlap-link {
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      z-index 3
+      display block
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+    }
+    .image-col {
+      width 100%
+      height 250px
+      background-image linear-gradient(to right, #48bcd3 0, #62d6ed 100%)
+      display inline-flex
+      justify-content center
+      align-items center
+      flex-direction column
+
+      @media (min-width: screen-md-min) {
+        width 40.425532%
+        float left
+      }
+      @media (min-width: (screen-lg - 1)) {
+        width 400px
+      }
+    }
+    .content-col {
+      width 100%
+      background-color #e6e6e6
+      text-align center
+
+      @media (min-width: screen-md-min) {
+        width 59.574468%
+        float left
+        overflow hidden
+        height 250px
+        box-shadow inset 2px 0 1px -1px rgba(0,0,0,.35)
+        text-align left
+      }
+      @media (min-width: (screen-lg - 1)) {
+        width 800px
+      }
+
+      .category-desc {
+        padding 38px 28px 38px 42px
+        color #4c4c4c
+
+        @media (min-width: screen-md-min) {
+          padding 47px 75px 0 60px
+        }
+        @media (min-width: (screen-lg - 1)) {
+          padding 56px 135px 0 52px
+        }
+
+        h3 {
+          font-size 2.6rem
+          line-height 1
+          text-transform uppercase
+          color inherit
+          margin 0
+
+          @media (min-width: screen-md-min) {
+            margin-bottom 24px
+          }
+          @media (min-width: (screen-lg - 1)) {
+            margin-bottom 30px
+          }
+        }
+        p {
+          color inherit
+          font-size 1.6rem
+          line-height 2.5rem
+          font-weight 300
+          margin-bottom 24px
+          display none
+
+          @media (min-width: screen-md-min) {
+            display block
+          }
+        }
+        .more-link {
+          font-size 1.8rem
+          line-height 2.4rem
+          font-weight 300
+          font-family font-family-alt
+          display none
+          color #15accb
+          text-transform uppercase
+          text-decoration none
+          border-bottom 1px dashed
+
+          [class~="inline-icon"] {
+            vertical-align top
+            margin-left 10px
+          }
+
+          @media (min-width: screen-md-min) {
+            display inline-block
+          }
+
+          &:hover {
+            color #a7a7a7
+
+            [class~="inline-icon"] {
+              background-position 0 -22px
+            }
+          }
+        }
+      }
+    }
+    .preparates-col {
+      background-color #48bcd3
+      width 100%
+      clear left
+      display none
+
+      @media (min-width: screen-md-min) {
+        position absolute
+        top 0
+        left 0
+        z-index 2
+        width (screen-md - 20px)
+        height 250px
+        padding-left 0
+        transform translateX((screen-md - 20px))
+        transition transform .5s ease-in-out
+        -webkit-backface-visibility hidden
+        display block
+      }
+      @media (min-width: (screen-lg - 1)) {
+        width screen-lg
+        margin-bottom 30px
+        padding-left 67px
+        transform translateX(screen-lg)
+      }
+
+      .content-wrap {
+        background-color #e6e6e6
+        clearfix()
+
+        @media (min-width: screen-md-min) {
+          padding-left 0
+          height 250px
+          box-shadow inset 2px 0 1px -1px rgba(0,0,0,.25)
+        }
+        @media (min-width: (screen-lg - 1)) {
+          padding-left 67px
+        }
+      }
+      .preparates-list {
+        list-style none
+        margin 0
+        padding 20px 0
+        width 100%
+        display flex
+        justify-content space-around
+        flex-direction column
+        flex-wrap nowrap
+        align-items center
+        background-color #fff
+
+        @media (min-width: screen-md-min) {
+          width 800px
+          height 250px
+          flex-direction row
+          float left
+          padding 0
+        }
+        @media (min-width: (screen-lg - 1)) {
+          width 926px
+        }
+
+        li {
+          position relative
+          border 1px solid #d9d9d9
+          width 68%
+          padding-top 42.5%
+          background-color #fff
+          transition border-color .3s ease-in-out
+          margin 20px 0
+
+          @media (min-width: screen-md-min) {
+            padding-top 0
+            margin 0
+            width 234px
+            height 201px
+          }
+          @media (min-width: (screen-lg - 1)) {
+            width 274px
+            height 221px
+          }
+
+          &:hover,
+          &:focus {
+            border-color brand-primary
+
+            .overlap-layer {
+              opacity 1
+            }
+          }
+        }
+        .image-container {
+          position absolute
+          top 16px
+          right 16px
+          left 16px
+          bottom 48px
+          display flex
+          align-content center
+          justify-content center
+
+          img {
+            display block
+            max-width 100%
+            max-height 100%
+            height auto
+          }
+        }
+        .item-title {
+          position absolute
+          bottom 0
+          left 0
+          width 100%
+          line-height 48px
+          text-align center
+          text-transform uppercase
+          font-weight bold
+          font-size 2rem
+          font-family font-family-alt
+          color #38a9c0
+
+          @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+            font-size 1.8rem
+          }
+        }
+        .overlap-layer {
+          position absolute
+          opacity 0
+          display block
+          top 0
+          left 0
+          bottom 0
+          right 0
+          padding 10px 25px 0
+          background-image linear-gradient(to top, #eaeaea 0, #f7f7f7 100%)
+          text-align center
+          transition opacity .3s ease-in-out;
+
+          .overlap-item-title {
+            min-height 69px
+            max-height 69px
+            display inline-flex
+            justify-content center
+            flex-direction row
+            flex-wrap nowrap
+            align-items center
+            margin 0 0 16px
+            font-size 2rem
+            line-height 1.2
+            text-transform uppercase
+            font-weight bold
+            color #15accb
+            border-bottom 1px solid brand-primary
+            width 100%
+            padding-bottom 5px
+
+            @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+              font-size 1.6rem
+              min-height 49px
+            }
+          }
+          .overlap-item-desc {
+            font-size 1.4rem
+            line-height 1.2
+            font-weight 300
+            color #484848
+            padding 0 10px
+            display block
+            max-height 55px
+            margin-bottom 20px
+
+            p {
+              margin-bottom 0
+            }
+          }
+        }
+      }
+      .more-link {
+        float right
+        width 140px
+        height 250px
+        text-transform uppercase
+        font-size 1.8rem
+        line-height 1.2
+        font-weight 300
+        font-family font-family-alt
+        text-decoration none
+        color #15accb
+        padding 90px 0 0 24px
+
+        .inline-icon {
+          margin-top 3px
+        }
+
+        &:hover {
+          color #a7a7a7
+
+          [class~="inline-icon"] {
+            background-position 0 -38px
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .image-col {
+        float right
+        background-image linear-gradient(to left, #48bcd3 0, #62d6ed 100%)
+      }
+      .content-col {
+        float left
+        background-color #f2f2f2
+        box-shadow inset -2px 0 1px -1px rgba(0,0,0,.25)
+      }
+      .preparates-col .content-wrap {
+        background-color #f2f2f2
+      }
+    }
+  }
+}

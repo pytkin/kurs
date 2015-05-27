@@ -1,0 +1,648 @@
+//
+// Layouts
+// -------------------------------------------------- //
+
+.site-wrapper {
+  width 100%
+  min-height 100%
+  position relative
+  background-color #fff
+  display flex
+  flex-direction column
+  padding-top 202px
+
+  @media (min-width: screen-sm-min) {
+    padding-top 258px
+  }
+  @media (min-width: screen-md-min) {
+    padding-top 159px
+  }
+}
+
+.inner-container {
+  width 100%
+  max-width screen-lg
+  margin 0 auto
+  clearfix()
+
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    max-width (screen-md - 20px)
+  }
+}
+
+.site-header {
+  flex-shrink 0
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 169px
+  box-shadow 0 1px 1px 0 rgba(0,0,0,.25)
+  background-color #fff
+  z-index 5
+
+  @media (min-width: screen-md-min) {
+    height 159px
+  }
+}
+
+.site-content {
+  flex-grow 1
+  flex-shrink 1
+}
+
+.site-footer {
+  flex-shrink 0
+  min-height 191px
+  color #999
+  font-size 1.4rem
+  line-height 2.2rem
+  box-shadow 0 -1px 1px 0 rgba(0,0,0,.25)
+}
+
+
+// Header Blocks
+// -------------------------------------------------- //
+
+.site-header {
+
+  // Top section
+
+  .top-section {
+    height 50px
+    background-color #f2f2f2
+
+    @media (min-width: screen-md-min) {
+      height 40px
+    }
+  }
+  .header-top-region-form {
+    padding-top 4px
+    margin-left 2px
+    float left
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+
+    .form-group {
+      float left
+      margin-bottom 0
+      margin-right 20px
+
+      &:last-child {
+        margin-right 0
+      }
+    }
+    label {
+      font-size 1.3rem
+      color #999
+      margin-right 8px
+
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        display none
+      }
+    }
+    select,
+    .select2-container {
+      width 202px
+      min-width 202px
+      max-width 202px
+    }
+    .select2-container {
+      .select2-selection--single {
+        height 31px
+      }
+      .select2-selection__rendered {
+        line-height 29px
+        font-size 13px
+        color #999
+      }
+    }
+  }
+
+  .header-online-consultant {
+    position relative
+    float right
+    height 50px
+    line-height 50px
+    padding 0 13px 0 13px
+    background-color brand-primary
+    background-image linear-gradient(to bottom, brand-primary 0, rgba(0,0,0,0) 100%)
+    color #fff
+    font-family font-family-alt
+    font-size 1.6rem
+    text-transform uppercase
+    font-weight bold
+    text-decoration none
+    z-index 2
+    transition background-color .15s ease-in-out
+
+    @media (min-width: screen-md-min) {
+      height 40px
+      line-height 40px
+
+      &:before {
+        background-image url(../img/header-online-consult-icon.png)
+        width 20px
+        height 25px
+        vertical-align -7px
+      }
+    }
+    @media (min-width: screen-lg) {
+      padding 0 10px 0 32px
+
+      &:before {
+        position absolute
+        top 8px
+        left 8px
+      }
+    }
+
+    &:before {
+      content ''
+      background url(../img/header-online-consult-icon-lg.png) no-repeat 0 0
+      width 30px
+      height 35px
+      display inline-block
+      vertical-align -10px
+    }
+    &:hover,
+    &:active {
+      background-color #16accb
+    }
+  }
+  .header-call-req {
+    position relative
+    float right
+    height 50px
+    line-height 50px
+    padding 0 11px 0 9px
+    background-color transparent
+    background-image linear-gradient(to bottom, #f2f2f2 0, rgba(0,0,0,0) 100%)
+    color brand-secondary
+    font-family font-family-alt
+    font-size 1.6rem
+    text-transform uppercase
+    font-weight bold
+    text-decoration none
+    z-index 2
+    transition background-color .15s ease-in-out
+
+    @media (min-width: screen-md-min) {
+      height 40px
+      line-height 40px
+      padding 0 11px 0 9px
+
+      &:before {
+        width 26px
+        height 27px
+        background-image url(../img/header-call-req-icon.png)
+        vertical-align -8px
+      }
+    }
+    @media (min-width: screen-lg) {
+      padding 0 28px 0 50px
+
+      &:before {
+        position absolute
+        top 7px
+        left 13px
+      }
+    }
+
+    &:before {
+      display inline-block
+      content ''
+      background url(../img/header-call-req-icon-lg.png) no-repeat 0 0
+      width 38px
+      height 37px
+      vertical-align -12px
+    }
+    &:after {
+      position absolute
+      content ''
+      top 3px
+      left -1px
+      bottom 2px
+      border-left 1px dotted #b4b4b4
+      width 0
+    }
+    &:hover,
+    &:active {
+      background-color #d5d5d5
+    }
+  }
+  .header-contact-phone {
+    position relative
+    float right
+    height 50px
+    line-height 50px
+    padding 0 14px 0 35px
+    color brand-primary
+    font-family font-family-alt
+    font-size 2.2rem
+    text-transform uppercase
+    font-weight bold
+    text-decoration none
+    z-index 2
+
+    @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+      font-size 3rem
+    }
+    @media (min-width: screen-md-min) {
+      height 40px
+      line-height 40px
+      font-size 2.4rem
+
+      &:before {
+        top 5px
+        background-image url(../img/header-phone-icon.png)
+        width 28px
+        height 30px
+      }
+    }
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      padding-right 28px
+    }
+
+    &:before {
+      position absolute
+      content ''
+      top 9px
+      left 0
+      background url(../img/header-phone-icon-lg.png) no-repeat 0 0
+      width 30px
+      height 34px
+    }
+  }
+
+  // Bottom section
+
+  .bottom-section {
+    position relative
+    height 89px
+    box-shadow 0 -1px 1px 0 rgba(0,0,0,.15)
+    z-index 3
+
+    @media (min-width: screen-sm-min) {
+      height 119px
+    }
+
+    .logo {
+      float left
+      margin 24px 0 0 10px
+      background url(../img/logo-md.png) no-repeat 0 0 /100% auto
+      width 225px
+      height 37px
+
+      @media (min-width: screen-sm-min) {
+        background-image url(../img/logo-md.png)
+        width 527px
+        height 88px
+        margin-top 15px
+      }
+      @media (min-width: screen-lg) {
+        background-image url(../img/logo-lg.png)
+        width 664px
+        height 111px
+        margin-top 4px
+        margin-left 0
+      }
+    }
+    .mobile-menu-button {
+      float right
+      position relative
+      width 60px
+      height 60px
+      background-image none
+      background-color #e6e6e6
+      border-radius 5px
+      border none
+      margin 15px 10px 0 0
+      padding 0
+
+      @media (min-width: screen-sm-min) {
+        margin-top 30px
+      }
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+
+      &:after {
+        position absolute
+        content ''
+        background url(../img/mobile-menu-bars.png) no-repeat 0 0
+        width 34px
+        height 32px
+        top 15px
+        left 13px
+      }
+      &:before {
+        position absolute
+        content ''
+        background url(../img/mobile-menu-decorate-triangle.png) no-repeat 0 0
+        width 37px
+        height 14px
+        bottom -28px
+        left 13px
+        display none
+        z-index 4
+
+        @media (min-width: screen-sm-min) {
+          bottom -43px
+        }
+      }
+      &:focus {
+        outline 0
+      }
+      &[aria-expanded="true"] {
+        &:after {
+          background-position 0 -33px
+          height 33px
+        }
+        &:before {
+          display block
+        }
+      }
+    }
+    .mobile-menu {
+      position absolute
+      top 90px
+      left 0
+      right 0
+      overflow-x visible
+      overflow-y auto
+      -webkit-overflow-scrolling touch
+      max-height 580px
+      z-index 3
+      box-shadow 0 1px 1px rgba(0,0,0,.25)
+      max-height 70vh
+
+      @media (min-width: screen-sm-min) {
+        top 119px
+      }
+    }
+    .mobile-menu-form {
+      background-color brand-primary
+      padding 13px 10px 21px
+      box-shadow inset 0 1px 1px rgba(0,0,0,.25)
+
+      .form-group {
+        max-width 472px
+        margin 0 auto 17px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+      label {
+        font-size 1.4rem
+        display block
+        color #fff
+      }
+      select,
+      .select2-container {
+        width 100%
+        min-width 100%
+        max-width 100%
+      }
+      .select2-container {
+        .select2-selection--single {
+          height 47px
+
+          .select2-selection__arrow {
+            height 45px
+            width 36px
+
+            b {
+              right 8px
+              width 36px
+              height 36px
+              margin-top -18px
+              background-image url(../img/select-arrow-lg.png)
+            }
+          }
+        }
+        .select2-selection__rendered {
+          line-height 45px
+          font-size 1.8rem
+          color #757575
+          padding 0 52px 0 18px
+          font-size 1.8rem
+        }
+      }
+    }
+    .main-nav-mobile {
+      margin 0
+      background-color #f2f2f2
+
+      ul {
+        list-style none
+        margin 0
+        padding-left 0
+        border-bottom 1px solid #d9d9d9
+      }
+      li {
+        display block
+        height 100px
+        border-top 1px solid #d9d9d9
+      }
+      a {
+        display block
+        position relative
+        height 99px
+        padding 14px 43px 0 38px
+        font-size 1.8rem
+        line-height 74px
+        text-transform uppercase
+        color #4c4c4c
+        font-weight 300
+        font-family font-family-alt
+        text-decoration none
+
+        @media (min-width: screen-sm-min) {
+          font-size 2.4rem
+        }
+
+        &:before {
+          position absolute
+          content ''
+          top 30px
+          right 43px
+          background url(../img/mobile-menu-rarrow.png) no-repeat 0 0
+          width 23px
+          height 42px
+        }
+        &:focus {
+          .main-nav-icon {
+            background-position 0 -74px
+          }
+        }
+      }
+      .main-nav-icon {
+        display none
+        position static
+        margin-right 34px
+        vertical-align middle
+
+        @media (min-width: screen-sm-min) {
+          display inline-block
+        }
+      }
+    }
+    .user-actions {
+      position absolute
+      height 64px
+      width 100%
+      bottom -64px
+      padding-top 14px
+      text-align center
+      box-shadow inset 0 -1px 1px rgba(0,0,0,.15), inset 0 1px 1px rgba(0,0,0,.25)
+      background-color #fff
+
+      @media (min-width: screen-sm-min) {
+        height 89px
+        bottom -89px
+      }
+      @media (max-width: screen-xs-max) {
+        .btn {
+          padding 7px 15px 7px 10px
+        }
+      }
+      @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+        .btn {
+          button-size(15px, 22px, 1.8rem, 1.6)
+        }
+      }
+      @media (min-width: screen-md-min) {
+        display block
+        height auto
+        width auto
+        bottom auto
+        text-align left
+        padding 5px 0 3px 11px
+        margin-top 31px
+        float right
+        position relative
+        box-shadow none
+      }
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        padding-left 28px
+      }
+
+      &:before {
+        position absolute
+        content ''
+        top 0
+        left -1px
+        bottom 0
+        border-left 1px dotted #b4b4b4
+        width 0
+      }
+
+      .btn + .btn {
+        margin-left 5px
+
+        @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+          margin-left 30px
+        }
+      }
+    }
+  }
+}
+
+// Footer Blocks
+// -------------------------------------------------- //
+
+.site-footer {
+  p {
+    margin-bottom 0
+    display inline
+  }
+  .top-section {
+    background-color #f2f2f2
+    padding 30px 0
+
+    @media (min-width: (screen-lg - 1)) {
+      padding 39px 0
+    }
+  }
+  .bottom-section {
+    background-color #e6e6e6
+
+    .copyrights {
+      display table-cell
+      padding 37px 0 30px
+      min-height 147px
+      width 24.75%
+      border-bottom 9px solid brand-primary
+
+      @media (max-width: screen-md-max) {
+        width 50%
+      }
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        width 31%
+        padding-top 22px
+        min-height 140px
+      }
+
+      strong {
+        display block
+        font-weight 700
+        color #29a7cb
+      }
+    }
+    .info-column {
+      display table-cell
+      padding 37px 0 30px
+      min-height 147px
+      width 75.25%
+      border-bottom 9px solid brand-secondary
+
+      @media (max-width: screen-md-max) {
+        width 50%
+      }
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        width 66%
+        padding-top 22px
+        min-height 140px
+      }
+    }
+  }
+  .collapse {
+    &.in {
+      display inline
+    }
+
+    @media (min-width: screen-md-min) {
+      display inline
+    }
+  }
+  .more-link {
+    text-decoration none
+    border-bottom 1px dashed
+    line-height 1.3
+    margin-left 5px
+
+    &[aria-expanded="true"] {
+      display none !important
+    }
+  }
+
+  .inner-container {
+    display table
+  }
+  @media (max-width: screen-md-max) {
+    .inner-container {
+      padding 0 50px 0 30px
+    }
+  }
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    .inner-container {
+      padding 0 20px
+    }
+  }
+}

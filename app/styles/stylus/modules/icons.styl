@@ -1,0 +1,94 @@
+//
+// Blocks
+// -------------------------------------------------- //
+
+
+
+.btn-icon {
+  display inline-block
+  vertical-align -3px
+  background-repeat no-repeat
+  background-position 0 0
+  position relative
+  width 28px
+  height 28px
+  margin -5px -15px -5px 5px
+
+  .btn-lg &,
+  .btn-hg & {
+    margin -5px -10px -5px 10px
+    vertical-align middle
+  }
+  .btn-hg & {
+    width 37px
+    height 37px
+  }
+
+  &.icon-rarrow {
+    &.btn-icon-default {
+
+    }
+    &.btn-icon-primary {
+      background-image url(../img/btn-icon-rarrow-primary.png)
+    }
+  }
+
+  &.icon-check {
+    &.btn-icon-default {
+      background-image url(../img/btn-icon-check-default.png)
+
+      .btn-hg & {
+        background-image url(../img/btn-icon-check-default-hg.png)
+      }
+    }
+    &.btn-icon-primary {
+
+    }
+  }
+}
+
+.inline-icon {
+  display inline-block
+  vertical-align middle
+  background-repeat no-repeat
+  background-position 0 0
+
+  &.icon-rarrow {
+    width 13px
+    height 22px
+    background-image url(../img/inline-icon-rarrow.png)
+  }
+  &.icon-rarrow-lg {
+    width 21px
+    height 38px
+    background-image url(../img/inline-icon-rarrow-lg.png)
+  }
+  &.icon-rarrow-sm {
+    width 10px
+    height 14px
+    background-image url(../img/inline-icon-rarrow-sm.png)
+  }
+}
+
+.main-nav-icon {
+  display block
+  position relative
+  top -8px
+  width 74px
+  height 74px
+  background-repeat no-repeat
+  background-position 0 0
+
+  &.preparations {
+    background-image url(../img/main-nav-icon-01.png)
+  }
+  &.where-to-buy {
+    background-image url(../img/main-nav-icon-02.png)
+  }
+  &.price {
+    background-image url(../img/main-nav-icon-03.png)
+  }
+  &.questions {
+    background-image url(../img/main-nav-icon-04.png)
+  }
+}

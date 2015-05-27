@@ -1,0 +1,269 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display inline-block
+  margin-bottom 0 // For input.btn
+  font-weight btn-font-weight
+  text-align center
+  vertical-align middle
+  touch-action manipulation
+  cursor pointer
+  background-image none // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent
+  border-radius 5px
+  white-space: nowrap
+  button-size(7px, 20px, 1.4rem, 1.45)
+  user-select none
+  text-decoration none
+  transition border-color .15s ease-in-out, background-color .15s ease-in-out, color .15s ease-in-out
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline 0
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color btn-default-color
+    text-decoration none
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image none
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor cursor-disabled
+    pointer-events none // Future-proof disabling of clicks
+    opacity .65
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  color: btn-default-color;
+  background-color: btn-default-bg;
+  border-color: btn-default-border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: btn-default-color;
+    background-color: darken(btn-default-bg, 10%);
+        border-color: darken(btn-default-border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: btn-default-bg;
+          border-color: btn-default-border;
+    }
+  }
+}
+.btn-primary {
+  color: btn-primary-color;
+  background-color: #16adcb;
+  background-image linear-gradient(to top, rgba(0,0,0,0) 0, btn-primary-bg 100%)
+  border-color: btn-primary-border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: btn-primary-color;
+    background-color: darken(#16adcb, 10%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: btn-primary-bg;
+          border-color: btn-primary-border;
+    }
+  }
+
+  &.type-filled {
+    background-color #fff
+    background-image none
+    border-color btn-primary-bg
+    color btn-primary-bg
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color mix(btn-primary-bg, white, 7%)
+    }
+  }
+}
+.btn-secondary {
+  color: btn-secondary-color;
+  background-color: #a1bb26;
+  background-image linear-gradient(to top, rgba(0,0,0,0) 0, btn-secondary-bg 100%)
+  border-color: btn-secondary-border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: btn-secondary-color;
+    background-color: #869b1f;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: btn-secondary-bg;
+          border-color: btn-secondary-border;
+    }
+  }
+}
+// // Success appears as green
+// .btn-success {
+//   .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+// }
+// // Info appears as blue-green
+// .btn-info {
+//   .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+// }
+// // Warning appears as orange
+// .btn-warning {
+//   .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+// }
+// // Danger and error appear as red
+// .btn-danger {
+//   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+// }
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+// .btn-link {
+//   color: @link-color;
+//   font-weight: normal;
+//   border-radius: 0;
+//
+//   &,
+//   &:active,
+//   &.active,
+//   &[disabled],
+//   fieldset[disabled] & {
+//     background-color: transparent;
+//     .box-shadow(none);
+//   }
+//   &,
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     border-color: transparent;
+//   }
+//   &:hover,
+//   &:focus {
+//     color: @link-hover-color;
+//     text-decoration: @link-hover-decoration;
+//     background-color: transparent;
+//   }
+//   &[disabled],
+//   fieldset[disabled] & {
+//     &:hover,
+//     &:focus {
+//       color: @btn-link-disabled-color;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  button-size(15px, 20px, 1.4rem, 1.4)
+}
+.btn-hg {
+  button-size(15px, 22px, 1.8rem, 1.6)
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display block
+  width 100%
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top 5px
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width 100%
+  }
+}
