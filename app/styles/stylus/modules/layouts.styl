@@ -9,10 +9,10 @@
   background-color #fff
   display flex
   flex-direction column
-  padding-top 202px
+  padding-top 139px
 
   @media (min-width: screen-sm-min) {
-    padding-top 258px
+    padding-top 169px
   }
   @media (min-width: screen-md-min) {
     padding-top 159px
@@ -36,11 +36,14 @@
   top 0
   left 0
   width 100%
-  height 169px
+  height 139px
   box-shadow 0 1px 1px 0 rgba(0,0,0,.25)
   background-color #fff
   z-index 5
 
+  @media (min-width: screen-sm-min) {
+    height 169px
+  }
   @media (min-width: screen-md-min) {
     height 159px
   }
@@ -57,7 +60,7 @@
   color #999
   font-size 1.4rem
   line-height 2.2rem
-  box-shadow 0 -1px 1px 0 rgba(0,0,0,.25)
+  box-shadow 0 -1px 2px 0 rgba(0,0,0,.25)
 }
 
 
@@ -129,7 +132,7 @@
     line-height 50px
     padding 0 13px 0 13px
     background-color brand-primary
-    background-image linear-gradient(to bottom, brand-primary 0, rgba(0,0,0,0) 100%)
+    background-image linear-gradient(to bottom, brand-primary 0, rgba(80,209,235,0) 100%)
     color #fff
     font-family font-family-alt
     font-size 1.6rem
@@ -180,7 +183,7 @@
     line-height 50px
     padding 0 11px 0 9px
     background-color transparent
-    background-image linear-gradient(to bottom, #f2f2f2 0, rgba(0,0,0,0) 100%)
+    background-image linear-gradient(to bottom, #f2f2f2 0, rgba(242,242,242,0) 100%)
     color brand-secondary
     font-family font-family-alt
     font-size 1.6rem
@@ -283,7 +286,7 @@
   .bottom-section {
     position relative
     height 89px
-    box-shadow 0 -1px 1px 0 rgba(0,0,0,.15)
+    box-shadow 0 -1px 2px 0 rgba(0,0,0,.15)
     z-index 3
 
     @media (min-width: screen-sm-min) {
@@ -373,12 +376,12 @@
       top 90px
       left 0
       right 0
-      overflow-x visible
+      overflow-x hidden
       overflow-y auto
       -webkit-overflow-scrolling touch
       max-height 580px
       z-index 3
-      box-shadow 0 1px 1px rgba(0,0,0,.25)
+      box-shadow 0 1px 2px rgba(0,0,0,.25)
       max-height 70vh
 
       @media (min-width: screen-sm-min) {
@@ -494,41 +497,12 @@
       }
     }
     .user-actions {
-      position absolute
-      height 64px
-      width 100%
-      bottom -64px
-      padding-top 14px
-      text-align center
-      box-shadow inset 0 -1px 1px rgba(0,0,0,.15), inset 0 1px 1px rgba(0,0,0,.25)
-      background-color #fff
+      display block
+      padding 5px 0 3px 11px
+      margin-top 31px
+      float right
+      position relative
 
-      @media (min-width: screen-sm-min) {
-        height 89px
-        bottom -89px
-      }
-      @media (max-width: screen-xs-max) {
-        .btn {
-          padding 7px 15px 7px 10px
-        }
-      }
-      @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
-        .btn {
-          button-size(15px, 22px, 1.8rem, 1.6)
-        }
-      }
-      @media (min-width: screen-md-min) {
-        display block
-        height auto
-        width auto
-        bottom auto
-        text-align left
-        padding 5px 0 3px 11px
-        margin-top 31px
-        float right
-        position relative
-        box-shadow none
-      }
       @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
         padding-left 28px
       }
@@ -545,10 +519,6 @@
 
       .btn + .btn {
         margin-left 5px
-
-        @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
-          margin-left 30px
-        }
       }
     }
   }
