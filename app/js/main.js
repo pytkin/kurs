@@ -20,4 +20,19 @@ $(function () {
     $(this).closest('.category-row').addClass('show-preparates-col');
   });
 
+  // Слайдер дозировок препарата на странице "Препараты"
+  $('.js-preparates-slider').flickity({
+    cellAlign: 'left',
+    draggable: false,
+    wrapAround: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
+
+  $('.js-show-more-preparates-toggle').on('click', function (event) {
+    event.preventDefault();
+
+    $(this).prev('.js-preparates-slider').flickity('next', true);
+  });
+
 });

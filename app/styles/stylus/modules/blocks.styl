@@ -11,14 +11,15 @@
   padding-top 14px
   text-align center
   background-color #fff
-  display none
+  display block
 
+  @media (min-width: screen-md-min) {
+    display none
+  }
   @media (min-width: screen-sm-min) {
     height 89px
   }
   @media (max-width: screen-xs-max) {
-    display block
-
     .btn {
       padding 7px 15px 7px 10px
     }
@@ -145,6 +146,11 @@
     width (screen-md - 20px)
   }
 
+  // Для внутренних страниц
+  .inner-page & {
+    margin 17px auto 0
+  }
+
   ul {
     list-style none
     margin 0
@@ -162,7 +168,21 @@
       text-align center
       vertical-align middle
 
-      a {
+      &.active {
+        > a {
+          background-image linear-gradient(to top, rgba(0,0,0,.05) 0, rgba(255,255,255,.05) 100%), linear-gradient(to top, #fff 87%, rgba(255,255,255,.68) 100%)
+
+          > .main-nav-icon {
+            background-position 0 -74px
+          }
+
+          &:after {
+            transform translateY(0)
+          }
+        }
+      }
+
+      > a {
         position absolute
         top 0
         right 0
@@ -192,10 +212,11 @@
           transform translateY(7px)
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-image linear-gradient(to top, rgba(0,0,0,.05) 0, rgba(255,255,255,.05) 100%), linear-gradient(to top, #fff 87%, rgba(255,255,255,.68) 100%)
 
-          .main-nav-icon {
+          > .main-nav-icon {
             background-position 0 -74px
           }
 
@@ -801,6 +822,570 @@
       }
       .preparates-col .content-wrap {
         background-color #f2f2f2
+      }
+    }
+  }
+}
+
+
+// Preparates Nav
+
+.preparates-nav {
+  margin 0
+
+  .categories-list {
+    list-style none
+    padding-left 0
+    margin 0 0 17px
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    justify-content center
+
+    li {
+      display none
+      position relative
+      margin 0 21px
+      padding-bottom 5px
+
+      @media (min-width: screen-md-min) {
+        display inline-block
+      }
+
+      &.active {
+        @media (max-width: screen-sm-max) {
+          display inline-block
+        }
+
+        a {
+          @media (min-width: screen-md-min) {
+            color #15accb
+          }
+
+          &:after {
+            opacity 1
+
+            @media (max-width: screen-sm-max) {
+              opacity 0
+            }
+          }
+        }
+      }
+    }
+    a {
+      display block
+      text-decoration none
+      text-transform uppercase
+      font-size 2.6rem
+      color #484848
+      font-weight 300
+      font-family font-family-alt
+      line-height 1
+      text-align center
+
+      @media (min-width: screen-xs-min) {
+        font-size 3.6rem
+      }
+
+      @media (min-width: screen-md-min) {
+        color #4c4c4c
+        font-size 2rem
+        text-align left
+      }
+
+      &:after {
+        content ''
+        position absolute
+        bottom 0
+        right 20px
+        left 20px
+        height 1px
+        background-color #15accb
+        opacity 0
+        transition opacity .15s ease-in-out
+      }
+      &:hover {
+        color #484848
+
+        @media (min-width: screen-md-min) {
+          color #15accb
+        }
+      }
+    }
+  }
+
+  .subcategories-tabs {
+    position relative
+    margin 0
+    list-style none
+    padding 7px 0 0
+    height 38px
+    background-color #e6e6e6
+    border-bottom 1px solid #d9d9d9
+    text-align center
+    box-shadow inset 0 -6px 6px -6px rgba(0,0,0,.06)
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+
+    &:before {
+      position absolute
+      content ''
+      top 0
+      left 0
+      right 0
+      height 7px
+      background-color #f2f2f2
+    }
+
+    li {
+      display inline-block
+      margin 0 15px
+
+      &.active {
+        box-shadow 0 -7px 6px rgba(0,0,0,.06)
+
+        a {
+          color #15accb
+          border-color #d9d9d9 #d9d9d9 transparent
+          background-color #f2f2f2
+          z-index 3
+        }
+      }
+    }
+    a {
+      position relative
+      display inline-block
+      padding 14px 16px 6px
+      margin-top -7px
+      line-height 1
+      border 1px solid transparent
+      font-family font-family-alt
+      font-weight 300
+      text-transform uppercase
+      text-decoration none
+      color #757575
+      border-top-radius 4px
+      z-index 2
+
+      &:hover,
+      &:focus {
+        color #15accb
+      }
+    }
+  }
+
+  .subcategories-dropdown {
+    position relative
+    margin 0 20px
+
+    @media (min-width: screen-sm-min) {
+      margin 0 60px
+    }
+
+    &.open {
+      .dropdown-menu {
+        display block
+      }
+    }
+
+    .dropdown-text-holder {
+      display inline-block
+      width 100%
+      position relative
+      padding 11px 65px 10px 49px
+      text-transform uppercase
+      font 300 1.4rem/1.4 font-family-alt
+      text-decoration none
+      color #15accb
+      border 1px solid brand-primary
+
+      @media (min-width: screen-xs-min) {
+        font-size 2.4rem
+      }
+      @media (min-width: screen-sm-min) {
+        font-size 3rem
+      }
+
+      &:before {
+        position absolute
+        content ''
+        top 50%
+        left 12px
+        margin-top -11px
+        display block
+        width 22px
+        height 22px
+        background url(../img/preparates-subcategories-dropdown-bullet-01.png) no-repeat 0 0
+      }
+      &:after {
+        position absolute
+        content ''
+        top 50%
+        right 10px
+        margin-top -12px
+        display block
+        width 42px
+        height 24px
+        background url(../img/preparates-subcategories-dropdown-barrow.png) no-repeat 0 0
+      }
+    }
+    > .dropdown-menu {
+      position absolute
+      top 100%
+      left 0
+      margin 0
+      padding-left 0
+      width 100%
+      display none
+      border 1px solid brand-primary
+      border-top none
+      z-index 5
+
+      li {
+        display inline-block
+        position relative
+        width 100%
+        padding 10px 65px 10px 49px
+        text-transform uppercase
+        font 300 1.4rem/1.4 font-family-alt
+        text-decoration none
+        background-color #e6e6e6
+        border-bottom 1px solid #c9c9c9
+
+        @media (min-width: screen-xs-min) {
+          font-size 2.4rem
+        }
+        @media (min-width: screen-sm-min) {
+          font-size 3rem
+        }
+
+        &:last-child {
+          border-bottom none
+        }
+
+        &:before {
+          position absolute
+          content ''
+          top 50%
+          left 12px
+          margin-top -11px
+          display block
+          width 22px
+          height 22px
+          background url(../img/preparates-subcategories-dropdown-bullet-02.png) no-repeat 0 0
+        }
+
+        a {
+          text-decoration none
+          color #757575
+        }
+      }
+    }
+  }
+}
+
+
+// Preparates in category
+
+.preparate-list-in-category {
+  padding 33px 19px 4px
+
+  @media (min-width: screen-md-min) {
+    padding-top 40px
+  }
+  @media (min-width: (screen-lg - 1)) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  .preparate {
+    margin-bottom 36px
+    border 1px solid #d9d9d9
+    border-radius 5px
+    background-color #fff
+    box-shadow 0 1px 6px rgba(0,0,0,.06)
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+
+    @media (min-width: screen-md-min) {
+      margin-bottom 44px
+    }
+
+    .image-col {
+      position relative
+      width 100%
+      min-height 322px
+      background-image linear-gradient(to bottom, #15accb 0, #62d6ed 100%)
+      display inline-flex
+      align-items center
+      justify-content space-between
+      flex-direction column
+      flex-shrink 0
+      padding 15px 0 30px
+
+      @media (min-width: screen-md-min) {
+        width 279px
+      }
+
+      .image-wrap {
+        padding 0 20px
+
+        img {
+          display block
+          max-width 100%
+          height auto
+        }
+      }
+      .preparate-title {
+        z-index 2
+        color #fff
+        font-size 2.6rem
+        height 6rem
+        width 100%
+        overflow hidden
+        font-weight bold
+        text-transform uppercase
+        font-family font-family-alt
+        margin 0
+        text-align center
+        display inline-flex
+        flex-direction column
+        align-items center
+        justify-content center
+      }
+      .overlap-link {
+        position absolute
+        top 0
+        right 0
+        left 0
+        bottom 0
+        z-index 4
+
+        @media (min-width: screen-md-min) {
+          display none
+        }
+      }
+      .more-link {
+        z-index 2
+        display inline-block
+        color #fff
+        font-size 1.8rem
+        line-height 2rem
+        font-weight 300
+        text-decoration none
+        border-bottom 1px dashed
+
+        @media (min-width: screen-md-min) {
+          font-size 1.4rem
+        }
+
+        &:hover {
+          border-bottom-color transparent
+        }
+      }
+    }
+    .slider-col {
+      display none
+      flex-grow 1
+      padding 7px 11px 0
+
+      @media (min-width: screen-md-min) {
+        display block
+      }
+
+      .gallery-wrap {
+        width 100%
+        height 491px
+        overflow hidden
+        margin-bottom 10px
+
+        &:not(.flickity-enabled) {
+          height auto
+
+          .gallery-cell {
+            margin-bottom 10px
+
+            &:last-child {
+              margin-right 0
+            }
+          }
+          .dosage-cards {
+            display block
+            min-height 0
+
+            li:last-child {
+              margin-right 0
+            }
+          }
+        }
+
+        @media (min-width: (screen-lg - 1)) {
+          height 266px
+        }
+      }
+      .gallery-cell {
+        width 599px
+        float left
+        margin-right 11px
+        text-align center
+
+        @media (min-width: (screen-lg - 1)) {
+          width 155px
+        }
+
+        @media (min-width: (screen-lg - 1)) {
+          &[data-merge="5"] {
+            width 815px
+          }
+          &[data-merge="4"] {
+            width 650px
+          }
+          &[data-merge="3"] {
+            width 486px
+          }
+          &[data-merge="2"] {
+            width 320px
+          }
+        }
+
+        &.dry {
+          .slide-group-header {
+            background url(../img/preparetes-slider-group-pattern-dry.png) repeat-x center
+
+            &:before {
+              background url(../img/preparetes-slider-group-icon-dry.png) no-repeat 0 0 #fff
+            }
+          }
+          .dosage-cards li {
+            border-color brand-secondary
+          }
+        }
+        &.flow {
+          .slide-group-header {
+            background url(../img/preparetes-slider-group-pattern-flow.png) repeat-x center
+
+            &:before {
+              background url(../img/preparetes-slider-group-icon-flow.png) no-repeat 0 0 #fff
+            }
+          }
+          .dosage-cards li {
+            border-color brand-primary
+          }
+        }
+      }
+      .slide-group-header {
+        height 51px
+        margin-bottom 5px
+        position relative
+
+        &:before {
+          position absolute
+          content ''
+          width 57px
+          height 57px
+          border 3px solid #fff
+          border-radius 50%
+          top -3px
+          left 50%
+          margin-left -26px
+        }
+      }
+      .dosage-cards {
+        list-style none
+        margin 0
+        padding-left 0
+
+        @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+          display flex
+          flex-wrap wrap
+          align-items center
+          justify-content center
+          min-height 430px
+        }
+
+        li {
+          position relative
+          width 155px
+          height 210px
+          display inline-flex
+          flex-direction column
+          justify-content center
+          align-items center
+          margin 0 15px 15px
+          border 1px solid transparent
+          color #4c4c4c
+          font-size 1.3rem
+          line-height 2rem
+          font-weight 300
+          text-align center
+          vertical-align top
+          background-image linear-gradient(to bottom, #fff 0, rgba(255,255,255,0) 100%)
+          transition background-color .15s ease-in-out, padding .15s ease-in-out
+
+          @media (min-width: (screen-lg - 1)) {
+            margin 0 6px 0 0
+
+            &:last-child {
+              margin-right 0
+            }
+          }
+
+          strong {
+            font-weight 700
+            font-size 1.8rem
+            display block
+            text-align center
+          }
+          .btn {
+            position absolute
+            bottom 14px
+            left 13px
+            padding-left 15px
+            width 128px
+            transition opacity .15s ease-in-out, transform .15s ease-in-out
+            opacity 0
+            transform translateY(-10px)
+          }
+
+          &:hover,
+          &:focus {
+            padding-bottom 50px
+            background-color rgba(0,0,0,.05)
+
+            .btn {
+              opacity 1
+              transform translateX(0)
+            }
+          }
+        }
+        .card-head {
+          width 110px
+          border-bottom 1px solid #c6c6c6
+          padding-bottom 12px
+          margin-bottom 12px
+        }
+      }
+      .more-link {
+        float right
+        text-decoration none
+        text-transform uppercase
+        color #15accb
+        border-bottom 1px dashed
+        font 300 1.6rem/2.4rem font-family-alt
+        margin-bottom 10px
+
+        .inline-icon {
+          vertical-align top
+          margin-left 3px
+        }
+
+        &:hover {
+          border-bottom-color transparent
+        }
       }
     }
   }
