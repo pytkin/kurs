@@ -883,10 +883,9 @@
       line-height 1
       text-align center
 
-      @media (min-width: screen-xs-min) {
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
         font-size 3.6rem
       }
-
       @media (min-width: screen-md-min) {
         color #4c4c4c
         font-size 2rem
@@ -983,6 +982,9 @@
 
     @media (min-width: screen-sm-min) {
       margin 0 60px
+    }
+    @media (min-width: screen-md-min) {
+      display none
     }
 
     &.open {
