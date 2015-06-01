@@ -70,8 +70,8 @@
               </form>
               <nav class="main-nav-mobile">
                 <ul>
-                  <li class="active"><a href="#"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-                  <li><a href="#"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+                  <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+                  <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
                   <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
                   <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
                 </ul>
@@ -91,8 +91,8 @@
         </div>
         <nav class="main-nav">
           <ul>
-            <li class="active"><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-            <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+            <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+            <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
             <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
             <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
           </ul>
@@ -105,7 +105,111 @@
           <div class="page-header">
             <h1>Где купить</h1>
           </div>
-
+          <section class="where-to-buy-filter">
+            <div class="block-header">
+              <h3>Вы можете узнать в каких аптеках Вашего города нужный препарат есть в наличии или доступен для заказа<sup>*</sup>.</h3>
+              <span class="note"><sup>*</sup>Для уточнения информации обязательно обратитесь в аптеку.</span>
+            </div>
+            <div class="block-body">
+              <form action="" class="where-to-buy-filter-form">
+                <div class="form-group">
+                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Страна:</label>
+                  <select name="where-to-buy-filter-form--country-select" id="_id_where-to-buy-filter-form--country-select">
+                    <option value="0">Россия</option>
+                    <option value="1">Украина</option>
+                    <option value="2">Казахстан</option>
+                    <option value="3">Белорусия</option>
+                  </select>
+                  <div class="checkbox">
+                    <label for="_id_where-to-buy-filter-form--show-on-map-checkbox">
+                      <input type="checkbox" name="where-to-buy-filter-form--show-on-map-checkbox" id="_id_where-to-buy-filter-form--show-on-map-checkbox">
+                      <span class="checkbox-replace"></span>
+                      Показать на карте
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Город:</label>
+                  <select name="where-to-buy-filter-form--city-select" id="_id_where-to-buy-filter-form--city-select">
+                    <option value="0">Санкт-Петербург</option>
+                    <option value="1">Москва</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="_id_where-to-buy-filter-form--praparation-select" class="sr-only">Препарат</label>
+                  <select name="where-to-buy-filter-form--praparation-select" id="_id_where-to-buy-filter-form--praparation-select">
+                    <option value="0">Альгерон</option>
+                    <option value="1">Лейкостим</option>
+                  </select>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-secondary">Найти <i class="btn-icon btn-icon-default icon-search"></i></button>
+                </div>
+              </form>
+              <div class="map-holder" id="whereToBuyMap">
+                <!-- ymaps holder -->
+              </div>
+            </div>
+            <div class="block-footer">
+              Найдено: <span class="total-founded">12 аптек</span>
+            </div>
+          </section>
+          <ul class="where-to-buy-results">
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+            <li>
+              <span class="pharmacy-title">ООО "Подорожник"</span>
+              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+              <p>8 (812) 214-27-15</p>
+              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
+            </li>
+          </ul>
       </main>
       <footer class="site-footer">
         <div class="top-section">
@@ -150,7 +254,7 @@
     <script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
     <!-- endbuild -->
 
-    <!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
     <!-- build:js js/main.js -->
     <script src="js/main.js"></script>

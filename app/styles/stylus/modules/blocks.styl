@@ -1585,3 +1585,235 @@
     }
   }
 }
+
+
+// Где купить
+
+.where-to-buy-filter {
+  background-color #fff
+  border 1px solid #d9d9d9
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+  margin 48px 0 56px
+
+  @media (min-width: screen-md-min) {
+    margin-right 40px
+    margin-left 40px
+    border-radius 4px
+  }
+
+  .block-header {
+    padding 26px 30px 16px
+
+    @media (min-width: screen-md-min) {
+      padding 46px 39px 26px
+    }
+
+    h3 {
+      margin 0 0 17px
+      text-transform uppercase
+      font-size 2rem
+      line-height 1.2
+
+      @media (min-width: screen-md-min) {
+        font-size 2.4rem
+      }
+    }
+
+    sup {
+      color #e82835
+    }
+    .note {
+      font-weight 300
+      font-size 1.6rem
+      line-height 1
+      color #a7a7a7
+      font-weight 300
+
+      @media (min-width: screen-md-min) {
+        font-size 1.8rem
+      }
+    }
+  }
+  .block-footer {
+    height 51px
+    line-height 51px
+    padding-left 29px
+    color #a7a7a7
+    font-weight 300
+    font-size 1.4rem
+
+    @media (min-width: screen-lg-min) {
+      padding-left 40px
+    }
+
+    @media (max-width: screen-sm-max) {
+      text-align center
+      font-size 1.8rem
+      line-height 72px
+      height 72px
+    }
+
+    .total-founded {
+      font-weight 700
+      color #15accb
+    }
+  }
+  .map-holder {
+    height 355px
+    width 100%
+    display none
+
+    @media (min-width: screen-lg-min) {
+      display block
+    }
+
+    > ymaps {
+      width 100%
+      height 355
+    }
+    ymaps[class$="-copyright"] {
+      display none
+    }
+  }
+}
+
+.where-to-buy-filter-form {
+  background-color brand-primary
+  box-shadow 0 1px 2px rgba(0,0,0,.25)
+  padding 35px 0 27px
+  clearfix()
+
+  @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+    padding 23px 29px 21px
+  }
+  @media (min-width: screen-lg-min) {
+    padding 23px 40px 0
+  }
+
+  .form-group {
+    position relative
+    width 80%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-md-min) {
+      float left
+      max-width none
+    }
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      margin-bottom 12px
+
+      &:nth-child(1) {
+        width 347px
+        margin-right 105px
+      }
+      &:nth-child(2) {
+        width 347px
+      }
+      &:nth-child(3) {
+        width 100%
+      }
+    }
+    @media (min-width: screen-lg-min) {
+      width 235px
+      margin-right 58px
+      margin-bottom 6px
+    }
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+  }
+  .checkbox {
+    margin-bottom 0
+    display none
+
+    @media (min-width: screen-lg-min) {
+      display block
+    }
+
+    label {
+      padding-left 32px
+    }
+    .checkbox-replace {
+      background-image url(../img/monochrome-checkbox.png)
+    }
+  }
+  .form-actions {
+    text-align center
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      clear left
+
+      .btn {
+        min-width 200px
+        button-size(15px, 20px, 1.4rem, 1.4)
+      }
+    }
+
+    @media (max-width: screen-sm-max) {
+      .btn {
+        min-width 252px
+        button-size(15px, 22px, 1.8rem, 1.6)
+      }
+    }
+
+    .btn {
+      width 158px
+    }
+  }
+}
+
+.where-to-buy-results {
+  display flex
+  list-style none
+  padding-left 0
+  margin-bottom 40px
+  flex-wrap wrap
+  flex-direction row
+  justify-content center
+
+  @media (max-width: screen-sm-max) {
+    flex-direction column
+  }
+
+  li {
+    width 360px
+    padding 0 20px
+    margin-bottom 42px
+    font-size 1.6rem
+    line-height 2.5rem
+    font-weight 300
+
+    @media (max-width: screen-sm-max) {
+      width 100%
+      padding 0 60px
+      font-size 2rem
+    }
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      width 420px
+    }
+
+    .pharmacy-title {
+      font-weight 700
+      display block
+      margin-bottom 9px
+    }
+    p {
+      margin-bottom 5px
+    }
+    .more-link {
+      text-decoration none
+      border-bottom 1px dashed
+      font-size 1.4rem
+      line-height 2rem
+
+      &:hover {
+        border-bottom-color transparent
+      }
+    }
+  }
+}

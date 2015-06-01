@@ -1,6 +1,8 @@
 $(function () {
   'use strict';
 
+  var ymaps = window.ymaps;
+
   $('select').select2();
 
 
@@ -34,5 +36,28 @@ $(function () {
 
     $(this).prev('.js-preparates-slider').flickity('next', true);
   });
+
+
+  // Инициализация карты на странице "Где купить"
+
+  function initWhereToBuyMap() {
+    var myMap = new ymaps.Map('whereToBuyMap', {
+          center: [59.939095, 30.315868],
+          zoom: 11,
+          controls: []
+        });
+    var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-marker.png',
+          iconImageSize: [28, 39],
+          iconImageOffset: [-14, -38]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+
+  if (ymaps) {
+    ymaps.ready(initWhereToBuyMap);
+  }
 
 });
