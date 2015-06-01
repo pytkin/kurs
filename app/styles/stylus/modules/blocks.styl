@@ -1390,3 +1390,196 @@
     }
   }
 }
+
+
+// Patient signup form
+
+.patient-signup-form {
+  padding 23px 30px 35px
+
+  @media (min-width: screen-md-min) {
+    padding-left 50px
+    padding-right 50px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-left 80px
+    padding-right 80px
+  }
+
+  .form-row {
+    clearfix()
+
+    .form-group {
+      position relative
+      width 100%
+      max-width 472px
+      margin 0 auto 12px
+
+      @media (min-width: screen-sm-min) {
+        width 80%
+      }
+      @media (min-width: screen-md-min) {
+        float left
+        width 368px
+
+        &:first-child {
+          margin-right 102px
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        margin-right 60px
+        width 306px
+      }
+    }
+  }
+  label {
+    display block
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+  }
+  .collapse-toggle {
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+
+    &[aria-expanded="true"] {
+      &:after {
+        background-position 0 0
+      }
+    }
+
+    @media (min-width: screen-md-min) {
+      display none
+    }
+
+    &:after {
+      position absolute
+      content ''
+      top 50%
+      margin-top -12px
+      right 0
+      width 42px
+      height 24px
+      background url(../img/inline-icon-barrow-lg.png) no-repeat 0 -24px
+    }
+  }
+  .user-agreement {
+    background-color #fff
+    border 1px solid #d9d9d9
+    border-radius 4px
+    font-size 1.3rem
+    font-weight 300
+    padding 13px 26px
+    margin-bottom 10px
+
+    p {
+      margin-bottom 0
+    }
+  }
+  .confirm-user-agreement {
+    position relative
+    display block
+    background-color #e6e6e6
+    margin 0 -30px 40px
+    padding 13px 30px 14px
+
+    @media (min-width: screen-md-min) {
+      margin-left -50px
+      margin-right -50px
+      padding-left 50px
+      padding-right 50px
+    }
+    @media (min-width: screen-lg-min) {
+      margin-left -80px
+      margin-right -80px
+      padding-left 80px
+      padding-right 80px
+    }
+
+    .checkbox {
+      margin 0
+
+      label {
+        font-weight 300
+        font-size 1.6rem
+
+        @media (min-width: screen-sm-min) {
+          font-size 1.8rem
+        }
+        @media (min-width: screen-md-min) {
+          font-weight 700
+          font-size 1.4rem
+        }
+      }
+    }
+  }
+  .form-actions {
+    text-align center
+
+    strong {
+      font-weight 700
+      color #484848
+      display block
+      margin-bottom 25px
+      font-size 1.8rem
+    }
+    .btn {
+      @media (max-width: screen-sm-max) {
+        width 252px
+        button-size(15px, 22px, 1.8rem, 1.6)
+      }
+    }
+  }
+  .confirmation-code {
+    text-align center
+
+    strong {
+      @media (min-width: screen-md-min) {
+        font-size 1.6rem
+      }
+    }
+    .form-group {
+      float none
+      width 252px
+      margin 0 auto 11px
+
+      @media (min-width: screen-md-min) {
+        width 172px
+      }
+
+      label {
+        font-size 1.8rem
+
+        @media (min-width: screen-md-min) {
+          font-size 1.4rem
+        }
+      }
+    }
+    .btn {
+      @media (min-width: screen-md-min) {
+        width 172px
+      }
+    }
+  }
+  .collapse {
+    &.in {
+      display inline
+    }
+  }
+  .more-link {
+    text-decoration none
+    border-bottom 1px dashed
+    line-height 2rem
+
+    &[aria-expanded="true"] {
+      display none !important
+    }
+  }
+}

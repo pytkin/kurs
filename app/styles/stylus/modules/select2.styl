@@ -12,8 +12,12 @@
   .select2-selection--single {
     cursor: pointer;
     display: block;
-    height: 28px;
+    height: 47px;
     user-select: none;
+
+    @media (min-width: screen-md-min) {
+      height: 36px;
+    }
 
     &:focus {
       outline: 0;
@@ -21,11 +25,21 @@
 
     .select2-selection__rendered {
       display: block;
-      padding-left: 9px;
-      padding-right: 29px;
+      padding-left: 18px;
+      padding-right: 52px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-size: 1.8rem;
+      line-height: 45px;
+      color #757575
+
+      @media (min-width: screen-md-min) {
+        font-size: 1.3rem;
+        line-height: 35px;
+        padding-left: 9px;
+        padding-right: 29px;
+      }
     }
   }
   .select2-search--inline {
@@ -146,8 +160,7 @@
     border-radius: 4px;
 
     .select2-selection__rendered {
-      color: #444;
-      line-height: 28px;
+      color input-color
     }
     .select2-selection__clear {
       cursor: pointer;
@@ -158,21 +171,35 @@
       color: #999;
     }
     .select2-selection__arrow {
-      height: 34px;
+      height: 45px;
+      width: 36px;
       position: absolute;
       top: 0;
       right: 3px;
-      width: 23px;
+
+
+      @media (min-width: screen-md-min) {
+        height: 34px;
+        width: 23px;
+
+        b {
+          right: 2px;
+          width 23px
+          height 23px
+          margin-top: -11px;
+          background-image url(../img/select-arrow.png)
+        }
+      }
 
       b {
         display block
-        right: 0;
+        right: 8px;
         top: 50%;
-        background url(../img/select-arrow.png) no-repeat 0 0;
+        background url(../img/select-arrow-lg.png) no-repeat 0 0;
         position: absolute;
-        margin-top: -13px;
-        width 23px
-        height 23px
+        margin-top: -18px;
+        width 36px
+        height 36px
       }
     }
   }

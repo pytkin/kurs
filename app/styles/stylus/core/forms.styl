@@ -18,22 +18,36 @@ fieldset {
 }
 
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: line-height-computed;
-  font-size: (font-size-base * 1.5);
-  line-height: inherit;
-  color: legend-color;
-  border: 0;
-  border-bottom: 1px solid legend-border-color;
+  position relative
+  display block
+  width 100%
+  padding 24px 0
+  margin-bottom 32px
+  font-size 1.6rem
+  font-weight bold
+  font-family font-family-alt
+  line-height 1
+  text-transform uppercase
+  color legend-color
+  border 0
+  border-bottom 1px solid legend-border-color
+
+  @media (min-width: screen-sm-min) {
+    font-size 2.4rem
+  }
+  @media (min-width: screen-md-min) {
+    border-bottom-color transparent
+    font-size 1.8rem
+    margin-bottom 10px
+  }
 }
 
 label {
-  display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
-  font-weight: 300;
+  display inline-block
+  margin-bottom 10px
+  font-weight 300
+  font-size 1.4rem
+  color #757575
 }
 
 
@@ -46,14 +60,6 @@ label {
 // Override content-box in Normalize (* isn't specific enough)
 input[type="search"] {
   box-sizing: border-box;
-}
-
-// Position radios and checkboxes better
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9; // IE8-9
-  line-height: normal;
 }
 
 // Set the height of file controls to match text inputs
@@ -115,16 +121,21 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: 6px 12px;
-  font-size: font-size-base;
+  height: 47px;
+  padding: 11px 17px;
+  font-size: 1.8rem;
   line-height: line-height-base;
   color: input-color;
   background-color: input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid input-border;
   border-radius: input-border-radius;
-  //transition: border-color ease-in-out .15s;
+
+  @media (min-width: screen-md-min) {
+    height: 36px;
+    font-size: font-size-base;
+    padding: 6px 12px;
+  }
 
   // Customize the `:focus` state to imitate native WebKit styles.
   &:focus {
@@ -201,7 +212,7 @@ input[type="search"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 
@@ -211,17 +222,25 @@ input[type="search"] {
 
 .radio,
 .checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  position relative
+  display block
+  margin-top 10px
+  margin-bottom 10px
 
   label {
-    min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
+    min-height 38px
+    line-height 19px
+    padding-left 51px
+    margin-bottom 0
+    font-weight normal
+    cursor pointer
+    color #545454
+
+    @media (min-width: screen-md-min) {
+      min-height 23px
+      line-height 23px
+      padding-left 48px
+    }
   }
 }
 .radio input[type="radio"],
@@ -229,8 +248,47 @@ input[type="search"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
-  margin-top: 4px \9;
+  margin-left: -51px;
+  width 38px
+  height 38px
+  top 0
+  opacity 0
+  z-index 2
+
+  @media (min-width: screen-md-min) {
+    margin-left: -48px;
+    width 23px
+    height 23px
+  }
+}
+
+.checkbox,
+.checkbox-inline {
+  .checkbox-replace {
+    position absolute
+    width 38px
+    height 38px
+    top 0
+    left 0
+    display block
+    cursor pointer
+    background url(../img/colored-checkbox-lg.png) no-repeat 0 0
+  }
+
+  input[type="checkbox"]:checked ~ .checkbox-replace {
+    background-position 0 -38px
+  }
+
+  @media (min-width: screen-md-min) {
+    .checkbox-replace {
+      width 23px
+      height 23px
+      background-image url(../img/colored-checkbox.png)
+    }
+    input[type="checkbox"]:checked ~ .checkbox-replace {
+      background-position 0 -23px
+    }
+  }
 }
 
 .radio + .radio,
@@ -308,8 +366,36 @@ input[type="checkbox"] {
 // below a form control. Use for general help, formatting, or instructional text.
 
 .help-block {
-  display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: lighten(text-color, 25%); // lighten the text some for contrast
+  position relative
+  display block
+  margin 5px -30px 19px
+  color text-color
+  background-color #fff
+  border 1px solid #d9d9d9
+  padding 19px 0
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+
+  @media (min-width: screen-md-min) {
+    border-radius 4px
+    margin-left -30px
+    margin-right -30px
+  }
+  @media (min-width: screen-lg-min) {
+    margin-left -40px
+    margin-right -40px
+  }
+
+  span {
+    display block
+    background-color brand-primary
+    color #fff
+    padding 16px 40px
+    font-size 2rem
+    line-height 1.2
+    font-weight 300
+
+    @media (min-width: screen-md-min) {
+      font-size 1.6rem
+    }
+  }
 }
