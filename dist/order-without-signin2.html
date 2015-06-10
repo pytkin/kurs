@@ -68,7 +68,7 @@
               <nav class="main-nav-mobile">
                 <ul>
                   <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-                  <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+                  <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
                   <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
                   <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
                 </ul>
@@ -89,7 +89,7 @@
         <nav class="main-nav">
           <ul>
             <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-            <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+            <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
             <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
             <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
           </ul>
@@ -97,116 +97,130 @@
         <section class="page-wrap">
           <ol class="breadcrumb">
             <li><a href="index.html">Главная</a></li>
-            <li class="active">Где купить</li>
+            <li class="active">Ваш заказ</li>
           </ol>
           <div class="page-header">
-            <h1>Где купить</h1>
+            <h1>Ваш заказ</h1>
           </div>
-          <section class="where-to-buy-filter">
-            <div class="block-header">
-              <h3>Вы можете узнать в каких аптеках Вашего города нужный препарат есть в наличии или доступен для заказа<sup>*</sup>.</h3>
-              <span class="note"><sup>*</sup>Для уточнения информации обязательно обратитесь в аптеку.</span>
-            </div>
-            <div class="block-body">
-              <form action="" class="where-to-buy-filter-form">
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Страна:</label>
-                  <select name="where-to-buy-filter-form--country-select" id="_id_where-to-buy-filter-form--country-select">
-                    <option value="0">Россия</option>
-                    <option value="1">Украина</option>
-                    <option value="2">Казахстан</option>
-                    <option value="3">Белорусия</option>
-                  </select>
-                  <div class="checkbox">
-                    <label for="_id_where-to-buy-filter-form--show-on-map-checkbox">
-                      <input type="checkbox" name="where-to-buy-filter-form--show-on-map-checkbox" id="_id_where-to-buy-filter-form--show-on-map-checkbox">
-                      <span class="checkbox-replace"></span>
-                      Показать на карте
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Город:</label>
-                  <select name="where-to-buy-filter-form--city-select" id="_id_where-to-buy-filter-form--city-select">
-                    <option value="0">Санкт-Петербург</option>
-                    <option value="1">Москва</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--praparation-select" class="sr-only">Препарат</label>
-                  <select name="where-to-buy-filter-form--praparation-select" id="_id_where-to-buy-filter-form--praparation-select">
-                    <option value="0">Альгерон</option>
-                    <option value="1">Лейкостим</option>
-                  </select>
-                </div>
+          <section class="order-without-signin">
+            <div class="signin-panel">
+              <div class="text-col">
+                <h3>Если у Вас есть аккаунт, то авторизируйтесь<sup>*</sup>.</h3>
+                <span class="note">Если его нет, то он будет сформирован в процессе оформления заказа</span>
+              </div>
+              <form action="" class="signin-form">
                 <div class="form-actions">
-                  <button class="btn btn-secondary">Найти <i class="btn-icon btn-icon-default icon-search"></i></button>
+                  <button type="submit" class="btn btn-secondary">Войти <i class="btn-icon btn-icon-default icon-rarrow"></i></button>
+                  <a href="#" class="forgotten-pass">Забыли пароль? <i class="inline-icon icon-rarrow-sm"></i></a>
+                </div>
+                <div class="form-group">
+                  <label for="_id-order-without-signin--email">E-mail:</label>
+                  <input type="email" class="form-control" name="order-without-signin--email" id="_id-order-without-signin--email">
+                </div>
+                <div class="form-group">
+                  <label for="_id-order-without-signin--password">Пароль:</label>
+                  <input type="password" class="form-control" name="order-without-signin--password" id="_id-order-without-signin--password">
                 </div>
               </form>
-              <div class="map-holder" id="whereToBuyMap">
-                <!-- ymaps holder -->
+              <div class="note visible-md-block"><sup>*</sup> Если его нет, то он будет сформирован в процессе оформления заказа</div>
+            </div>
+            <div class="user-order">
+              <div class="block-header">
+                <h3>Заказ № 565768983</h3>
+              </div>
+              <div class="block-body">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Название</th>
+                      <th>Упаковка</th>
+                      <th>Кол-во</th>
+                      <th>Стоимость</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-th="Название">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</td>
+                      <td data-th="Упаковка">1 шприц</td>
+                      <td data-th="Кол-во">
+                        <select name="order-without-signin--order-total" id="_id-order-without-signin--order-total">
+                          <option value="1">1 шт.</option>
+                          <option value="2">2 шт.</option>
+                          <option value="3">3 шт.</option>
+                          <option value="4">4 шт.</option>
+                          <option value="5">5 шт.</option>
+                        </select>
+                      </td>
+                      <td data-th="Стоимость"><strong>12 991,56 руб.</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="block-footer">
-              Найдено: <span class="total-founded">12 аптек</span>
+          </section>
+          <section class="discount-program-info">
+            <div class="block-header">
+              <h3>Ваша скидочная программа</h3>
+              <a class="collapse-toggle collapsed" href="#collapse-discount-program-info-body" data-toggle="collapse" aria-expanded="true"></a>
+            </div>
+            <div class="block-body">
+              <div class="collapse in" id="collapse-discount-program-info-body">
+                <div class="figure-col">
+                  <span class="visible-lg-block">
+                    <img src="img/discount-program-figure.png" alt="" width="517" height="361">
+                  </span>
+                  <span class="visible-md-block">
+                    <img src="img/discount-program-figure-md.png" alt="" width="420" height="362">
+                  </span>
+                </div>
+                <div class="descr-col">
+                  <p>Изначально Вы приобретаете препарат Фасовкой №1 по стартовой цене:</p>
+                  <div class="old-price">6 495,78 руб.</div>
+                  <span class="divider"></span>
+                  <p>Стоимость препарата с 1-й по 4-ю покупку составит:</p>
+                  <ol class="price-steps">
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                  </ol>
+                  <span class="divider"></span>
+                  <p class="highlight">С 5-й покупки скидка вырастет до 10% и стоимость составит:</p>
+                  <div class="new-price">5 846,20 руб.</div>
+                </div>
+              </div>
             </div>
           </section>
-          <ul class="where-to-buy-results">
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-          </ul>
+          <section class="chosing-pharmacy">
+            <div class="block-header">
+              <h3>Выбор аптеки</h3>
+              <span class="note">Вы можете получить заказ в этой аптеке:</span>
+              <a class="collapse-toggle collapsed" href="#chosing-farmacy-body" data-toggle="collapse" aria-expanded="true"></a>
+            </div>
+            <div class="block-body">
+              <div class="collapse in" id="chosing-farmacy-body">
+                <span class="note">Вы можете получить заказ в этой аптеке:</span>
+                <div class="pharmacy-card">
+                  <div class="text-col">
+                    <div class="pharmacy-title">ООО "Подорожник"</div>
+                    <div class="pharmacy-descr">
+                      <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+                      <p>8 (812) 214-27-15</p>
+                    </div>
+                    <a href="#" class="more-link">Выбрать другую аптеку <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </div>
+                  <div class="map-col">
+                    <div class="map-holder" id="whereToBuyMap">
+                      <!-- ymaps holder -->
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.collapse -->
+            </div>
+            <div class="block-footer">
+              <a href="#" class="btn btn-secondary btn-lg">Отправить заказ <i class="btn-icon  btn-icon-default icon-rarrow"></i></a>
+            </div>
+          </section><!-- /.chosing-farmacy -->
         </section>
       </main>
       <footer class="site-footer">

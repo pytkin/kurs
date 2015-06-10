@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Курс на выздороаление</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900,400italic,300,400|Roboto+Condensed:700,300&subset=cyrillic,latin,latin-ext">
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+  </head>
+  <body class="inner-page"> <!-- <- .inner-page -->
+
+    <div class="site-wrapper">
+      <header class="site-header" data-spy="affix" data-offset-top="10"> <!-- <- data-spy="affix" data-offset-top="10" -->
+        <div class="top-section">
+          <div class="inner-container">
+            <form action="" class="header-top-region-form">
+              <div class="form-group">
+                <label for="_id_header-top-region-form--country-select">Страна:</label>
+                <select name="header-top-region-form--country-select" id="_id_header-top-region-form--country-select">
+                  <option value="0">Россия</option>
+                  <option value="1">Украина</option>
+                  <option value="2">Казахстан</option>
+                  <option value="3">Белорусия</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="_id_header-top-region-form--country-select">Город:</label>
+                <select name="header-top-region-form--city-select" id="_id_header-top-region-form--city-select">
+                  <option value="0">Санкт-Петербург</option>
+                  <option value="1">Москва</option>
+                </select>
+              </div>
+            </form>
+            <div class="pull-right">
+              <a href="#" class="header-online-consultant"><span class="visible-lg-inline">Онлайн-консультант</span></a>
+              <a href="#" class="header-call-req"><span class="visible-lg-inline">Заказать звонок</span></a>
+              <div class="header-contact-phone">8-800-2002-142</div>
+            </div>
+          </div><!-- /.inner-container -->
+        </div><!-- /.top-section -->
+        <div class="bottom-section">
+          <div class="inner-container">
+            <a href="index.html" class="logo"></a>
+            <button class="mobile-menu-button" data-toggle="collapse" href="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu"></button>
+            <div class="mobile-menu collapse" id="mobileMenu">
+              <form action="" class="mobile-menu-form">
+                <div class="form-group">
+                  <label for="_id_header-top-region-form--country-select">Страна:</label>
+                  <select name="header-top-region-form--country-select" id="_id_header-top-region-form--country-select">
+                    <option value="0">Россия</option>
+                    <option value="1">Украина</option>
+                    <option value="2">Казахстан</option>
+                    <option value="3">Белорусия</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="_id_header-top-region-form--country-select">Город:</label>
+                  <select name="header-top-region-form--city-select" id="_id_header-top-region-form--city-select">
+                    <option value="0">Санкт-Петербург</option>
+                    <option value="1">Москва</option>
+                  </select>
+                </div>
+              </form>
+              <nav class="main-nav-mobile">
+                <ul>
+                  <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+                  <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+                  <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
+                  <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="user-actions hidden-xs hidden-sm">
+              <a href="#" class="btn btn-primary type-filled btn-lg">Войти <i class="btn-icon btn-icon-primary icon-rarrow"></i></a>
+              <a href="#" class="btn btn-secondary btn-lg">Зарегистрироваться <i class="btn-icon btn-icon-default icon-check"></i></a>
+            </div>
+          </div><!-- /.inner-container -->
+        </div><!-- /.bottom-section -->
+      </header>
+      <main class="site-content">
+        <div class="user-actions-mobile">
+          <a href="#" class="btn btn-primary type-filled btn-lg">Войти <i class="btn-icon btn-icon-primary icon-rarrow"></i></a>
+          <a href="#" class="btn btn-secondary btn-lg">Зарегистрироваться <i class="btn-icon btn-icon-default icon-check"></i></a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+            <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+            <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
+            <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
+          </ul>
+        </nav>
+        <section class="page-wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Главная</a></li>
+            <li class="active">Ваш заказ</li>
+          </ol>
+          <div class="page-header">
+            <h1>Ваш заказ</h1>
+          </div>
+          <section class="order-without-signin">
+            <div class="signin-panel">
+              <div class="text-col">
+                <h3>Если у Вас есть аккаунт, то авторизируйтесь<sup>*</sup>.</h3>
+                <span class="note">Если его нет, то он будет сформирован в процессе оформления заказа</span>
+              </div>
+              <form action="" class="signin-form">
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-secondary">Войти <i class="btn-icon btn-icon-default icon-rarrow"></i></button>
+                  <a href="#" class="forgotten-pass">Забыли пароль? <i class="inline-icon icon-rarrow-sm"></i></a>
+                </div>
+                <div class="form-group">
+                  <label for="_id-order-without-signin--email">E-mail:</label>
+                  <input type="email" class="form-control" name="order-without-signin--email" id="_id-order-without-signin--email">
+                </div>
+                <div class="form-group">
+                  <label for="_id-order-without-signin--password">Пароль:</label>
+                  <input type="password" class="form-control" name="order-without-signin--password" id="_id-order-without-signin--password">
+                </div>
+              </form>
+              <div class="note visible-md-block"><sup>*</sup> Если его нет, то он будет сформирован в процессе оформления заказа</div>
+            </div>
+            <div class="user-order">
+              <div class="block-header">
+                <h3>Заказ № 565768983</h3>
+              </div>
+              <div class="block-body">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Название</th>
+                      <th>Упаковка</th>
+                      <th>Кол-во</th>
+                      <th>Стоимость</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-th="Название">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</td>
+                      <td data-th="Упаковка">1 шприц</td>
+                      <td data-th="Кол-во">
+                        <select name="order-without-signin--order-total" id="_id-order-without-signin--order-total">
+                          <option value="1">1 шт.</option>
+                          <option value="2">2 шт.</option>
+                          <option value="3">3 шт.</option>
+                          <option value="4">4 шт.</option>
+                          <option value="5">5 шт.</option>
+                        </select>
+                      </td>
+                      <td data-th="Стоимость"><strong>12 991,56 руб.</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="discount-program-info">
+            <div class="block-header">
+              <h3>Ваша скидочная программа</h3>
+              <a class="collapse-toggle collapsed" href="#collapse-discount-program-info-body" data-toggle="collapse" aria-expanded="true"></a>
+            </div>
+            <div class="block-body">
+              <div class="collapse in" id="collapse-discount-program-info-body">
+                <div class="figure-col">
+                  <span class="visible-lg-block">
+                    <img src="img/discount-program-figure.png" alt="" width="517" height="361">
+                  </span>
+                  <span class="visible-md-block">
+                    <img src="img/discount-program-figure-md.png" alt="" width="420" height="362">
+                  </span>
+                </div>
+                <div class="descr-col">
+                  <p>Изначально Вы приобретаете препарат Фасовкой №1 по стартовой цене:</p>
+                  <div class="old-price">6 495,78 руб.</div>
+                  <span class="divider"></span>
+                  <p>Стоимость препарата с 1-й по 4-ю покупку составит:</p>
+                  <ol class="price-steps">
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                    <li><strong>6 495,78 руб.</strong></li>
+                  </ol>
+                  <span class="divider"></span>
+                  <p class="highlight">С 5-й покупки скидка вырастет до 10% и стоимость составит:</p>
+                  <div class="new-price">5 846,20 руб.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="chosing-pharmacy-with-map">
+            <div class="block-header">
+              <h3>Выбор аптеки</h3>
+              <span class="note">Выберите аптеку, куда будет доставлен Ваш заказ.</span>
+              <a class="collapse-toggle collapsed" href="#chosing-pharmacy-with-map-body" data-toggle="collapse" aria-expanded="true"></a>
+            </div>
+            <div class="block-body">
+              <div class="collapse in" id="chosing-pharmacy-with-map-body">
+                <form action="" class="chosing-pharmacy-filter-form">
+                  <div class="form-group">
+                    <label for="_id_chosing-pharmacy-filter-form--city-select">Город:</label>
+                    <select name="chosing-pharmacy-filter-form--city-select" id="_id_chosing-pharmacy-filter-form--city-select">
+                      <option value="0">Санкт-Петербург</option>
+                      <option value="1">Москва</option>
+                    </select>
+                    <div class="checkbox">
+                      <label for="_id_chosing-pharmacy-filter-form--show-on-map-checkbox">
+                        <input type="checkbox" name="chosing-pharmacy-filter-form--show-on-map-checkbox" id="_id_chosing-pharmacy-filter-form--show-on-map-checkbox">
+                        <span class="checkbox-replace"></span>
+                        Показать на карте
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="_id_chosing-pharmacy-filter-form--street-select">Рядом с улицей:</label>
+                    <select name="chosing-pharmacy-filter-form--street-select" id="_id_chosing-pharmacy-filter-form--street-select">
+                      <option value="0">ул. Белы Куна</option>
+                      <option value="1">ул. Белы Куна 2</option>
+                    </select>
+                  </div>
+                  <div class="form-actions">
+                    <button class="btn btn-secondary">Найти <i class="btn-icon btn-icon-default icon-search"></i></button>
+                  </div>
+                </form>
+                <div class="map-holder" id="whereToBuyMap">
+                  <!-- ymaps holder -->
+                </div>
+                <div class="total-founded">Найдено <strong>3 аптеки</strong> рядом с м. Петроградская:</div>
+                <section class="chosing-pharmacy-with-map-results">
+                  <div class="pharmacy-card">
+                    <div class="pharmacy-title"><span class="row-number">1.</span> ООО "Подорожник"</div>
+                    <div class="pharmacy-descr">
+                      <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+                      <p>8 (812) 214-27-15</p>
+                    </div>
+                    <a href="#" class="more-link">Посмотреть на карте <i class="inline-icon icon-rarrow"></i></a>
+                    <div class="checkbox-inline is-rtl">
+                      <label>
+                        Выбрать
+                        <input type="checkbox" name="_id_chosing-pharmacy-with-map-results--check-item-checkbox-01" id="_id_chosing-pharmacy-with-map-results--check-item-checkbox-01">
+                        <span class="checkbox-replace"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="pharmacy-card">
+                    <div class="pharmacy-title"><span class="row-number">2.</span> ООО "Первая помощь"</div>
+                    <div class="pharmacy-descr">
+                      <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+                      <p>8 (812) 214-27-15</p>
+                    </div>
+                    <a href="#" class="more-link">Посмотреть на карте <i class="inline-icon icon-rarrow"></i></a>
+                    <div class="checkbox-inline is-rtl">
+                      <label>
+                        Выбрать
+                        <input type="checkbox" name="_id_chosing-pharmacy-with-map-results--check-item-checkbox-02" id="_id_chosing-pharmacy-with-map-results--check-item-checkbox-02">
+                        <span class="checkbox-replace"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="pharmacy-card">
+                    <div class="pharmacy-title"><span class="row-number">3.</span> ООО "Здоровые люди"</div>
+                    <div class="pharmacy-descr">
+                      <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
+                      <p>8 (812) 214-27-15</p>
+                    </div>
+                    <a href="#" class="more-link">Посмотреть на карте <i class="inline-icon icon-rarrow"></i></a>
+                    <div class="checkbox-inline is-rtl">
+                      <label>
+                        Выбрать
+                        <input type="checkbox" name="_id_chosing-pharmacy-with-map-results--check-item-checkbox-03" id="_id_chosing-pharmacy-with-map-results--check-item-checkbox-03">
+                        <span class="checkbox-replace"></span>
+                      </label>
+                    </div>
+                  </div>
+                </section><!-- /.chosing-pharmacy-with-map-results -->
+              </div><!-- /.collapse -->
+            </div><!-- /.block-body -->
+            <div class="block-footer">
+              <a href="#" class="btn btn-secondary btn-lg">Отправить заказ <i class="btn-icon  btn-icon-default icon-rarrow"></i></a>
+            </div>
+          </section>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="top-section">
+          <div class="inner-container">
+            <p>Внимание! Данный сайт является ТОЛЬКО бесплатным информационным ресурсом, помогающим ВАМ найти товар в законно работающих, лицензированных аптеках. Данный сайт не осуществляет дистанционную и иную торговлю лекарственными средствами и прочими товарами.</p>
+            <a href="#footer-extended-info" data-toggle="collapse" class="more-link visible-xs-inline-block visible-sm-inline-block">Читать дальше <i class="inline-icon icon-rarrow-sm"></i></a>
+            <div class="collapse" id="footer-extended-info">
+              <p>Все вопросы, связанные с приобретением лекарственных средств и иных товаров, необходимо решать с аптекой, в которой Вы готовы приобрести препарат.</p>
+            </div>
+          </div><!-- /.inner-container -->
+        </div><!-- /.top-section -->
+        <div class="bottom-section">
+          <div class="inner-container">
+            <div class="copyrights">
+              <p><strong>Курс на выздоровление ©2011-2015</strong></p>
+              <p>Все права защишенны.</p>
+            </div>
+            <div class="info-column">
+              <p>Вся информация, представленная на данном сайте, может быть использована исключительно для ознакомления.</p>
+              <a href="#footer-extended-info2" data-toggle="collapse" class="more-link visible-xs-inline-block visible-sm-inline-block">Читать дальше <i class="inline-icon icon-rarrow-sm"></i></a>
+              <div class="collapse" id="footer-extended-info2">
+                <p>При ознакомлении с информацией о препаратах БИОКАД, необходимо учитывать, что они имеют противопоказания и могут применяться только в соответствии с инструкцией по применению и после консультации с врачом.</p>
+              </div>
+            </div>
+          </div><!-- /.inner-container -->
+        </div><!-- /.bottom-section -->
+      </footer>
+    </div><!-- /.site-wrapper -->
+
+    <!-- build:js js/vendor.js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/plugins.js -->
+    <script src="/bower_components/select2/dist/js/select2.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
+    <!-- endbuild -->
+
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+    <!-- build:js js/main.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

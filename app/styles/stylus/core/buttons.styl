@@ -21,6 +21,7 @@
   button-size(7px, 20px, 1.4rem, 1.45)
   user-select none
   text-decoration none
+  background-clip padding-box
   transition border-color .15s ease-in-out, background-color .15s ease-in-out, color .15s ease-in-out
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
@@ -174,6 +175,40 @@
     &.active {
       background-color: btn-secondary-bg;
           border-color: btn-secondary-border;
+    }
+  }
+}
+.btn-primary-flat {
+  color: btn-primary-color;
+  background-color: transparent;
+  background-image linear-gradient(to top, rgba(80,209,235,0) 0, btn-primary-bg 100%)
+  border-color: #fff;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: #fff;
+    background-color: #15accb;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: transparent;
+          border-color: btn-primary-border;
     }
   }
 }

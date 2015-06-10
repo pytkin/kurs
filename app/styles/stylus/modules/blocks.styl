@@ -3,7 +3,7 @@
 // -------------------------------------------------- //
 
 
-// User actions
+// User actions mobile
 
 .user-actions-mobile {
   height 64px
@@ -39,6 +39,88 @@
   }
 }
 
+
+// Hello user mobile
+
+.hello-user-mobile {
+  background-color #fff
+  padding 7px 10px 10px 10px
+  min-height 90px
+  clearfix()
+
+  @media (min-width: screen-xs-min) {
+    padding-left 30px
+    padding-bottom 5px
+  }
+  @media (min-width: screen-md-min) {
+    display none
+  }
+
+  .username-panel {
+    margin-top 10px
+    padding-left 40px
+    background url(../img/hello-user-avatar.png) no-repeat 1px 8px
+    font-size 1.4rem
+    line-height 3rem
+    color #999
+    font-weight 300
+
+    @media (min-width: screen-xs-min) {
+      float left
+      width 70%
+      font-size 1.8rem
+
+      strong {
+        font-size 3rem
+      }
+    }
+
+    strong {
+      position relative
+      margin-top -5px
+      display block
+      font-size 2.4rem
+      font-weight 300
+    }
+  }
+  .hello-user-actions {
+    border-top 1px dotted #b4b4b4
+    padding 9px 0 0
+    font-size 1.4rem
+    font-weight 300
+    text-align left
+    margin-top 10px
+    clearfix()
+
+    @media (min-width: screen-xs-min) {
+      margin-top 0
+      border-top none
+      border-left 1px dotted #b4b4b4
+      float right
+      padding-bottom 11px
+      padding-left 23px
+      text-align right
+      font-size 1.8rem
+    }
+
+    .cabinet-link {
+      display inline-block
+
+      @media (min-width: screen-xs-min) {
+        display block
+        margin-bottom 11px
+      }
+    }
+    .signout-link {
+      color #969696
+      float right
+
+      @media (min-width: screen-xs-min) {
+        float none
+      }
+    }
+  }
+}
 
 // Promo slider
 
@@ -148,7 +230,7 @@
 
   // Для внутренних страниц
   .inner-page & {
-    margin 17px auto 0
+    margin 0 auto
   }
 
   ul {
@@ -981,7 +1063,9 @@
     margin 0 20px
 
     @media (min-width: screen-sm-min) {
-      margin 0 60px
+      margin 0 auto
+      width 80%
+      max-width 472px
     }
     @media (min-width: screen-md-min) {
       display none
@@ -1669,7 +1753,7 @@
 
     > ymaps {
       width 100%
-      height 355
+      height 355px
     }
     ymaps[class$="-copyright"] {
       display none
@@ -1814,6 +1898,3380 @@
       &:hover {
         border-bottom-color transparent
       }
+    }
+  }
+}
+
+
+// Заказ без регистрации
+
+.order-without-signin {
+  background-color #fff
+  border 1px solid #d9d9d9
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+  padding-top 25px
+
+  @media (min-width: screen-md-min) {
+    padding-top 0
+    margin-right 20px
+    margin-left 20px
+    border-radius 4px
+    margin-bottom 46px
+  }
+  @media (min-width: screen-lg-min) {
+    margin-right 40px
+    margin-left 40px
+  }
+
+  .signin-panel {
+    padding 31px 29px 18px
+    display none
+    clearfix()
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+    @media (min-width: screen-lg-min) {
+      padding-bottom 38px
+    }
+
+    sup {
+      color #e82835
+    }
+
+    .text-col {
+      position relative
+
+      @media (min-width: screen-lg-min) {
+        float left
+        width 500px
+      }
+
+      h3 {
+        margin 0 0 30px
+        text-transform uppercase
+        font-size 2.4rem
+        line-height 1
+
+        @media (min-width: screen-lg-min) {
+          margin-bottom 17px
+        }
+      }
+      sup {
+        color #e82835
+      }
+      .note {
+        display none
+        font-weight 300
+        font-size 1.6rem
+        line-height 1.2
+        color #484848
+        padding-right 100px
+
+        @media (min-width: screen-lg-min) {
+          display inline-block
+        }
+      }
+    }
+    .signin-form {
+      position relative
+      border 1px solid brand-primary
+      background-color #fff
+      clearfix()
+
+      @media (min-width: screen-md-min) {
+        padding 20px 25px 10px
+
+        &:before {
+          display block
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        padding 21px 19px 19px 37px
+        float right
+        width 508px
+
+        &:before {
+          top 50%
+          left -13px
+          margin-top -14px
+          margin-left 0
+          background-image url(../img/signin-form-ltriangle.png)
+          width 13px
+          height 28px
+        }
+      }
+      @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+        margin-bottom 12px
+      }
+
+      &:before {
+        position absolute
+        display none
+        content ''
+        left 50%
+        margin-left -15px
+        top -14px
+        background url(../img/signin-form-ttriangle.png) no-repeat 0 0
+        width 30px
+        height 14px
+      }
+
+      .form-group {
+        float left
+        width 252px
+        margin-right 52px
+
+        @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+          margin-bottom 32px
+        }
+        @media (min-width: screen-lg-min) {
+          clear left
+          width 243px
+          margin-right 0
+        }
+      }
+      label {
+        color #484848
+        font-size 1.4rem
+        margin-bottom 5px
+
+        @media (min-width: screen-lg-min) {
+          line-height 3.6rem
+          margin-bottom 0
+          float left
+          width 67px
+        }
+      }
+      .form-control {
+        @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+          height 40px
+          padding 8px 12px
+        }
+        @media (min-width: screen-lg-min) {
+          width 176px
+        }
+      }
+      .form-actions {
+        float right
+        width 148px
+
+        @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+          width 180px
+          padding-top 20px
+
+          .btn {
+            button-size(15px, 20px, 1.4rem, 1.4)
+          }
+        }
+        .btn {
+          display block
+          width 100%
+          margin-bottom 16px
+        }
+        .forgotten-pass {
+          font-size 1.4rem
+          line-height 2rem
+          text-decoration none
+          border-bottom 1px dashed
+
+          @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+            position absolute
+            left 330px
+            top 94px
+          }
+
+          &:hover {
+            border-bottom-color transparent
+          }
+        }
+      }
+    }
+  }
+  .user-order {
+    .block-header {
+      background-color brand-primary
+      padding 0 40px
+
+      h3 {
+        font-size 2.6rem
+        color #4d4d4d
+        margin 0
+        line-height 67px
+        text-transform uppercase
+
+        @media (min-width: screen-md-min) {
+          line-height 50px
+          font-size 3rem
+        }
+        @media (min-width: screen-lg-min) {
+          line-height 72px
+        }
+      }
+    }
+    .block-body {
+      padding 10px 39px 26px
+
+      select,
+      .select2-container {
+        width 152px !important
+
+        @media (min-width: screen-md-min) {
+          width 86px !important
+        }
+      }
+      .select2-selection--single .select2-selection__rendered {
+        font-size 1.6rem
+      }
+      .order-table {
+        width 100%
+
+        @media (min-width: screen-md-min) {
+          thead th {
+            display table-cell
+            color #999
+            font-size 1.4rem
+            line-height 1
+            padding 15px 0
+            font-weight 300
+            text-align left
+
+            &:nth-child(n+2) {
+              padding-left 70px
+            }
+          }
+          tbody td {
+            display table-cell
+            padding 0
+
+            &:nth-child(n+2) {
+              padding-left 70px
+              white-space nowrap
+            }
+            &:before {
+              display none
+            }
+            strong {
+              font-size inherit
+            }
+          }
+        }
+
+        thead th {
+          display none
+        }
+        tbody td {
+          display block
+          position relative
+          padding 10px 0
+
+          @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+            padding 22px 0 22px 160px
+          }
+
+          strong {
+            font-size 2.5rem
+          }
+
+          &:before {
+            display block
+            content: attr(data-th)": ";
+            width: 160px;
+            font-weight 300
+
+            @media (min-width: screen-xs-min) {
+              position absolute
+              left 0
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.discount-program-info {
+  padding 13px 30px
+
+  @media (min-width: screen-md-min) {
+    padding 0 50px 49px
+  }
+  @media (min-width: screen-lg-min) {
+    padding 0 80px 62px
+  }
+
+  .block-header {
+    position relative
+    border-bottom 1px solid brand-primary
+    padding 25px 0
+
+    h3 {
+      text-transform uppercase
+      margin 0
+    }
+
+    @media (min-width: screen-md-min) {
+      padding 0
+      border-bottom none
+      margin-bottom 34px
+    }
+    @media (min-width: screen-lg-min) {
+      margin-bottom 42px
+    }
+
+    .collapse-toggle {
+      display block
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+
+      &[aria-expanded="true"] {
+        &:after {
+          background-position 0 0
+        }
+      }
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+
+      &:after {
+        position absolute
+        content ''
+        top 50%
+        margin-top -12px
+        right 0
+        width 42px
+        height 24px
+        background url(../img/inline-icon-barrow-lg.png) no-repeat 0 -24px
+      }
+    }
+  }
+  .block-body {
+    clearfix()
+  }
+  .figure-col {
+    float left
+    width 420px
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+    @media (min-width: screen-lg-min) {
+      width 517px
+    }
+  }
+  .descr-col {
+    padding 23px 55px 17px
+    font-size 1.6rem
+    font-weight 300
+    text-align center
+
+    @media (min-width: screen-md-min) {
+      float right
+      width 398px
+      border 1px solid brand-primary
+      background-color #fff
+      padding 23px 26px 17px
+      font-size 1.4rem
+    }
+    @media (min-width: screen-lg-min) {
+      width 479px
+      padding-left 55px
+      padding-right 55px
+      font-size 1.4rem
+    }
+
+    p {
+      margin-bottom 16px
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 6px
+      }
+    }
+    .old-price {
+      display inline-block
+      margin 0 auto
+      line-height 62px
+      padding 0 19px
+      background-color #cbcbcb
+      font-weight 700
+      font-size 1.8rem
+      color #484848
+
+      @media (min-width: screen-md-min) {
+        font-size 1.6rem
+        line-height 28px
+        padding 0 9px
+      }
+    }
+    .price-steps {
+      width 180px
+      margin 0 auto
+      text-align left
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+
+      @media (min-width: screen-md-min) {
+        width 150px
+        font-size inherit
+        line-height 1.5
+      }
+    }
+    .new-price {
+      display inline-block
+      margin 0 auto
+      line-height 62px
+      padding 0 19px
+      background-color brand-primary
+      font-weight 700
+      font-size 1.8rem
+      color #fff
+
+      @media (min-width: screen-md-min) {
+        font-size 1.6rem
+        line-height 28px
+        padding 0 9px
+      }
+    }
+    .highlight {
+      color #15accb
+    }
+    .divider {
+      display block
+      width 147px
+      margin 27px auto 21px
+      height 1px
+      background-color #cbcbcb
+
+      @media (min-width: screen-md-min) {
+        margin 17px auto 11px
+      }
+    }
+  }
+}
+
+.chosing-pharmacy-with-map {
+  padding 13px 0
+
+  @media (min-width: screen-md-min) {
+    border-top 1px solid #d0d0d0
+    padding 0
+  }
+
+  .block-header {
+    position relative
+    border-bottom 1px solid #50d1eb
+    padding 25px 0
+    margin-left 30px
+    margin-right 30px
+
+    @media (min-width: screen-md-min) {
+      padding 52px 50px 36px
+      margin 0
+      border none
+    }
+    @media (min-width: screen-lg-min) {
+      padding 58px 80px 36px
+    }
+
+    h3 {
+      font 300 3rem/1 font-family-alt
+      text-transform uppercase
+      color #484848
+      margin 0
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 32px
+      }
+    }
+    .note {
+      font-size 1.6rem
+      display none
+
+      @media (min-width: screen-md-min) {
+        display block
+      }
+    }
+    .collapse-toggle {
+      display block
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+
+      &[aria-expanded="true"] {
+        &:after {
+          background-position 0 0
+        }
+      }
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+
+      &:after {
+        position absolute
+        content ''
+        top 50%
+        margin-top -12px
+        right 0
+        width 42px
+        height 24px
+        background url(../img/inline-icon-barrow-lg.png) no-repeat 0 -24px
+      }
+    }
+  }
+  .block-body {
+    .map-holder {
+      height 362px
+      width 100%
+      display none
+
+      @media (min-width: screen-md-min) {
+        display block
+      }
+
+      > ymaps {
+        width 100%
+        height 362px
+      }
+      ymaps[class$="-copyright"] {
+        display none
+      }
+    }
+
+    .total-founded {
+      padding 25px 0
+      line-height 1.2
+      height 90px
+      color #a7a7a7
+      font-size 1.6rem
+      border-bottom 1px solid #d0d0d0
+      text-align center
+
+      @media (min-width: screen-xs-min) {
+        padding-top 0
+        line-height 90px
+      }
+      @media (min-width: screen-md-min) {
+        padding-left 50px
+        padding-right 50px
+        text-align left
+        font-size 1.4rem
+      }
+      @media (min-width: screen-lg-min) {
+        padding-left 80px
+        padding-right 80px
+      }
+
+      strong {
+        color #15accb
+      }
+    }
+  }
+  .block-footer {
+    text-align center
+    padding 21px 0 31px
+  }
+}
+
+.chosing-pharmacy-filter-form {
+  padding 28px 0 0
+  clearfix()
+
+  @media (max-width: screen-xs-max) {
+    padding-top 58px
+  }
+  @media (min-width: screen-md-min) {
+    padding 0 50px
+  }
+  @media (min-width: screen-lg-min) {
+    padding 0 80px
+  }
+
+  .form-group {
+    position relative
+    width 80%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-md-min) {
+      float left
+      max-width none
+      margin-bottom 11px
+      width 252px
+      margin-right 58px
+    }
+
+    label {
+      margin-bottom 5px
+    }
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+    left 0
+  }
+  .checkbox {
+    margin-bottom 0
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+
+    label {
+      padding-left 32px
+    }
+    .checkbox-replace {
+      background-image url(../img/monochrome-checkbox.png)
+    }
+  }
+  .form-actions {
+    padding-top 16px
+    text-align center
+
+    @media (min-width: screen-md-min) and (max-width: (screen-lg - 1)) {
+      .btn {
+        min-width 200px
+        button-size(15px, 20px, 1.4rem, 1.4)
+      }
+    }
+    @media (min-width: screen-md-min) {
+      float left
+    }
+    @media (min-width: screen-lg-min) {
+      padding-top 26px
+    }
+    @media (max-width: screen-sm-max) {
+      .btn {
+        min-width 252px
+        button-size(15px, 22px, 1.8rem, 1.6)
+      }
+    }
+
+    .btn {
+      width 158px
+    }
+  }
+}
+
+.chosing-pharmacy-with-map-results {
+  .pharmacy-card {
+    position relative
+    padding 24px 30px 24px
+    border-bottom 1px solid #d0d0d0
+    display flex
+    flex-wrap nowrap
+    flex-direction column
+
+    @media (min-width: screen-md-min) {
+      padding-left 50px
+      padding-right 50px
+      padding-bottom 9px
+      flex-direction row
+    }
+    @media (min-width: screen-lg-min) {
+      padding-left 80px
+      padding-right 80px
+    }
+
+    &:nth-child(even) {
+      background-color #e6e6e6
+
+      &:after {
+        display block
+        position absolute
+        content ''
+        bottom 0
+        left 0
+        right 0
+        height 3px
+        background-color #f2f2f2
+      }
+      &:before {
+        display block
+        position absolute
+        content ''
+        top 0
+        left 0
+        right 0
+        height 3px
+        background-color #f2f2f2
+      }
+    }
+
+    .pharmacy-title {
+      font-weight 700
+      font-size 1.8rem
+      line-height 2.5rem
+      margin-bottom 20px
+
+      @media (min-width: screen-md-min) {
+        font-size 1.6rem
+        margin-bottom 0
+        float left
+        width 262px
+      }
+    }
+    .row-number {
+      padding-right 10px
+    }
+    .pharmacy-descr {
+      margin-bottom 22px
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 0
+        float left
+        width 370px
+      }
+
+      p {
+        margin-bottom 8px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+    }
+    .more-link {
+      display inline-block
+      text-decoration none
+      border-bottom 1px dashed
+      width 178px
+      white-space nowrap
+
+      &:hover {
+        border-bottom-color transparent
+      }
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+    }
+    .checkbox-inline {
+      position absolute
+      right 30px
+      top 19px
+
+      @media (min-width: screen-md-min) {
+        right 50px
+        top 30px
+      }
+      @media (min-width: screen-lg-min) {
+        right 80px
+      }
+
+      label {
+        color #15accb
+      }
+    }
+  }
+}
+
+
+.chosing-pharmacy {
+  padding 13px 0
+
+  @media (min-width: screen-md-min) {
+    border-top 1px solid #d0d0d0
+    padding 0
+  }
+
+  .block-header {
+    position relative
+    border-bottom 1px solid #50d1eb
+    padding 25px 0
+    margin-left 30px
+    margin-right 30px
+
+    @media (min-width: screen-md-min) {
+      padding 52px 50px 36px
+      margin 0
+      border none
+    }
+    @media (min-width: screen-lg-min) {
+      padding 58px 80px 36px
+    }
+
+    h3 {
+      font 300 3rem/1 font-family-alt
+      text-transform uppercase
+      color #484848
+      margin 0
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 32px
+      }
+    }
+    .note {
+      font-size 1.6rem
+      display none
+
+      @media (min-width: screen-md-min) {
+        display block
+      }
+    }
+    .collapse-toggle {
+      display block
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+
+      &[aria-expanded="true"] {
+        &:after {
+          background-position 0 0
+        }
+      }
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+
+      &:after {
+        position absolute
+        content ''
+        top 50%
+        margin-top -12px
+        right 0
+        width 42px
+        height 24px
+        background url(../img/inline-icon-barrow-lg.png) no-repeat 0 -24px
+      }
+    }
+  }
+  .pharmacy-card {
+    clearfix()
+
+    @media (min-width: screen-md-min) {
+      box-shadow inset 0 2px 2px -1px rgba(0,0,0,.25)
+      background-color #fff
+    }
+
+    .text-col {
+      @media (min-width: screen-md-min) {
+        padding 50px 40px 0 50px
+        float left
+        width 50%
+        height 220px
+      }
+      @media (min-width: screen-lg-min) {
+        padding-left 80px
+      }
+      .pharmacy-title {
+        font-weight 700
+        font-size 1.8rem
+        line-height 2.5rem
+        margin-bottom 10px
+
+        @media (min-width: screen-md-min) {
+          font-size 1.6rem
+          margin-bottom 5px
+        }
+      }
+      .pharmacy-descr {
+        font-size 1.8rem
+        line-height 1.2
+        margin-bottom 52px
+
+        @media (min-width: screen-md-min) {
+          margin-bottom 32px
+          font-size 1.6rem
+        }
+
+        p {
+          margin-bottom 8px
+
+          &:last-child {
+            margin-bottom 0
+          }
+        }
+      }
+      .more-link {
+        display inline-block
+        text-decoration none
+        border-bottom 1px dashed
+
+        &:hover {
+          border-bottom-color transparent
+        }
+      }
+    }
+    .map-col {
+      float left
+      width 50%
+      height 220px
+      display none
+
+      @media (min-width: screen-md-min) {
+        display block
+      }
+
+      .map-holder {
+        height 220px
+        width 100%
+
+        > ymaps {
+          width 100%
+          height 220px
+        }
+        ymaps[class$="-copyright"] {
+          display none
+        }
+      }
+    }
+  }
+  .block-body {
+    padding 40px 30px 20px
+
+    @media (min-width: screen-md-min) {
+      padding 0
+    }
+
+    .note {
+      display block
+      margin-bottom 50px
+
+      @media (min-width: screen-md-min) {
+        display none
+      }
+    }
+  }
+  .block-footer {
+    text-align center
+    padding 21px 0 31px
+  }
+}
+
+
+// Навигация кабинета
+
+.cabinet-nav {
+  @media (max-width: screen-sm-max) {
+    border-top 1px solid #d9d9d9
+    background-color #fff
+    padding 14px 0 18px
+    box-shadow 0 -1px 2px -2px rgba(0,0,0,.25)
+  }
+
+  @media (min-width: screen-md-min) {
+    margin 27px 0 0
+  }
+
+  .subpages-tabs {
+    position relative
+    margin 0 0 -1px
+    padding-left 0
+    list-style none
+    height 47px
+    text-align center
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+
+    li {
+      display inline-block
+      margin 0 15px
+
+      &.active {
+        box-shadow 0 -6px 6px -6px rgba(0,0,0,0.06)
+
+        a {
+          color #15accb
+          border-color #d9d9d9 #d9d9d9 #fff
+          background-color #fff
+          z-index 3
+        }
+      }
+    }
+    a {
+      position relative
+      display inline-block
+      padding 15px 16px 14px
+      line-height 1
+      border 1px solid transparent
+      font-family font-family-alt
+      font-weight 300
+      text-transform uppercase
+      text-decoration none
+      color #757575
+      border-top-radius 4px
+      z-index 2
+
+      &:hover,
+      &:focus {
+        color #15accb
+      }
+    }
+  }
+
+  .subpages-dropdown {
+    position relative
+    margin 0 20px
+
+    @media (min-width: screen-sm-min) {
+      margin 0 auto
+      width 80%
+      max-width 472px
+    }
+    @media (min-width: screen-md-min) {
+      display none
+    }
+
+    &.open {
+      .dropdown-menu {
+        display block
+      }
+    }
+
+    .dropdown-text-holder {
+      display inline-block
+      width 100%
+      position relative
+      padding 11px 65px 10px 49px
+      text-transform uppercase
+      font 300 1.4rem/1.4 font-family-alt
+      text-decoration none
+      color #15accb
+      border 1px solid brand-primary
+
+      @media (min-width: screen-xs-min) {
+        font-size 2.4rem
+      }
+      @media (min-width: screen-sm-min) {
+        font-size 3rem
+      }
+
+      &:before {
+        position absolute
+        content ''
+        top 50%
+        left 12px
+        margin-top -11px
+        display block
+        width 22px
+        height 22px
+        background url(../img/preparates-subcategories-dropdown-bullet-01.png) no-repeat 0 0
+      }
+      &:after {
+        position absolute
+        content ''
+        top 50%
+        right 10px
+        margin-top -12px
+        display block
+        width 42px
+        height 24px
+        background url(../img/preparates-subcategories-dropdown-barrow.png) no-repeat 0 0
+      }
+    }
+    > .dropdown-menu {
+      position absolute
+      top 100%
+      left 0
+      margin 0
+      padding-left 0
+      width 100%
+      display none
+      border 1px solid brand-primary
+      border-top none
+      z-index 5
+
+      li {
+        display inline-block
+        position relative
+        width 100%
+        padding 10px 65px 10px 49px
+        text-transform uppercase
+        font 300 1.4rem/1.4 font-family-alt
+        text-decoration none
+        background-color #e6e6e6
+        border-bottom 1px solid #c9c9c9
+
+        @media (min-width: screen-xs-min) {
+          font-size 2.4rem
+        }
+        @media (min-width: screen-sm-min) {
+          font-size 3rem
+        }
+
+        &:last-child {
+          border-bottom none
+        }
+
+        &:before {
+          position absolute
+          content ''
+          top 50%
+          left 12px
+          margin-top -11px
+          display block
+          width 22px
+          height 22px
+          background url(../img/preparates-subcategories-dropdown-bullet-02.png) no-repeat 0 0
+        }
+
+        a {
+          text-decoration none
+          color #757575
+        }
+      }
+    }
+  }
+}
+
+
+// ЛК: заказы пациентов
+
+.cabinet-orders {
+  background-color #fff
+  border 1px solid #d9d9d9
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+
+  @media (min-width: screen-md-min) {
+    padding-top 16px
+    margin-right 20px
+    margin-left 20px
+    border-radius 4px
+    margin-bottom 27px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-top 27px
+    margin-right 40px
+    margin-left 40px
+  }
+}
+
+.cabinet-orders-filter-form {
+  background-color brand-primary
+  padding 31px 20px 21px
+  clearfix()
+
+  @media (min-width: screen-md-min) {
+    padding 15px 30px 18px
+  }
+
+  @media (min-width: screen-lg-min) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  label {
+    display block
+    color #484848
+    margin-bottom 7px
+    font-size 1.8rem
+
+    @media (min-width: screen-md-min) {
+      font-size 1.4rem
+    }
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+  }
+  .form-group {
+    position relative
+    width 100%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-sm-min) {
+      width 80%
+    }
+    @media (min-width: screen-md-min) {
+      float left
+      margin-right 50px
+      margin-bottom 0
+
+      &:first-child {
+        width 366px
+      }
+      &:nth-child(2) {
+        width 192px
+      }
+    }
+    @media (min-width: screen-lg-min) {
+      margin-right 78px
+
+      &:first-child {
+        width 436px
+      }
+      &:nth-child(2) {
+        width 266px
+      }
+    }
+  }
+  .form-actions {
+    .btn {
+      display block
+      width 100%
+    }
+    @media (max-width: screen-sm-max) {
+      width 100%
+      max-width 472px
+      margin 0 auto
+
+      .btn {
+        button-size(15px, 22px, 1.8rem, 1.6)
+      }
+    }
+    @media (min-width: screen-md-min) {
+      padding-top 26px
+      width 180px
+      float left
+    }
+  }
+}
+
+.cabinet-orders-results {
+  position relative
+
+  @media (min-width: screen-lg-min) {
+    border-top 31px solid #e6e6e6
+  }
+
+  dl {
+    margin 0
+    padding 21px 0 10px
+    font-size 1.4rem
+    font-weight 300
+    border-bottom 1px solid #dbdbdb
+    display flex
+    flex-wrap wrap
+    flex-direction column
+
+    @media (min-width: (screen-sm-min - 1)) {
+      flex-direction row
+    }
+    @media (min-width: screen-md-min) {
+      display block
+      padding-left 30px
+      padding-right 30px
+    }
+    @media (min-width: screen-lg-min) {
+      padding-left 175px
+      padding-top 0
+      clearfix()
+    }
+
+    dt {
+      font-weight 300
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding 0 30px
+      }
+      @media (max-width: (screen-sm-min - 1)) {
+        background-color #e6e6e6
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        width 160px
+        font-size 1.8rem
+
+        &.property-header--number {
+          background-color #e6e6e6
+        }
+      }
+      @media (max-width: screen-md-max) {
+        color #757575
+        line-height 39px
+        padding 0 10px
+      }
+      @media (min-width: screen-lg-min) {
+        display none
+      }
+    }
+    dd {
+      line-height 1.6rem
+      padding-top 10px
+      padding-bottom 10px
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding-left 30px
+        padding-right 30px
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        line-height 1.2
+        padding-top 10px
+        padding-bottom 8px
+        font-size 1.8rem
+        width calc(100% - 160px)
+
+        &.property-value--number {
+          background-color #e6e6e6
+          font-weight bold
+        }
+        &.property-value--patient-name {
+          font-weight bold
+        }
+        &.property-value--order-price {
+          font-weight bold
+        }
+        &.property-value--order-status {
+          padding-bottom 65px
+          position relative
+
+          .more-link {
+            float right
+          }
+          .btn {
+            width 50%
+            position absolute
+            bottom 5px
+            left 30px
+            button-size(15px, 20px, 1.4rem, 1.4)
+          }
+        }
+      }
+      @media (max-width: screen-xs-max) {
+        &.property-value--order-status {
+          position relative
+          padding-bottom 50px
+
+          .btn {
+            position absolute
+            bottom 0
+            left 30px
+            right 30px
+          }
+          .more-link {
+            float right
+          }
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        float left
+        padding-top 42px
+        padding-bottom 13px
+      }
+    }
+  }
+
+  .more-link {
+    display inline-block
+    text-decoration none
+    border-bottom 1px dashed
+
+    &:hover {
+      border-bottom-color transparent
+    }
+    .inline-icon {
+      margin-left 16px
+    }
+  }
+
+  @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+    .order-item {
+      position relative
+
+      dl {
+        padding-top 185px
+      }
+      dt {
+        background-color #e6e6e6
+        line-height 30px
+      }
+      dd {
+        padding-top 12px
+        min-height 40px
+      }
+
+      .property-header--number {
+        position absolute
+        top 41px
+        left 30px
+        width 335px
+      }
+      .property-value--number {
+        position absolute
+        top 71px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--date {
+        position absolute
+        top 41px
+        left 367px
+        width 500px
+      }
+      .property-value--date {
+        position absolute
+        top 71px
+        left 367px
+        width 500px
+      }
+      .property-header--patient-name {
+        position absolute
+        top 110px
+        left 30px
+        width 335px
+      }
+      .property-value--patient-name {
+        position absolute
+        top 140px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--patient-phone {
+        position absolute
+        top 110px
+        left 367px
+        width 500px
+      }
+      .property-value--patient-phone {
+        position absolute
+        top 140px
+        left 367px
+        width 500px
+      }
+      .property-header--drug-name,
+      .property-value--drug-name {
+        width 335px
+      }
+      .property-header--drug-package-type {
+        position absolute
+        top 185px
+        left 367px
+        width 198px
+      }
+      .property-value--drug-package-type {
+        position absolute
+        top 215px
+        left 367px
+        width 198px
+      }
+      .property-header--drug-quantity {
+        position absolute
+        top 185px
+        left 567px
+        width 151px
+      }
+      .property-value--drug-quantity {
+        position absolute
+        top 215px
+        left 567px
+        width 151px
+      }
+      .property-header--order-price {
+        position absolute
+        top 185px
+        left 720px
+        width 147px
+      }
+      .property-value--order-price {
+        position absolute
+        top 215px
+        left 720px
+        width 147px
+        font-weight bold
+        text-align right
+      }
+      .property-value--order-status {
+        .order-status {
+          margin-right 30px
+        }
+        .btn {
+          float right
+          margin-top -6px
+        }
+      }
+    }
+  }
+
+  @media (min-width: screen-lg-min) {
+    .order-item {
+      position relative
+      min-height 133px
+
+      &:first-child {
+        dt {
+          display block
+          position absolute
+          left 0
+          top -31px
+          line-height 31px
+
+          &.property-header--number {
+            left 40px
+
+            &:after {
+              content ' /'
+            }
+          }
+          &.property-header--date {
+            left 69px
+          }
+          &.property-header--patient-name {
+            left 240px
+          }
+          &.property-header--patient-phone {
+            display none
+          }
+          &.property-header--drug-name {
+            left 438px
+          }
+          &.property-header--drug-package-type {
+            left 626px
+          }
+          &.property-header--drug-quantity {
+            left 738px
+          }
+          &.property-header--order-price {
+            left 840px
+          }
+          &.property-header--order-status {
+            left 989px
+          }
+        }
+      }
+
+      .property-value--number {
+        position absolute
+        top 43px
+        left 40px
+        font-weight bold
+        line-height 1
+        padding-top 0
+      }
+      .property-value--date {
+        position absolute
+        left 40px
+        top 67px
+        line-height 1
+        padding-top 0
+      }
+      .property-value--patient-name {
+        width 200px
+        margin-right 33px
+        font-weight bold
+      }
+      .property-value--patient-phone {
+        display none
+      }
+      .property-value--drug-name {
+        width 210px
+        margin-right 15px
+      }
+      .property-value--drug-package-type {
+        width 80px
+        margin-right 36px
+      }
+      .property-value--drug-quantity {
+        width 50px
+        margin-right 32px
+      }
+      .property-value--order-price {
+        font-weight bold
+        width 110px
+        margin-right 9px
+      }
+      .property-value--order-status {
+        width 135px
+
+        .btn {
+          margin-bottom 7px
+        }
+      }
+    }
+  }
+}
+
+.cabinet-orders-where-to-take {
+  background-color #f4f4f4
+  box-shadow inset 0 1px 2px -1px rgba(0,0,0,.25)
+  border-bottom 1px solid #dbdbdb
+  clearfix()
+
+  .map-holder {
+    height 221px
+    width 478px
+    float left
+    display none
+
+    @media (min-width: screen-md-min) {
+      display block
+    }
+    @media (min-width: screen-lg-min) {
+      width 700px
+    }
+
+    > ymaps {
+      width 100%
+      height 221px
+    }
+    ymaps[class$="-copyright"] {
+      display none
+    }
+  }
+  .pharmacy-card {
+    padding 20px 30px 20px 30px
+
+    @media (min-width: screen-md-min) {
+      float left
+      width 418px
+      padding 52px 120px 40px 70px
+    }
+
+    .pharmacy-title {
+      display inline-block
+      font-weight bold
+      font-size 1.6rem
+      margin-bottom 8px
+    }
+    .pharmacy-descr {
+      font-weight 300
+      font-size 1.6rem
+      line-height 2.5rem
+
+      p {
+        margin-bottom 5px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+    }
+  }
+}
+
+
+// ЛК: пациенты
+
+.cabinet-patients {
+  @extend .cabinet-orders
+}
+
+.cabinet-patients-filter-form {
+  background-color brand-primary
+  padding 31px 20px 21px
+  clearfix()
+
+  @media (min-width: screen-md-min) {
+    padding 15px 30px 18px
+  }
+
+  @media (min-width: screen-lg-min) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  label {
+    display block
+    color #484848
+    margin-bottom 7px
+    font-size 1.8rem
+
+    @media (min-width: screen-md-min) {
+      font-size 1.4rem
+    }
+  }
+  .form-group {
+    position relative
+    width 100%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-sm-min) {
+      width 80%
+    }
+    @media (min-width: screen-md-min) {
+      float left
+      margin-right 14px
+      margin-bottom 0
+
+      &:first-child {
+        width 404px
+      }
+    }
+  }
+  .form-actions {
+    clearfix()
+
+    .btn:last-child {
+      float right
+    }
+    @media (max-width: screen-sm-max) {
+      width 100%
+      max-width 472px
+      margin 0 auto
+
+      .btn {
+        button-size(15px, 22px, 1.8rem, 1.6)
+        display block
+        width 100%
+        float none
+        margin-bottom 12px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+    }
+    @media (min-width: screen-md-min) {
+      padding-top 26px
+      width: calc(100% - 418px);
+      float left
+    }
+  }
+}
+
+.cabinet-patients-results {
+  position relative
+
+  @media (min-width: screen-lg-min) {
+    border-top 31px solid #e6e6e6
+  }
+
+  dl {
+    position relative
+    margin 0
+    padding 7px 0 14px
+    font-size 1.4rem
+    font-weight 300
+    border-bottom 1px solid #dbdbdb
+    display flex
+    flex-wrap wrap
+    flex-direction column
+    z-index 3
+
+    @media (min-width: (screen-sm-min - 1)) {
+      flex-direction row
+    }
+    @media (min-width: screen-md-min) {
+      display block
+      padding-left 30px
+      padding-right 30px
+    }
+    @media (min-width: screen-lg-min) {
+      padding-top 0
+      padding-left 376px
+      clearfix()
+    }
+
+    dt {
+      font-weight 300
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding 0 30px
+      }
+      @media (max-width: (screen-sm-min - 1)) {
+        background-color #e6e6e6
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        width 195px
+        font-size 1.8rem
+
+        &.property-header--patient-name {
+          background-color #e6e6e6
+        }
+        &[class^="property-header--"]:after {
+          display inline-block
+          content ':'
+        }
+      }
+      @media (max-width: screen-md-max) {
+        color #757575
+        line-height 39px
+        padding 0 10px
+      }
+      @media (min-width: screen-lg-min) {
+        display none
+      }
+    }
+    dd {
+      line-height 1.6rem
+      padding-top 10px
+      padding-bottom 10px
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding-left 30px
+        padding-right 30px
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        line-height 1.2
+        padding-top 10px
+        padding-bottom 8px
+        font-size 1.8rem
+        width calc(100% - 195px)
+
+        &.property-value--patient-name {
+          font-weight bold
+          background-color #e6e6e6
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        float left
+        padding-top 28px
+        padding-bottom 13px
+      }
+    }
+  }
+
+  .patient-item {
+    position relative
+
+    &:last-child {
+      dl {
+        border-bottom none
+      }
+    }
+  }
+
+  .signup-status {
+    display inline-block
+    font-size 1.6rem
+
+    @media (min-width: screen-lg-min) {
+      font-size 1.4rem
+    }
+
+    &.status-confirmed {
+      color #a5be27
+    }
+    &.status-not-confirmed {
+      @media (min-width: screen-lg-min) {
+        margin-top -7px
+      }
+
+      .icon-flag-done {
+        vertical-align top
+        top 2px
+      }
+    }
+    a {
+      text-decoration none
+      display inline-block
+      border-bottom 1px dashed
+
+      &:hover {
+        border-bottom-color transparent
+      }
+    }
+  }
+
+  .item-actions {
+    position absolute
+    background-color #e6e6e6
+    top 7px
+    right 0
+    width 78px
+    line-height 39px
+    height 39px
+    border-left 2px solid #fff
+    text-align center
+    z-index 4
+
+    .delete-link {
+      vertical-align 2px
+    }
+
+    @media (min-width: screen-md-min) {
+      top 10px
+      width 42px
+      line-height 30px
+      height 30px
+      right 30px
+    }
+    @media (min-width: screen-lg-min) {
+      background-color transparent
+      border-left none
+      width 28px
+      height 28px
+      top 50%
+      margin-top -14px
+      right 40px
+    }
+  }
+
+  @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+    .patient-item {
+      &:hover {
+        &:before {
+          position absolute
+          content ''
+          top 2px
+          bottom 3px
+          right 0
+          left 0
+          background-color #e6e6e6
+        }
+        .item-actions {
+          border-left-color transparent
+        }
+      }
+
+      dl {
+        padding-top 88px
+      }
+      dt {
+        background-color #e6e6e6
+        line-height 30px
+      }
+      dd {
+        padding-top 12px
+        min-height 40px
+      }
+
+      .property-header--patient-name {
+        position absolute
+        top 10px
+        left 30px
+        width 335px
+      }
+      .property-value--patient-name {
+        position absolute
+        top 40px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--patient-phone {
+        position absolute
+        top 10px
+        left 367px
+        width 198px
+      }
+      .property-value--patient-phone {
+        position absolute
+        top 40px
+        left 367px
+        width 198px
+      }
+      .property-header--birth-date {
+        position absolute
+        top 10px
+        left 567px
+        width 260px
+      }
+      .property-value--birth-date {
+        position absolute
+        top 40px
+        left 567px
+        width 260px
+      }
+      .property-value--signup-status {
+        .signup-status {
+          margin-right 30px
+        }
+      }
+    }
+  }
+
+  @media (min-width: screen-lg-min) {
+    .patient-item {
+      position relative
+
+      &:hover {
+        &:before {
+          position absolute
+          content ''
+          top 2px
+          bottom 3px
+          right 0
+          left 0
+          background-color #e6e6e6
+        }
+      }
+      &:first-child {
+        dt {
+          display block
+          position absolute
+          left 0
+          top -31px
+          line-height 31px
+
+          &.property-header--birth-date {
+            left 696px
+          }
+          &.property-header--patient-name {
+            left 445px
+          }
+          &.property-header--patient-phone {
+            left 40px
+          }
+          &.property-header--signup-status {
+            left 898px
+          }
+        }
+      }
+
+      .property-value--birth-date {
+        width 80px
+        margin-right 75px
+      }
+      .property-value--patient-name {
+        margin-right 135px
+        width 200px
+        text-align center
+        font-weight bold
+
+        a {
+          color text-color
+
+          &:hover {
+            color #15accb
+          }
+        }
+      }
+      .property-value--patient-phone {
+        position absolute
+        left 40px
+        top 32px
+        line-height 1
+        padding-top 0
+        padding-bottom 0
+      }
+      .property-value--signup-status {
+        width 165px
+      }
+    }
+  }
+}
+
+
+// ЛК: личные данные
+
+.cabinet-personal-data {
+  background-color #fff
+  border 1px solid #d9d9d9
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+  padding-bottom 18px
+
+  @media (min-width: screen-md-min) {
+    padding-top 16px
+    margin-right 20px
+    margin-left 20px
+    border-radius 4px
+    margin-bottom 27px
+    padding-bottom 0
+  }
+  @media (min-width: screen-lg-min) {
+    margin-right 40px
+    margin-left 40px
+  }
+
+  form {
+    padding 0 30px 0
+
+    @media (min-width: screen-md-min) {
+      border-bottom 1px solid #dbdbdb
+      margin-bottom 10px
+      padding-bottom 48px
+    }
+    @media (min-width: screen-lg-min) {
+      padding-left 40px
+      padding-right 40px
+    }
+
+    &:last-child {
+      border-bottom none
+      margin-bottom 0
+    }
+
+    .flex-row {
+      display flex
+      justify-content space-around
+      flex-wrap wrap
+
+      @media (min-width: screen-md-min) {
+        flex-wrap nowrap
+        justify-content space-between
+        align-items center
+      }
+
+      @media (min-width: (screen-xs-min - 1)) and (max-width: screen-sm-max) {
+        .btn {
+          margin 38px 0
+        }
+      }
+    }
+    .form-row {
+      clearfix()
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 29px
+
+        .form-group {
+          margin-bottom 0
+        }
+      }
+    }
+    .phone-holder {
+      font 300 3.6rem/1 font-family-alt
+
+      @media (min-width: (screen-xs-min - 1)) and (max-width: screen-xs-max) {
+        font-size 2.4rem
+      }
+      @media (min-width: screen-sm-min) {
+        font-size 3.6rem
+      }
+      @media (min-width: screen-md-min) {
+        font-size 2.4rem
+      }
+    }
+    .signup-status {
+      font-size 1.8rem
+      color #a7a7a7
+      font-weight 300
+      margin 38px 0
+
+      @media (min-width: (screen-xs-min - 1)) {
+        margin 0
+        line-height 3.6rem
+      }
+      @media (min-width: screen-md-min) {
+        font-size 1.4rem
+        line-height 1
+      }
+
+      strong {
+        font-weight bold
+      }
+
+      &.status-confirmed {
+        strong {
+          color #b3cf2a
+        }
+      }
+
+      a {
+        text-decoration none
+        display inline-block
+        border-bottom 1px dashed
+
+        &:hover {
+          border-bottom-color transparent
+        }
+      }
+    }
+    label {
+      display block
+      margin-bottom 5px
+    }
+    select,
+    .select2-container {
+      width 100%
+      min-width 100%
+      max-width 100%
+    }
+    .form-group {
+      position relative
+      width 100%
+      max-width 472px
+      margin 0 auto 29px
+
+      @media (min-width: screen-sm-min) {
+        width 80%
+      }
+    }
+    .form-actions {
+      text-align center
+
+      @media (min-width: screen-md-min) {
+        text-align right
+      }
+    }
+    .btn {
+      min-width 150px
+    }
+    @media (max-width: screen-sm-max) {
+      .btn {
+        button-size(15px, 22px, 1.8rem, 1.6)
+        min-width 200px
+
+        .btn-icon {
+          margin-right -10px
+        }
+      }
+    }
+    @media (max-width: screen-md-max) {
+      .btn {
+        button-size(15px, 20px, 1.4rem, 1.4)
+        min-width 200px
+      }
+      .btn-icon {
+        margin-right -10px
+      }
+    }
+  }
+  .collapse-toggle {
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+
+    &[aria-expanded="true"] {
+      &:after {
+        background-position 0 0
+      }
+    }
+
+    @media (min-width: screen-md-min) {
+      display none
+    }
+
+    &:after {
+      position absolute
+      content ''
+      top 50%
+      margin-top -12px
+      right 0
+      width 42px
+      height 24px
+      background url(../img/inline-icon-barrow-lg.png) no-repeat 0 -24px
+    }
+  }
+}
+
+.cabinet-personal-data-form {
+  .form-row {
+    &:first-child {
+      .form-group {
+        @media (min-width: screen-md-min) {
+          float left
+          width 368px
+
+          + .form-group {
+            margin-left 102px
+          }
+        }
+
+        @media (min-width: screen-lg-min) {
+          width 302px
+
+          + .form-group {
+            margin-left 64px
+          }
+        }
+
+        @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+          &:nth-child(3) {
+            margin-top 12px
+            margin-left 0
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+        display flex
+        justify-content center
+        align-items flex-end
+        width calc(80% + 20px)
+        margin 0 auto 29px
+        max-width 492px
+        min-width 472px
+
+        .form-group {
+          width calc(33.33334% - 10px)
+          margin 0 10px
+        }
+      }
+
+      .form-group {
+        @media (min-width: screen-md-min) {
+          float left
+          width 168px
+
+          + .form-group {
+            margin-left 32px
+            padding-top 24px
+          }
+        }
+
+        @media (min-width: screen-lg-min) {
+          width 118px
+
+          + .form-group {
+            margin-left 66px
+            padding-top 24px
+          }
+        }
+
+        @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+          &:nth-child(3) {
+            clear left
+            padding-top 12px
+            margin-left 0
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .form-group {
+        @media (min-width: screen-md-min) {
+          float left
+          width 368px
+
+          + .form-group {
+            margin-left 102px
+          }
+        }
+
+        @media (min-width: screen-lg-min) {
+          width 302px
+
+          + .form-group {
+            margin-left 64px
+          }
+        }
+      }
+    }
+  }
+}
+
+.cabinet-personal-data-personal-doctor-form {
+  .form-row {
+    &:first-child {
+      .form-group {
+        @media (min-width: screen-md-min) {
+          float left
+          width 368px
+
+          + .form-group {
+            margin-left 102px
+          }
+        }
+
+        @media (min-width: screen-lg-min) {
+          width 302px
+
+          + .form-group {
+            margin-left 64px
+          }
+        }
+
+        @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+          &:nth-child(3) {
+            margin-top 12px
+            margin-left 0
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ЛК админ: список заказов
+
+.admin-orders {
+  @extend .cabinet-orders
+}
+
+.admin-orders-filter-form {
+  background-color brand-primary
+  padding 31px 20px 21px
+  clearfix()
+
+  @media (min-width: screen-md-min) {
+    padding 15px 30px 18px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  label {
+    display block
+    color #484848
+    margin-bottom 7px
+    font-size 1.8rem
+
+    @media (min-width: screen-md-min) {
+      font-size 1.4rem
+    }
+  }
+  .form-group {
+    position relative
+    width 100%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-sm-min) {
+      width 80%
+    }
+    @media (min-width: screen-md-min) {
+      float left
+      margin-right 32px
+      margin-bottom 0
+      width 199px
+    }
+    @media (min-width: screen-lg-min) {
+      width 266px
+    }
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+  }
+  .form-actions {
+    clearfix()
+
+    @media (max-width: screen-sm-max) {
+      width 100%
+      max-width 472px
+      margin 0 auto
+
+      .btn {
+        button-size(15px, 22px, 1.8rem, 1.6)
+        display block
+        width 100%
+        float none
+        margin-bottom 12px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+    }
+    @media (min-width: screen-md-min) {
+      padding-top 26px
+      width 144px
+      float left
+
+      .btn {
+        display block
+        width 100%
+      }
+    }
+  }
+}
+
+.admin-orders-results {
+  position relative
+
+  @media (min-width: screen-lg-min) {
+    border-top 31px solid #e6e6e6
+  }
+
+  dl {
+    margin 0
+    padding 21px 0 10px
+    font-size 1.4rem
+    font-weight 300
+    border-bottom 1px solid #dbdbdb
+    display flex
+    flex-wrap wrap
+    flex-direction column
+
+    @media (min-width: (screen-sm-min - 1)) {
+      flex-direction row
+    }
+    @media (min-width: screen-md-min) {
+      display block
+      padding-left 30px
+      padding-right 30px
+    }
+    @media (min-width: screen-lg-min) {
+      padding-left 195px
+      padding-top 0
+      clearfix()
+    }
+
+    dt {
+      font-weight 300
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding 0 30px
+      }
+      @media (max-width: (screen-sm-min - 1)) {
+        background-color #e6e6e6
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        width 160px
+        font-size 1.8rem
+
+        &.property-header--pharmacy {
+          background-color #e6e6e6
+        }
+      }
+      @media (max-width: screen-md-max) {
+        color #757575
+        line-height 39px
+        padding 0 10px
+      }
+      @media (min-width: screen-lg-min) {
+        display none
+      }
+    }
+    dd {
+      line-height 1.6rem
+      padding-top 10px
+      padding-bottom 10px
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding-left 30px
+        padding-right 30px
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        line-height 1.2
+        padding-top 10px
+        padding-bottom 8px
+        font-size 1.8rem
+        width calc(100% - 160px)
+
+        &.property-value--pharmacy {
+          background-color #e6e6e6
+          font-weight bold
+        }
+        &.property-value--patient-name {
+          font-weight bold
+        }
+        &.property-value--order-price {
+          font-weight bold
+        }
+        &.property-value--order-status {
+          .more-link {
+            float right
+          }
+        }
+      }
+      @media (max-width: screen-xs-max) {
+        &.property-value--order-status {
+          .more-link {
+            float right
+          }
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        float left
+        padding-top 42px
+        padding-bottom 13px
+      }
+    }
+  }
+
+  .more-link {
+    display inline-block
+    text-decoration none
+    border-bottom 1px dashed
+
+    &:hover {
+      border-bottom-color transparent
+    }
+  }
+
+  @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+    .order-item {
+      position relative
+
+      dl {
+        padding-top 185px
+      }
+      dt {
+        background-color #e6e6e6
+        line-height 30px
+      }
+      dd {
+        padding-top 12px
+        min-height 40px
+      }
+
+      .property-header--pharmacy {
+        position absolute
+        top 41px
+        left 30px
+        width 335px
+      }
+      .property-value--pharmacy {
+        position absolute
+        top 71px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--number {
+        position absolute
+        top 41px
+        left 367px
+        width 198px
+      }
+      .property-value--number {
+        position absolute
+        top 71px
+        left 367px
+        width 198px
+        font-weight bold
+      }
+      .property-header--date {
+        position absolute
+        top 41px
+        left 567px
+        width 300px
+      }
+      .property-value--date {
+        position absolute
+        top 71px
+        left 567px
+        width 300px
+      }
+      .property-header--patient-name {
+        position absolute
+        top 110px
+        left 30px
+        width 335px
+      }
+      .property-value--patient-name {
+        position absolute
+        top 140px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--patient-phone {
+        position absolute
+        top 110px
+        left 367px
+        width 500px
+      }
+      .property-value--patient-phone {
+        position absolute
+        top 140px
+        left 367px
+        width 500px
+      }
+      .property-header--drug-name,
+      .property-value--drug-name {
+        width 335px
+      }
+      .property-header--drug-package-type {
+        position absolute
+        top 185px
+        left 367px
+        width 198px
+      }
+      .property-value--drug-package-type {
+        position absolute
+        top 215px
+        left 367px
+        width 198px
+      }
+      .property-header--drug-quantity {
+        position absolute
+        top 185px
+        left 567px
+        width 151px
+      }
+      .property-value--drug-quantity {
+        position absolute
+        top 215px
+        left 567px
+        width 151px
+      }
+      .property-header--order-price {
+        position absolute
+        top 185px
+        left 720px
+        width 147px
+      }
+      .property-value--order-price {
+        position absolute
+        top 215px
+        left 720px
+        width 147px
+        font-weight bold
+        text-align right
+      }
+      .property-value--order-status {
+        clearfix()
+
+        .more-link {
+          float right
+        }
+      }
+    }
+  }
+
+  @media (min-width: screen-lg-min) {
+    .order-item {
+      position relative
+      min-height 118px
+
+      &:first-child {
+        dt {
+          display block
+          position absolute
+          left 0
+          top -31px
+          line-height 31px
+
+          &.property-header--pharmacy {
+            left 40px
+
+            &:after {
+              content ' /'
+            }
+          }
+          &.property-header--number {
+            left 98px
+
+            &:after {
+              content ' /'
+            }
+          }
+          &.property-header--date {
+            left 127px
+          }
+          &.property-header--patient-name {
+            left 247px
+          }
+          &.property-header--patient-phone {
+            display none
+          }
+          &.property-header--drug-name {
+            left 438px
+          }
+          &.property-header--drug-package-type {
+            left 626px
+          }
+          &.property-header--drug-quantity {
+            left 738px
+          }
+          &.property-header--order-price {
+            left 840px
+          }
+          &.property-header--order-status {
+            left 989px
+          }
+        }
+      }
+
+      .property-value--pharmacy {
+        position absolute
+        top 42px
+        left 40px
+        font-weight bold
+        line-height 1
+        padding-top 0
+      }
+      .property-value--number {
+        position absolute
+        top 66px
+        left 40px
+        font-weight bold
+        line-height 1
+        padding-top 0
+      }
+      .property-value--date {
+        position absolute
+        left 40px
+        top 92px
+        line-height 1
+        padding-top 0
+      }
+      .property-value--patient-name {
+        width 200px
+        margin-right 10px
+        font-weight bold
+      }
+      .property-value--patient-phone {
+        position absolute
+        left 195px
+        top 65px
+        line-height 1
+        padding-top 0
+      }
+      .property-value--drug-name {
+        width 190px
+        margin-right 37px
+      }
+      .property-value--drug-package-type {
+        width 80px
+        margin-right 34px
+      }
+      .property-value--drug-quantity {
+        width 50px
+        margin-right 32px
+      }
+      .property-value--order-price {
+        font-weight bold
+        width 110px
+        margin-right 15px
+      }
+      .property-value--order-status {
+        width 135px
+
+        .order-status {
+          display inline-block
+          margin-bottom 10px
+        }
+      }
+    }
+  }
+}
+
+
+// ЛК аптека: отчёты
+
+.pharmacy-reports {
+  @extend .cabinet-orders
+
+  @media (min-width: screen-md-min) {
+    padding-top 0
+  }
+  @media (min-width: screen-lg-min) {
+    padding-top 0
+  }
+}
+
+.pharmacy-reports-filter-form {
+  position relative
+  background-color brand-primary
+  padding 31px 20px 21px
+  clearfix()
+
+  @media (min-width: screen-md-min) {
+    padding 15px 30px 18px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  label {
+    display block
+    color #484848
+    margin-bottom 5px
+    font-size 1.8rem
+
+    @media (min-width: screen-md-min) {
+      font-size 1.4rem
+    }
+  }
+  .form-group {
+    position relative
+    width 100%
+    max-width 472px
+    margin 0 auto 25px
+
+    @media (min-width: screen-sm-min) {
+      width 80%
+    }
+    @media (min-width: screen-md-min) {
+      float left
+      margin-right 32px
+      margin-bottom 0
+      width 228px
+    }
+    @media (min-width: screen-lg-min) {
+      width 144px
+      margin-right 36px
+    }
+  }
+  select,
+  .select2-container {
+    width 100%
+    min-width 100%
+    max-width 100%
+  }
+  .form-actions {
+    clearfix()
+
+    @media (max-width: screen-sm-max) {
+      width 100%
+      max-width 472px
+      margin 0 auto
+
+      .btn {
+        button-size(15px, 22px, 1.8rem, 1.6)
+        display block
+        width 100%
+        float none
+        margin-bottom 12px
+
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+    }
+    @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+      padding-top 14px
+      clear left
+      width 488px
+
+      .btn {
+        display block
+        width 100%
+        button-size(15px, 20px, 1.4rem, 1.4)
+      }
+    }
+
+    @media (min-width: screen-lg-min) {
+      float left
+      padding-top 24px
+      width 144px
+
+      .btn {
+        display block
+        width 100%
+      }
+    }
+  }
+  .report-download {
+    position relative
+    border 1px solid #fff
+    background-color transparent
+    margin 14px auto 0
+    padding 14px 12px 11px
+    max-width 472px
+
+    &:before {
+      background url(../img/report-download-ttriangle.png) no-repeat 0 0
+      position absolute
+      display block
+      content ''
+      width 20px
+      height 10px
+      top -10px
+      left 50%
+      right auto
+      margin-left -10px
+    }
+    .block-descr {
+      display block
+      font-size 1.4rem
+      font-weight bold
+      color #484848
+      vertical-align middle
+      text-align center
+      margin-bottom 14px
+
+      i {
+        font-style normal
+        color #fff
+      }
+    }
+
+    @media (max-width: screen-sm-max) {
+      .btn {
+        button-size(15px, 20px, 1.4rem, 1.4)
+        display block
+      }
+    }
+    @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+      height 78px
+      width 80%
+      padding-left 24px
+
+      .btn {
+        button-size(15px, 20px, 1.4rem, 1.4)
+        float right
+        width 180px
+      }
+      .block-descr {
+        font-size 1.8rem
+        width 185px
+        text-align left
+        margin-bottom 0
+        float left
+      }
+    }
+    @media (min-width: screen-md-min) {
+      height 63px
+      padding 14px 12px 11px 24px
+      margin 0
+      position absolute
+      right 30px
+      top 37px
+
+      .block-descr {
+        display inline-block
+        text-align left
+        margin-right 14px
+      }
+      &:before {
+        background-image url(../img/report-download-ltriangle.png)
+        top 50%
+        margin-top -10px
+        left -10px
+        height 21px
+        width 10px
+        margin-left 0
+      }
+    }
+    @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+      height 102px
+      width 318px
+      padding 15px 0 11px 0
+      text-align center
+
+      .block-descr {
+        font-size 1.6rem
+        margin-right 0
+        width auto
+        margin-bottom 14px
+      }
+      .btn {
+        min-width 148px
+      }
+    }
+    @media (min-width: screen-lg-min) {
+      top 18px
+
+      .block-descr {
+        width 142px
+        vertical-align middle
+        margin-bottom 0
+      }
+    }
+  }
+}
+
+.pharmacy-reports-title {
+  color #484848
+
+  @media (min-width: screen-md-min) {
+    padding 26px 30px 20px
+  }
+  @media (min-width: screen-lg-min) {
+    padding 40px 40px 30px
+  }
+
+  h2 {
+    margin 0 20px
+    font 300 30px/92px font-family-alt
+    text-transform uppercase
+
+    @media (min-width: screen-sm-min) {
+      margin 0 auto
+      width 80%
+      max-width 472px
+    }
+
+    @media (min-width: screen-md-min) {
+      line-height 1
+      margin 0
+      width auto
+      max-width none
+    }
+  }
+}
+
+.pharmacy-reports-results-header {
+  padding 0 30px
+  color #484848
+  height 60px
+  box-shadow 0 1px 2px -1px rgba(0,0,0,.25)
+  border-bottom 1px solid #bdbdbd
+
+  @media (min-width: screen-lg-min) {
+    padding-left 40px
+    padding-right 40px
+  }
+
+  h3 {
+    margin 0
+    font 300 24px/60px font-family-alt
+  }
+}
+
+.pharmacy-reports-results {
+  position relative
+
+  @media (min-width: screen-lg-min) {
+    border-top 31px solid #e6e6e6
+  }
+
+  dl {
+    margin 0
+    padding 21px 0 10px
+    font-size 1.4rem
+    font-weight 300
+    border-bottom 1px solid #dbdbdb
+    display flex
+    flex-wrap wrap
+    flex-direction column
+
+    @media (min-width: screen-xs-min) {
+      flex-direction row
+    }
+    @media (min-width: screen-md-min) {
+      display block
+      padding-left 30px
+      padding-right 30px
+    }
+    @media (min-width: screen-lg-min) {
+      padding-left 259px
+      padding-top 0
+      clearfix()
+    }
+
+    dt {
+      font-weight 300
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding 0 30px
+      }
+      @media (max-width: (screen-xs-min - 1)) {
+        background-color #e6e6e6
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        width 160px
+        font-size 1.8rem
+
+        &.property-header--number {
+          background-color #e6e6e6
+        }
+      }
+      @media (max-width: screen-md-max) {
+        color #757575
+        line-height 39px
+        padding 0 10px
+      }
+      @media (min-width: screen-lg-min) {
+        display none
+      }
+    }
+    dd {
+      line-height 1.6rem
+      padding-top 10px
+      padding-bottom 10px
+
+      @media (min-width: 0) and (max-width: screen-sm-max) {
+        padding-left 30px
+        padding-right 30px
+      }
+      @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+        line-height 1.2
+        padding-top 10px
+        padding-bottom 8px
+        font-size 1.8rem
+        width calc(100% - 160px)
+
+        &.property-value--number {
+          background-color #e6e6e6
+          font-weight bold
+        }
+        &.property-value--order-price {
+          font-weight bold
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        float left
+        padding-top 33px
+        padding-bottom 0
+      }
+    }
+  }
+
+  @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+    .order-item {
+      position relative
+
+      dl {
+        padding-top 87px
+      }
+      dt {
+        background-color #e6e6e6
+        line-height 30px
+      }
+      dd {
+        padding-top 12px
+        min-height 40px
+      }
+
+      .property-header--number {
+        position absolute
+        top 18px
+        left 30px
+        width 335px
+      }
+      .property-value--number {
+        position absolute
+        top 48px
+        left 30px
+        width 335px
+        font-weight bold
+      }
+      .property-header--date {
+        position absolute
+        top 18px
+        left 367px
+        width 500px
+      }
+      .property-value--date {
+        position absolute
+        top 48px
+        left 367px
+        width 500px
+      }
+      .property-header--drug-name,
+      .property-value--drug-name {
+        width 335px
+      }
+      .property-header--drug-package-type {
+        position absolute
+        top 87px
+        left 367px
+        width 198px
+      }
+      .property-value--drug-package-type {
+        position absolute
+        top 117px
+        left 367px
+        width 198px
+      }
+      .property-header--drug-quantity {
+        position absolute
+        top 87px
+        left 567px
+        width 151px
+      }
+      .property-value--drug-quantity {
+        position absolute
+        top 117px
+        left 567px
+        width 151px
+      }
+      .property-header--order-price {
+        position absolute
+        top 87px
+        left 720px
+        width 147px
+      }
+      .property-value--order-price {
+        position absolute
+        top 117px
+        left 720px
+        width 147px
+        font-weight bold
+        text-align right
+      }
+      .property-value--order-status {
+        clearfix()
+
+        .more-link {
+          float right
+        }
+      }
+    }
+  }
+
+  @media (min-width: screen-lg-min) {
+    .order-item {
+      position relative
+      min-height 59px
+
+      &:first-child {
+        dt {
+          display block
+          position absolute
+          left 0
+          top -31px
+          line-height 31px
+
+          &.property-header--number {
+            left 41px
+
+            &:after {
+              content ' /'
+            }
+          }
+          &.property-header--date {
+            left 70px
+          }
+          &.property-header--drug-name {
+            left 382px
+          }
+          &.property-header--drug-package-type {
+            left 788px
+          }
+          &.property-header--drug-quantity {
+            left 890px
+          }
+          &.property-header--order-price {
+            left 992px
+          }
+        }
+      }
+
+      .property-value--number {
+        position absolute
+        top 15px
+        left 40px
+        font-weight bold
+        line-height 1
+        padding-top 0
+      }
+      .property-value--date {
+        position absolute
+        left 40px
+        top 36px
+        line-height 1
+        padding-top 0
+      }
+      .property-value--drug-name {
+        width 515px
+        margin-right 22px
+      }
+      .property-value--drug-package-type {
+        width 80px
+        margin-right 25px
+      }
+      .property-value--drug-quantity {
+        width 50px
+        margin-right 38px
+      }
+      .property-value--order-price {
+        font-weight bold
+        width 98px
+      }
+    }
+  }
+}
+
+.pharmacy-reports-results-total {
+  background-color #e6e6e6
+  border-top 2px solid #fff
+  padding 20px 40px
+  font-size 1.6rem
+  font-weight bold
+  color #15accb
+  margin-bottom 27px
+  text-align center
+  clearfix()
+
+  @media (min-width: screen-sm-min) {
+    text-align left
+    padding 0 40px
+    line-height 68px
+    height 70px
+
+    span:not(.counter) {
+      float left
+    }
+  }
+  @media (min-width: screen-md-min) {
+    font-size 1.4rem
+  }
+
+  .counter {
+    display block
+    font-size 1.8rem
+    color #484848
+
+    @media (min-width: screen-sm-min) {
+      float right
     }
   }
 }

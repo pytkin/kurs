@@ -56,7 +56,7 @@ $(function () {
     myMap.geoObjects.add(myPlacemark);
   }
 
-  if (ymaps) {
+  if (ymaps && $('#whereToBuyMap').length) {
     ymaps.ready(initWhereToBuyMap);
   }
 
