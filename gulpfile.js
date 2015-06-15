@@ -8,6 +8,7 @@ var reload = browserSync.reload;
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/stylus/main.styl')
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.stylus())
     .pipe($.postcss([
@@ -24,7 +25,7 @@ gulp.task('styles', function () {
     //   require('postcss-nested'),
     //   require('postcss-simple-extend'),
     //   require('postcss-simple-vars'),
-       require('lost'),
+    //   require('lost'),
        require('postcss-discard-empty'),
        require('autoprefixer-core')({browsers: ['last 2 versions']}),
        require('css-mqpacker'),

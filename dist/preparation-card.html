@@ -9,10 +9,7 @@
     <title>Курс на выздороаление</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900,400italic,300,400|Roboto+Condensed:700,300&subset=cyrillic,latin,latin-ext">
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- endbuild -->
   </head>
   <body class="inner-page"> <!-- <- .inner-page -->
 
@@ -70,8 +67,8 @@
               </form>
               <nav class="main-nav-mobile">
                 <ul>
-                  <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-                  <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+                  <li class="active"><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+                  <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
                   <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
                   <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
                 </ul>
@@ -91,8 +88,8 @@
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
-            <li class="active"><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
+            <li class="active"><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+            <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
             <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
             <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
           </ul>
@@ -100,116 +97,86 @@
         <section class="page-wrap">
           <ol class="breadcrumb">
             <li><a href="index.html">Главная</a></li>
-            <li class="active">Где купить</li>
+            <li><a href="praparations.html">Препараты</a></li>
+            <li class="active">Противовирусные</li>
           </ol>
           <div class="page-header">
-            <h1>Где купить</h1>
+            <h1>Альгерон</h1>
           </div>
-          <section class="where-to-buy-filter">
+          <section class="preparation-card">
+            <div class="image-col">
+              <img src="img/temp/image-09.jpg" alt="Альгерон" width="359" height="191">
+            </div>
+            <p><strong>Альгерон - оригинальный препарат пегилированного интерферона альфа.</strong></p>
+            <p>Официальный сайт препарата "Альгерон" Вы можете посмотреть <a href="#">ЗДЕСЬ</a></p>
+            <p><strong>Действующее вещество</strong> - пегилированный интерферон альфа-2b (международное непатентованное наименование цепэгинтерферон альфа-2b). Представляет собой модификацию интерферона альфа, в норме вырабатываемого в организме человека который обладает высокой противовирусной активностью.</p>
+            <p>Пегилированный интерферон применяется для лечения активного вирусного гепатита С в составе комбинированной терапии с рибавирином у взрослых пациентов. Инструкцию по медицинскому применению Вы можете посмотреть <a href="#">ЗДЕСЬ</a>.</p>
+          </section>
+          <section class="preparation-dosages">
             <div class="block-header">
-              <h3>Вы можете узнать в каких аптеках Вашего города нужный препарат есть в наличии или доступен для заказа<sup>*</sup>.</h3>
-              <span class="note"><sup>*</sup>Для уточнения информации обязательно обратитесь в аптеку.</span>
+              <h2>Дозировки</h2>
+              <a class="collapse-toggle collapsed" href="#collapse-preparation-dosages-body" data-toggle="collapse" aria-expanded="true"></a>
             </div>
             <div class="block-body">
-              <form action="" class="where-to-buy-filter-form">
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Страна:</label>
-                  <select name="where-to-buy-filter-form--country-select" id="_id_where-to-buy-filter-form--country-select">
-                    <option value="0">Россия</option>
-                    <option value="1">Украина</option>
-                    <option value="2">Казахстан</option>
-                    <option value="3">Белорусия</option>
-                  </select>
-                  <div class="checkbox">
-                    <label for="_id_where-to-buy-filter-form--show-on-map-checkbox">
-                      <input type="checkbox" name="where-to-buy-filter-form--show-on-map-checkbox" id="_id_where-to-buy-filter-form--show-on-map-checkbox">
-                      <span class="checkbox-replace"></span>
-                      Показать на карте
-                    </label>
+              <div class="collapse" id="collapse-preparation-dosages-body">
+                <div class="dosage-list">
+                  <div class="dosage-group flow" data-merge="3">
+                    <div class="dosage-group-header"></div>
+                    <ul class="dosage-cards">
+                      <li>
+                        <span class="card-head">объем шприца <strong>0,5 мл</strong> ( 150 мкг )</span>
+                        <div class="card-foot">дозировка препарата <strong>150 мкг/мл</strong></div>
+                        <a class="btn btn-secondary btn-sm" href="#">Стоимость <i class="btn-icon btn-icon-default icon-rarrow"></i></a>
+                      </li>
+                      <li>
+                        <span class="card-head">объем шприца <strong>0,5 мл</strong> ( 300 мкг )</span>
+                        <div class="card-foot">дозировка препарата <strong>600 мкг/мл</strong></div>
+                        <a class="btn btn-secondary btn-sm" href="#">Стоимость <i class="btn-icon btn-icon-default icon-rarrow"></i></a>
+                      </li>
+                      <li>
+                        <span class="card-head">объем шприца <strong>0,8 мл</strong> ( 480 мкг )</span>
+                        <div class="card-foot">дозировка препарата <strong>600 мкг/мл</strong></div>
+                        <a class="btn btn-secondary btn-sm" href="#">Стоимость <i class="btn-icon btn-icon-default icon-rarrow"></i></a>
+                      </li>
+                    </ul>
+                  </div><!-- /.dosage-group -->
+                  <div class="dosage-group dry" data-merge="2">
+                    <div class="dosage-group-header"></div>
+                    <ul class="dosage-cards">
+                      <li>
+                        <span class="card-head">объем шприца <strong>1,0 мл</strong> ( 150 мкг )</span>
+                        <div class="card-foot">дозировка препарата <strong>150 мкг/мл</strong></div>
+                        <a class="btn btn-secondary btn-sm" href="#">Стоимость <i class="btn-icon btn-icon-default icon-rarrow"></i></a>
+                      </li>
+                      <li>
+                        <span class="card-head">объем шприца <strong>1,0 мл</strong> ( 300 мкг )</span>
+                        <div class="card-foot">дозировка препарата <strong>300 мкг/мл</strong></div>
+                        <a class="btn btn-secondary btn-sm" href="#">Стоимость <i class="btn-icon btn-icon-default icon-rarrow"></i></a>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--country-select" class="sr-only">Город:</label>
-                  <select name="where-to-buy-filter-form--city-select" id="_id_where-to-buy-filter-form--city-select">
-                    <option value="0">Санкт-Петербург</option>
-                    <option value="1">Москва</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="_id_where-to-buy-filter-form--praparation-select" class="sr-only">Препарат</label>
-                  <select name="where-to-buy-filter-form--praparation-select" id="_id_where-to-buy-filter-form--praparation-select">
-                    <option value="0">Альгерон</option>
-                    <option value="1">Лейкостим</option>
-                  </select>
-                </div>
-                <div class="form-actions">
-                  <button class="btn btn-secondary">Найти <i class="btn-icon btn-icon-default icon-search"></i></button>
-                </div>
-              </form>
-              <div class="map-holder" id="whereToBuyMap">
-                <!-- ymaps holder -->
-              </div>
-            </div>
-            <div class="block-footer">
-              Найдено: <span class="total-founded">12 аптек</span>
-            </div>
+                </div><!-- /.dosage-list -->
+              </div><!-- /.collapse -->
+            </div><!-- /.block-body -->
           </section>
-          <ul class="where-to-buy-results">
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-            <li>
-              <span class="pharmacy-title">ООО "Подорожник"</span>
-              <p>ул. Белы Куна, дом 20 корп. 1, литер.А, пом. 11Н</p>
-              <p>8 (812) 214-27-15</p>
-              <a href="#" class="more-link js-showon-the-map">Показать на карте <i class="inline-icon icon-rarrow-sm"></i></a>
-            </li>
-          </ul>
+          <section class="preparation-forms">
+            <div class="block-header">
+              <h2>Форма выпуска</h2>
+              <a class="collapse-toggle collapsed" href="#collapse-preparation-forms-body" data-toggle="collapse" aria-expanded="true"></a>
+            </div>
+            <div class="block-body">
+              <div class="collapse" id="collapse-preparation-forms-body">
+                <p><strong>Раствор для подкожного введения, 200 мкг/мл.</strong></p>
+                <ul>
+                  <li>По 0,4, 0,5, 0,6, 0,8 или 1,0 мл в трехкомпонентные стерильные шприцы из бесцветного нейтрального стекла.</li>
+                  <li>По 1 шприцу в контурной ячейковой упаковке из пленки полимерной.</li>
+                  <li>По 1 или 4 контурных ячейковых упаковок вместе с инструкцией по применению помещают в пачку из картона.</li>
+                  <li>По 1,0 мл во флаконы из бесцветного нейтрального стекла, укупоренные пробками с тефлоновым покрытием, обжатые алюминиевыми колпачками.</li>
+                  <li>По 1 или 4 флакона в контурной ячейковой упаковке из пленки полимерной вместе с инструкцией по применению помещают в пачку из картона.</li>
+                </ul>
+              </div><!-- /.collapse -->
+            </div><!-- /.block-body -->
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -240,25 +207,12 @@
       </footer>
     </div><!-- /.site-wrapper -->
 
-    <!-- build:js js/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="js/vendor.js"></script>
 
-    <!-- build:js js/plugins.js -->
-    <script src="/bower_components/select2/dist/js/select2.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
-    <!-- endbuild -->
+    <script src="js/plugins.js"></script>
 
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
-    <!-- build:js js/main.js -->
     <script src="js/main.js"></script>
-    <!-- endbuild -->
 </body>
 </html>

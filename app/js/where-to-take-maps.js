@@ -2,7 +2,6 @@ $(function () {
   'use strict';
 
   var ymaps = window.ymaps;
-  var id;
 
   // Инициализация карты на странице "Где купить"
 

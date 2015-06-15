@@ -9,10 +9,7 @@
     <title>Курс на выздороаление</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900,400italic,300,400|Roboto+Condensed:700,300&subset=cyrillic,latin,latin-ext">
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- endbuild -->
   </head>
   <body class="inner-page"> <!-- <- .inner-page -->
 
@@ -117,55 +114,54 @@
           </div>
           <nav class="cabinet-nav">
             <ul class="subpages-tabs">
-              <li><a href="#">Заявки на препараты</a></li>
-              <li class="active"><a href="#">Отчеты</a></li>
-              <li><a href="#">Данные об организации</a></li>
+              <li><a href="#">Аптеки</a></li>
+              <li class="active"><a href="#">Заявки на препараты</a></li>
+              <li><a href="#">Данные доступа</a></li>
             </ul>
             <div class="subpages-dropdown">
-              <a data-target="#" href="http://example.com" class="dropdown-text-holder" data-toggle="dropdown">Отчеты</a>
+              <a data-target="#" href="http://example.com" class="dropdown-text-holder" data-toggle="dropdown">Заявки на препараты</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Заявки на препараты</a></li>
-                <li><a href="#">Данные об организации</a></li>
+                <li><a href="#">Аптеки</a></li>
+                <li><a href="#">Данные доступа</a></li>
               </ul>
             </div>
           </nav>
-          <section class="pharmacy-reports">
-            <div class="pharmacy-reports-title">
-              <h2>ООО Подорожник</h2>
-            </div>
-            <form action="" class="pharmacy-reports-filter-form">
+          <section class="admin-orders">
+            <form action="" class="admin-orders-filter-form">
               <div class="form-group">
-                <label for="_id_pharmacy-reports-filter-form--year-select">Год:</label>
-                <select name="pharmacy-reports-filter-form--year-select" id="_id_pharmacy-reports-filter-form--year-select">
-                  <option value="0">2015</option>
-                  <option value="1">2014</option>
+                <label for="_id_admin-orders-filter-form--order-status-select">Статус заказа:</label>
+                <select name="admin-orders-filter-form--order-status-select" id="_id_admin-orders-filter-form--order-status-select">
+                  <option value="0">Новый</option>
+                  <option value="1">Завершенный</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="_id_pharmacy-reports-filter-form--month-select">Месяц:</label>
-                <select name="pharmacy-reports-filter-form--month-select" id="_id_pharmacy-reports-filter-form--month-select">
-                  <option value="0">Январь</option>
-                  <option value="1">Февраль</option>
+                <label for="_id_admin-orders-filter-form--pharmacy-select">Аптека:</label>
+                <select name="admin-orders-filter-form--pharmacy-select" id="_id_admin-orders-filter-form--pharmacy-select">
+                  <option value="0">ООО «Подорожник»</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <label for="_id_admin-orders-filter-form--patient-phone">Поиск <span class="visible-lg-inline">заказа</span> по телефону пациента:</label>
+                <input type="text" name="admin-orders-filter-form--patient-phone" id="_id_admin-orders-filter-form--patient-phone" class="form-control" value="+7 ">
               </div>
               <div class="form-actions">
-                <button class="btn btn-secondary">Показать <i class="btn-icon btn-icon-default icon-rarrow"></i></button>
-              </div>
-              <div class="report-download">
-                <span class="block-descr">Отчет комиссионера за <i>июнь 2015</i></span>
-                <a href="#" class="btn btn-secondary">Скачать <i class="btn-icon btn-icon-default icon-download"></i></a>
+                <button class="btn btn-secondary">Найти <i class="btn-icon btn-icon-default icon-search"></i></button>
               </div>
             </form>
-            <div class="pharmacy-reports-results-header">
-              <h3>Заказы за июнь 2015</h3>
-            </div>
-            <section class="pharmacy-reports-results">
+            <section class="admin-orders-results">
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -174,14 +170,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-new"></i> Новый</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -190,14 +197,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-shaping"></i> Формируется</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -206,14 +224,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -222,14 +251,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -238,14 +278,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -254,14 +305,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -270,14 +332,25 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
               <div class="order-item">
                 <dl>
+                  <dt class="property-header--pharmacy">Аптека</dt>
+                  <dd class="property-value--pharmacy">ООО "Подорожник"</dd>
                   <dt class="property-header--number">№</dt>
                   <dd class="property-value--number">№ 565768983</dd>
                   <dt class="property-header--date">Дата</dt>
                   <dd class="property-value--date">28.02.2014</dd>
+                  <dt class="property-header--patient-name">ФИО</dt>
+                  <dd class="property-value--patient-name">Константинопольский К.К.</dd>
+                  <dt class="property-header--patient-phone">Телефон</dt>
+                  <dd class="property-value--patient-phone">+7 923 543-23-44</dd>
                   <dt class="property-header--drug-name">Название</dt>
                   <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
                   <dt class="property-header--drug-package-type">Упаковка</dt>
@@ -286,61 +359,43 @@
                   <dd class="property-value--drug-quantity">2 шт.</dd>
                   <dt class="property-header--order-price">Стоимость</dt>
                   <dd class="property-value--order-price">12 991,56 руб.</dd>
-                </dl>
-              </div><!-- /.order-item -->
-              <div class="order-item">
-                <dl>
-                  <dt class="property-header--number">№</dt>
-                  <dd class="property-value--number">№ 565768983</dd>
-                  <dt class="property-header--date">Дата</dt>
-                  <dd class="property-value--date">28.02.2014</dd>
-                  <dt class="property-header--drug-name">Название</dt>
-                  <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
-                  <dt class="property-header--drug-package-type">Упаковка</dt>
-                  <dd class="property-value--drug-package-type">1 шприц</dd>
-                  <dt class="property-header--drug-quantity">Кол-во</dt>
-                  <dd class="property-value--drug-quantity">2 шт.</dd>
-                  <dt class="property-header--order-price">Стоимость</dt>
-                  <dd class="property-value--order-price">12 991,56 руб.</dd>
-                </dl>
-              </div><!-- /.order-item -->
-              <div class="order-item">
-                <dl>
-                  <dt class="property-header--number">№</dt>
-                  <dd class="property-value--number">№ 565768983</dd>
-                  <dt class="property-header--date">Дата</dt>
-                  <dd class="property-value--date">28.02.2014</dd>
-                  <dt class="property-header--drug-name">Название</dt>
-                  <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
-                  <dt class="property-header--drug-package-type">Упаковка</dt>
-                  <dd class="property-value--drug-package-type">1 шприц</dd>
-                  <dt class="property-header--drug-quantity">Кол-во</dt>
-                  <dd class="property-value--drug-quantity">2 шт.</dd>
-                  <dt class="property-header--order-price">Стоимость</dt>
-                  <dd class="property-value--order-price">12 991,56 руб.</dd>
-                </dl>
-              </div><!-- /.order-item -->
-              <div class="order-item">
-                <dl>
-                  <dt class="property-header--number">№</dt>
-                  <dd class="property-value--number">№ 565768983</dd>
-                  <dt class="property-header--date">Дата</dt>
-                  <dd class="property-value--date">28.02.2014</dd>
-                  <dt class="property-header--drug-name">Название</dt>
-                  <dd class="property-value--drug-name">Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</dd>
-                  <dt class="property-header--drug-package-type">Упаковка</dt>
-                  <dd class="property-value--drug-package-type">1 шприц</dd>
-                  <dt class="property-header--drug-quantity">Кол-во</dt>
-                  <dd class="property-value--drug-quantity">2 шт.</dd>
-                  <dt class="property-header--order-price">Стоимость</dt>
-                  <dd class="property-value--order-price">12 991,56 руб.</dd>
+                  <dt class="property-header--order-status">Статус</dt>
+                  <dd class="property-value--order-status">
+                    <span class="order-status"><i class="inline-icon icon-flag-done"></i> Получен</span>
+                    <a href="#" class="more-link">Изменить статус <i class="inline-icon icon-rarrow-sm"></i></a>
+                  </dd>
                 </dl>
               </div><!-- /.order-item -->
             </section>
-            <div class="pharmacy-reports-results-total">
-              <span>Итоговая стоимость заказов за месяц:</span>
-              <span class="counter">7 252 991,56 руб </span>
-            </div>
+            <nav>
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="First">
+                    <i class="inline-icon icon-paginaton-dbllarrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <i class="inline-icon icon-paginaton-larrow"></i>
+                  </a>
+                </li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">15</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <i class="inline-icon icon-paginaton-rarrow"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Last">
+                    <i class="inline-icon icon-paginaton-dblrarrow"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </section>
         </section>
       </main>
@@ -372,24 +427,15 @@
       </footer>
     </div><!-- /.site-wrapper -->
 
-    <!-- build:js js/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="js/vendor.js"></script>
 
-    <!-- build:js js/plugins.js -->
-    <script src="/bower_components/select2/dist/js/select2.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
-    <!-- endbuild -->
+    <script src="js/plugins.js"></script>
 
-    <!-- build:js js/main.js -->
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
     <script src="js/main.js"></script>
-    <!-- endbuild -->
+
+    <script src="js/where-to-take-maps.js"></script>
 
 </body>
 </html>
