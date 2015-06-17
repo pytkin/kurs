@@ -6237,3 +6237,1215 @@
     }
   }
 }
+
+
+// Сколько стоит лечение
+
+.cost-calculator-steps {
+  background-color #fff
+  border 1px solid #d9d9d9
+  box-shadow 0 1px 6px rgba(0,0,0,.06)
+  margin-bottom 45px
+
+  @media (min-width: screen-md-min) {
+    margin-right 20px
+    margin-left 20px
+    border-radius 4px
+  }
+  @media (min-width: screen-lg-min) {
+    margin-right 40px
+    margin-left 40px
+  }
+
+  .block-info {
+    padding 30px 30px 25px
+    font-size 1.8rem
+
+    @media (min-width: screen-lg-min) {
+      padding 39px 40px 36px
+    }
+    p:last-child {
+      margin-bottom 0
+    }
+  }
+  .steps-wrap {
+    position relative
+    height 70px
+    background-color brand-primary
+    color #fff
+    text-transform uppercase
+    box-shadow 0 1px 2px rgba(0,0,0,.25)
+    padding 14px 0 16px
+    font bold 18px/1 font-family-alt
+
+    &:before {
+      content ''
+      position absolute
+      bottom 21px
+      height 1px
+      left 62px
+      right 62px
+      background-color #fff
+
+      @media (min-width: screen-lg-min) {
+        left 172px
+        right 172px
+      }
+    }
+    [class^="step"]:not([class="step-descr"]) {
+      color rgba(255,255,255,.5)
+      position absolute
+      top 17px
+
+      &:before {
+        position absolute
+        content ''
+        left 50%
+        bottom -21px
+        margin-left -7px
+        width 14px
+        height 14px
+        border-radius 50%
+        border 1px solid #fff
+        background-color brand-primary
+      }
+
+      &.active {
+        color #fff
+
+        &:before {
+          background-color #fff
+        }
+        .step-descr {
+          display inline !important
+        }
+      }
+    }
+    @media (min-width: 0) and (max-width: screen-sm-max) {
+      .step-1 {
+        width 232px
+        left 38px
+        text-align left
+
+        &:before {
+          left 25px !important
+        }
+
+        &.active {
+          ~ .step-2 {
+            left 320px
+          }
+        }
+      }
+      .step-2 {
+        right 320px
+        width 270px
+        text-align center
+
+        &.active {
+          left 50%
+          margin-left -135px
+        }
+      }
+      .step-3 {
+        right 38px
+
+        &:before {
+          right 20px
+          left auto !important
+        }
+      }
+      .step-descr {
+        display none
+      }
+    }
+    @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+      .step-1 {
+        width 232px
+        left 38px
+        text-align left
+
+        &:before {
+          left 25px !important
+        }
+      }
+      .step-2 {
+        left 320px
+        width 270px
+        text-align center
+      }
+      .step-3 {
+        right 38px
+
+        &:before {
+          right 20px
+          left auto !important
+        }
+      }
+      .step-descr {
+        display none
+      }
+    }
+    @media (min-width: screen-lg-min) {
+      .step-1 {
+        left 56px
+      }
+      .step-2 {
+        left 430px
+      }
+      .step-3 {
+        right 43px
+      }
+    }
+  }
+  .block-footer {
+    color #a7a7a7
+    padding 22px 30px
+
+    dl {
+      margin 0
+      clearfix()
+
+      @media (min-width: screen-lg-min) {
+        font-size 1.4rem
+
+        dt {
+          display inline
+          float none
+          clear none
+          width auto
+        }
+        dd {
+          display inline
+          float none
+          width auto
+          margin-right 30px
+        }
+      }
+
+      dt {
+        font-weight normal
+        float left
+        clear left
+        width 192px
+      }
+      dd {
+        float left
+        display inline
+        color #15accb
+        font-weight bold
+        width calc(100% - 192px)
+      }
+    }
+    &:empty {
+      min-height 30px
+    }
+
+    @media (min-width: screen-lg-min) {
+      padding-left 40px
+      padding-right 40px
+
+      &:empty {
+        min-height 48px
+      }
+    }
+  }
+}
+
+.cost-calculator-preparations {
+  margin-bottom 45px
+
+  .block-body {
+    .content-wrap {
+      padding-left 30px
+      padding-right 30px
+      clearfix()
+
+      @media (min-width: screen-md-min) {
+        padding-left 20px
+        padding-right 20px
+      }
+      @media (min-width: screen-lg-min) {
+        padding-left 40px
+        padding-right 40px
+      }
+    }
+    .preparations-list {
+      list-style none
+      margin 0
+      padding 0
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      justify-content center
+
+      li {
+        position relative
+        border 1px solid #d9d9d9
+        width 100%
+        padding-top 100%
+        background-color #fff
+        margin-bottom 14px
+        transition border-color .3s ease-in-out
+        clearfix()
+
+        @media (min-width: screen-xs-min) and (max-width: scree-xs-max) {
+          padding-top 75%
+        }
+        @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+          float none
+          padding-top 0
+          min-height 148px
+
+          .item-title {
+            display none
+          }
+        }
+        @media (min-width: screen-md-min) {
+          padding-top 0
+          width 272px
+          height 221px
+          margin-right 10px
+          margin-bottom 0
+
+          &:last-child {
+            margin-right 0
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          width 274px
+          margin 0 13px
+        }
+
+        &:hover,
+        &:focus {
+          border-color brand-primary
+
+          .overlap-layer {
+            opacity 1
+          }
+        }
+      }
+      .image-container {
+        position absolute
+        top 16px
+        right 16px
+        left 16px
+        bottom 48px
+        display flex
+        align-content center
+        justify-content center
+
+        @media (min-width: screen-xs-min) and (max-width: screen-xs-max) {
+          bottom 64px
+        }
+
+        @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+          position static
+          margin-left 15px
+          float left
+          height 144px
+          width 167px
+
+          img {
+            max-width 100%
+            max-height 100%
+          }
+        }
+
+        img {
+          display block
+          max-width 75%
+          height auto
+          margin auto
+
+          @media (min-width: screen-md-min) {
+            max-width 100%
+          }
+        }
+      }
+      .item-title {
+        position absolute
+        bottom 0
+        left 0
+        width 100%
+        line-height 48px
+        text-align center
+        text-transform uppercase
+        font-weight bold
+        font-size 2rem
+        font-family font-family-alt
+        color #38a9c0
+
+        @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+          font-size 2.4rem
+          line-height 64px
+        }
+        @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+          font-size 1.8rem
+        }
+      }
+      .overlap-link {
+        display block
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        z-index 3
+
+        @media (min-width: screen-md-min) {
+          display none
+        }
+      }
+      .overlap-layer {
+        display none
+
+        @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
+          display block
+          width calc(100% - 183px)
+          float left
+          padding-left 34px
+
+          .btn {
+            display flex
+            position absolute
+            top 0
+            bottom 0
+            right 0
+            width 145px
+            border-radius 0 !important
+            border none
+            flex-direction column
+            justify-content center
+            align-items center
+
+            .btn-icon {
+              margin 5px auto
+            }
+          }
+        }
+
+        @media (min-width: screen-md-min) {
+          position absolute
+          opacity 0
+          display block
+          background-image linear-gradient(to top, #eaeaea 0, #f7f7f7 100%)
+          text-align center
+          top 0
+          left 0
+          bottom 0
+          right 0
+          padding 10px 25px 0
+          transition opacity .3s ease-in-out
+        }
+
+        .overlap-item-title {
+          min-height 69px
+          max-height 69px
+          display inline-flex
+          justify-content center
+          flex-direction row
+          flex-wrap nowrap
+          align-items center
+          margin 0 0 16px
+          font-size 2rem
+          line-height 1.2
+          text-transform uppercase
+          font-weight bold
+          color #15accb
+          border-bottom 1px solid brand-primary
+          width 100%
+          padding-bottom 5px
+
+          @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+            width calc(100% - 163px)
+            text-align left
+            display block
+            line-height 1.2
+            padding 16px 0 12px
+            min-height 0
+            max-height none
+          }
+          @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+            font-size 1.6rem
+            min-height 49px
+          }
+        }
+        .overlap-item-desc {
+          font-size 1.4rem
+          line-height 1.2
+          font-weight 300
+          color #484848
+          padding 0 10px
+          display block
+          max-height 55px
+          margin-bottom 20px
+
+          @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+            width calc(100% - 163px)
+            padding 0
+            max-height none
+          }
+
+          p {
+            margin-bottom 0
+          }
+        }
+      }
+    }
+  }
+}
+
+.cost-calculator-preparation-dosage {
+  padding 0 30px 37px
+
+  @media (min-width: screen-md-min) {
+    padding-left 20px
+    padding-right 20px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-left 80px
+    padding-right 80px
+  }
+
+  .mobile-note {
+    font-size 2.4rem
+    font-weight 300
+    margin-bottom 38px
+
+    strong {
+      font-weight 300
+      color brand-primary
+    }
+
+    @media (min-width: screen-md-min) {
+      display none
+    }
+  }
+  .weight-or-dosage-wrap {
+    clearfix()
+
+    .weight-col {
+      position relative
+      background-color #fff
+      border 1px solid #d9d9d9
+      margin-bottom 12px
+
+      @media (min-width: screen-md-min) {
+        float left
+        width 406px
+        margin-top 104px
+      }
+      @media (min-width: screen-lg-min) {
+        width 477px
+      }
+
+      .block-header {
+        margin-right 45px
+        display inline-block
+        vertical-align middle
+
+        @media (min-width: screen-md-min) {
+          display block
+          height 57px
+          width 100%
+          position absolute
+          top -104px
+          left 0
+          background-color #fff
+          border 1px solid #d9d9d9
+          border-right-color #f2f2f2
+          padding 7px 90px 0 0
+          text-align center
+          overflow hidden
+
+          h3 {
+            font-size 1.6rem
+            line-height 2rem
+            font-weight bold
+
+            strong {
+              font-weight bold
+            }
+          }
+          &:before {
+            content ''
+            position absolute
+            width 106px
+            height 106px
+            background-color #f2f2f2
+            border 1px solid #d9d9d9
+            border-radius 50%
+            right -97px
+            top -26px
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          padding-right 0
+        }
+
+        h3 {
+          font-size 3rem
+          line-height 4.7rem
+          text-transform uppercase
+          margin 0
+          display inline
+
+          strong {
+            font-weight 300
+            color #15accb
+          }
+        }
+      }
+      .top-panel {
+        position relative
+        padding 30px 52px 20px
+
+        @media (max-width: screen-sm-max) {
+          .btn {
+            button-size(15px, 22px, 1.8rem, 1.6)
+            display block
+            width 100%
+            margin-top 25px
+          }
+        }
+        @media (min-width: screen-md-min) {
+          padding 30px 100px 30px
+
+          .form-group {
+            margin-left 38px
+          }
+          .form-control {
+            width 100px
+          }
+        }
+        @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+          .btn {
+            button-size(15px, 20px, 1.4rem, 1.4)
+            display block
+            width 100%
+            margin-top 25px
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          padding 30px 100px 40px 100px
+
+          .form-group {
+            width 104px
+            margin-left 0
+          }
+          .form-control {
+            width 56px
+            margin-right 7px
+          }
+          label {
+            font-size 1.4rem
+          }
+        }
+
+        .form-group {
+          width 186px
+          display inline-block
+          vertical-align middle
+          margin-bottom 0
+        }
+        .form-control {
+          margin-right 15px
+          width 140px
+          display inline-block
+        }
+        label {
+          font-size 1.8rem
+        }
+
+        &:before {
+          content ''
+          position absolute
+          bottom -13px
+          left 50%
+          margin-left -13px
+          width 27px
+          height 13px
+          background url(../img/weight-or-dosage-top-panel-arrow.png) no-repeat 0 0
+        }
+      }
+      .bottom-panel {
+        background-color #e6e6e6
+        padding 20px 52px 30px
+        font-size 1.8rem
+
+        @media (min-width: screen-md-min) {
+          font-size 1.6rem
+          padding 30px 70px 66px 30px
+
+          p:first-child {
+            font-size 1.8rem
+            padding-left 48px
+          }
+          .checkbox {
+            label {
+              line-height 1.9rem
+            }
+            input[type="checkbox"] {
+              top 2px
+            }
+            .checkbox-replace {
+              top 2px
+            }
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          font-size 1.6rem
+          padding 30px 70px 60px 32px
+
+          p:first-child {
+            font-size 1.6rem
+          }
+        }
+
+        .checkbox {
+          label {
+            font-size inherit
+            font-weight 300
+          }
+          &:last-child {
+            margin-bottom 0
+          }
+        }
+      }
+    }
+    .dosage-col {
+      background-color #fff
+      border 1px solid brand-primary
+      position relative
+      padding 20px 52px 47px
+
+      @media (min-width: screen-md-min) {
+        float right
+        width 406px
+        margin-top 104px
+        padding 20px 70px 20px 22px
+      }
+      @media (min-width: screen-lg-min) {
+        width 477px
+        padding 20px 55px 20px 40px
+      }
+
+      .block-header {
+        margin-bottom 25px
+
+        @media (min-width: screen-md-min) {
+          display block
+          height 57px
+          width 100%
+          position absolute
+          top -104px
+          right 0
+          background-color #fff
+          border 1px solid #d9d9d9
+          border-left-color #f2f2f2
+          padding 7px 0 0 60px
+          text-align center
+          overflow hidden
+
+          h3 {
+            font-size 1.6rem
+            line-height 2rem
+            font-weight bold
+
+            strong {
+              font-weight bold
+            }
+          }
+          &:before {
+            content ''
+            position absolute
+            width 106px
+            height 106px
+            background-color #f2f2f2
+            border 1px solid #d9d9d9
+            border-radius 50%
+            left -97px
+            top -26px
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          padding-left 0
+        }
+
+        h3 {
+          font-size 3rem
+          text-transform uppercase
+          margin 0
+
+          strong {
+            font-weight 300
+            color #15accb
+          }
+        }
+      }
+      .block-body {
+        font-size 1.8rem
+
+        @media (min-width: screen-md-min) {
+          font-size 1.6rem
+
+          .checkbox {
+            margin 10px 0
+
+            input[type="checkbox"] {
+              top 2px
+            }
+            .checkbox-replace {
+              top 2px
+            }
+            label {
+              line-height 1.9rem
+            }
+            &:first-child {
+              margin-top 0
+            }
+          }
+        }
+
+        .checkbox {
+          margin 25px 0
+
+          label {
+            font-size inherit
+            font-weight 300
+          }
+          &:last-child {
+            margin-bottom 0
+          }
+        }
+      }
+    }
+    .or-decoration {
+      display block
+      background-color brand-primary
+      width 82px
+      height 82px
+      border-radius 50%
+      text-align center
+      line-height 82px
+      font-weight bold
+      font-style normal
+      font-size 1.6rem
+      margin 0 auto 17px
+      color #fff
+      text-transform uppercase
+
+      @media (min-width: screen-md-min) {
+        float left
+        position relative
+        top -13px
+        margin 0 2px
+      }
+    }
+  }
+}
+
+.cost-calculator-discounts {
+  padding 0 30px
+
+  @media (min-width: screen-md-min) {
+    padding-left 50px
+    padding-right 50px
+  }
+  @media (min-width: screen-lg-min) {
+    padding-left 80px
+    padding-right 80px
+  }
+
+  > .block-header {
+    margin-bottom 32px
+    clearfix()
+
+    @media (min-width: screen-lg-min) {
+      margin-bottom 49px
+    }
+
+    h3 {
+      font 300 3rem/1.2 font-family-alt
+      text-transform uppercase
+      color #484848
+      margin 0 0 16px
+
+      strong {
+        color brand-primary
+        font-weight 300
+      }
+
+      @media (min-width: screen-md-min) {
+        margin-bottom 0
+        font-size 2.4rem
+        float left
+        width calc(100% - 195px)
+        padding-right 180px
+      }
+      @media (min-width: screen-lg-min) {
+        font-size 1.8rem
+        line-height 3.6rem
+        font-weight bold
+        padding-right 0
+        width 50%
+      }
+    }
+    .form-group {
+      position relative
+      clearfix()
+
+      @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+        float right
+        width 195px
+        margin-top -22px
+        margin-bottom 0
+
+        label {
+          font-size 1.6rem
+          line-height 2rem
+          display block
+          margin-bottom 2px
+        }
+        select,
+        .select2-container {
+          float none
+          width 195px
+          min-width 195px
+          max-width 195px
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        float right
+        width 50%
+        margin-bottom 0
+        text-align right
+
+        label {
+          font-size 1.4rem
+          line-height 3.6rem
+          display inline-block
+          margin-bottom 0
+          margin-right 12px
+        }
+        select,
+        .select2-container {
+          float none
+          width 200px
+          min-width 200px
+          max-width 200px
+        }
+        .select2-selection__rendered {
+          text-align left
+        }
+      }
+
+      select,
+      .select2-container {
+        width 220px
+        min-width 220px
+        max-width 220px
+        float right
+      }
+      label {
+        font-size 1.8rem
+        line-height 47px
+        margin-bottom 0
+      }
+    }
+  }
+}
+
+.cost-calculator-discounts-results {
+  clearfix()
+
+  @media (min-width: screen-md-min) {
+    padding-left 60px
+    padding-right 60px
+  }
+  @media (min-width: screen-lg-min) {
+    margin-bottom 37px
+    padding-left 70px
+    padding-right 70px
+  }
+
+  .discount-item {
+    position relative
+    background-color #fff
+    border 1px solid brand-primary
+    margin-bottom 39px
+    clearfix()
+
+    @media (min-width: screen-md-min) {
+      margin-bottom 27px
+    }
+    @media (min-width: screen-lg-min) {
+      margin-left 13px
+      margin-right 13px
+      width 274px
+      border 1px solid #d9d9d9
+      float left
+
+      &:hover {
+        border-color brand-primary
+
+        .discounts-holder {
+          display block !important
+          z-index 2
+        }
+      }
+      &:nth-child(3n) .discounts-holder {
+        right 100%
+        left auto
+        margin -1px 1px 0 0
+      }
+    }
+  }
+  .preparation-holder {
+    clearfix()
+
+    @media (min-width: screen-md-min) {
+      float left
+      width 274px
+    }
+    @media (min-width: screen-lg-min) {
+      width 272px
+    }
+
+    .image-col {
+      position relative
+      width 248px
+      height 168px
+      float left
+      display flex
+      justify-content center
+      align-items center
+
+      @media (min-width: screen-md-min) {
+        width 100%
+        height 172px
+        margin-bottom 18px
+        float none
+
+        &:before {
+          height 1px
+          width 142px
+          left 50%
+          right auto
+          top auto
+          bottom 0
+          margin-left -71px
+        }
+      }
+
+      img {
+        display block
+        max-width 100%
+        max-height 100%
+      }
+      &:before {
+        content ''
+        position absolute
+        right 0
+        top 12px
+        background-color #c6c6c6
+        height 143px
+        width 1px
+      }
+    }
+    .descr-col {
+      float left
+      width 330px
+      padding 30px 11px 0 15px
+      text-align center
+      font-weight 300
+      font-size 1.8rem
+
+      @media (min-width: screen-md-min) {
+        float none
+        width 100%
+        padding 0
+        font-size 1.6rem
+
+        .preparation-price {
+          line-height 40px
+          height 40px
+          margin-bottom 11px
+        }
+        .preparation-total-cost {
+          font-size 1.8rem
+
+          strong {
+            font-size 2.4rem
+          }
+        }
+      }
+      @media (min-width: screen-lg-min) {
+        font-size 1.4rem
+
+        .preparation-price {
+          line-height 31px
+          height 31px
+          margin 0 15px 8px
+        }
+        .preparation-total-cost {
+          font-size 1.8rem
+
+          strong {
+            font-size 2rem
+          }
+        }
+      }
+
+      .preparation-info {
+        margin-bottom 12px
+      }
+      .preparation-price {
+        display block
+        line-height 31px
+        height 31px
+        background-color #e6e6e6
+        margin-bottom 5px
+      }
+      .preparation-total-cost {
+        line-height 50px
+        height 50px
+        color #fff
+        font-size 2.4rem
+        font-weight bold
+        background-color brand-primary
+      }
+    }
+  }
+  .discounts-holder {
+    background-color brand-primary
+    text-align center
+    padding 20px 54px 20px
+
+    @media (min-width: screen-md-min) {
+      width 444px
+      float left
+      padding 27px 40px 10px 40px
+    }
+    @media (min-width: screen-lg-min) {
+      position absolute
+      right auto
+      left 100%
+      margin -1px 0 0 1px
+      display none
+      padding 18px 10px 23px
+      font-size 1.3rem
+      width 350px
+    }
+
+    .block-header {
+      position relative
+      padding 0 50px 12px
+      margin-bottom 18px
+
+      @media (min-width: screen-md-min) {
+        padding-left 0
+        padding-right 0
+      }
+      @media (min-width: screen-lg-min) {
+        margin-bottom 13px
+        padding-left 20px
+        padding-right 20px
+      }
+
+      h3 {
+        color #fff
+        font bold 2.4rem/1 font-family-alt
+        margin 0 0 10px
+        text-transform uppercase
+
+        @media (min-width: screen-lg-min) {
+          font-size 1.8rem
+        }
+      }
+      p:last-child {
+        margin-bottom 0
+      }
+      &:before {
+        content ''
+        position absolute
+        width 282px
+        height 1px
+        bottom 0
+        left 50%
+        margin-left -141px
+        background-color #a8e8f5
+      }
+    }
+    .block-body {
+      table {
+        margin-left 17px
+        margin-bottom 14px
+
+        @media (min-width: screen-md-min) {
+          margin-left 0
+          margin-bottom 10px
+
+          td {
+            padding 4px
+          }
+        }
+        @media (min-width: screen-lg-min) {
+          font-size 1.4rem
+          margin-left 5px
+          margin-bottom 13px
+
+          td {
+            padding 3px 6px
+          }
+        }
+
+        td {
+          padding 4px 13px
+        }
+      }
+      .purchase-header {
+        color #fff
+        font-size 1.8rem
+        font-weight 300
+        padding 0 4px
+        border 1px solid #fff
+        height 23px
+        line-height 21px
+
+        @media (min-width: screen-md-min) {
+          font-size 1.6rem
+        }
+        @media (min-width: screen-lg-min) {
+          font-size 1.3rem
+        }
+      }
+      .total-cost {
+        color #fff
+        text-align left
+
+        @media (min-width: screen-md-min) {
+          font-size 1.6rem
+        }
+        @media (min-width: screen-lg-min) {
+          font-size 1.3rem
+        }
+      }
+
+      @media (max-width: screen-sm-max) {
+        .btn {
+          display block
+          width 100%
+          button-size(15px, 22px, 1.8rem, 1.6)
+        }
+      }
+      @media (min-width: screen-md-min) and (max-width: screen-md-max) {
+        .btn {
+          button-size(15px, 20px, 1.4rem, 1.4)
+        }
+      }
+    }
+  }
+}
