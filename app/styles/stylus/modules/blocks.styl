@@ -7327,17 +7327,6 @@
   .preparation-holder {
     clearfix()
 
-    @media (min-width: screen-sm-min) {
-      width 248px
-      float left
-
-      .image-col:before {
-        right 0
-        top 12px
-        height 143px
-        width 1px
-      }
-    }
     @media (min-width: screen-md-min) {
       float left
       width 274px
@@ -7353,6 +7342,18 @@
       justify-content center
       align-items center
 
+      @media (min-width: screen-sm-min) {
+        width 248px
+        float left
+
+        &:before {
+          right 0
+          left auto
+          top 12px
+          height 143px
+          width 1px
+        }
+      }
       @media (min-width: screen-md-min) {
         width 100%
         height 172px
@@ -7397,12 +7398,12 @@
 
       @media (min-width: screen-sm-min) {
         float left
-        width 330px
+        width calc(100% - 248px)
         padding 30px 11px 0 15px
         margin-bottom 0
 
         .preparation-info {
-          padding 0 40px
+          padding 0
         }
         .preparation-price {
           height 31px
@@ -7538,7 +7539,7 @@
       }
     }
     .block-body {
-      @media (max-width: screen-sm-max) {
+      @media (max-width: screen-xs-max) {
         table,
         tbody,
         table tr,
@@ -7563,10 +7564,10 @@
         margin-bottom 14px
 
         @media (min-width: screen-sm-min) {
-          margin-left 17px
+          margin-left auto
+          margin-right auto
         }
         @media (min-width: screen-md-min) {
-          margin-left 0
           margin-bottom 10px
 
           td {
