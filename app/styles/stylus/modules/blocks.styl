@@ -6,9 +6,8 @@
 // User actions mobile
 
 .user-actions-mobile {
-  height 64px
   width 100%
-  padding-top 14px
+  padding 14px 0
   text-align center
   background-color #fff
   display block
@@ -16,15 +15,12 @@
   @media (min-width: screen-md-min) {
     display none
   }
-  @media (min-width: screen-sm-min) {
-    height 89px
-  }
-  @media (max-width: screen-xs-max) {
+  @media (max-width: 340px) {
     .btn {
       padding 7px 15px 7px 10px
     }
   }
-  @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
+  @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
     .btn {
       button-size(15px, 22px, 1.8rem, 1.6)
     }
@@ -603,6 +599,20 @@
       @media (min-width: screen-md-max) {
         width 400px
       }
+
+      h3 {
+        font-size 2.6rem
+        line-height 1
+        text-transform uppercase
+        color inherit
+        margin 30px 0 0
+        color #fff
+        text-align center
+
+        @media (min-width: screen-md-min) {
+          margin-top 24px
+        }
+      }
     }
     .content-col {
       width 100%
@@ -622,30 +632,17 @@
       }
 
       .category-desc {
-        padding 38px 28px 38px 42px
+        height 2px
         color #4c4c4c
 
         @media (min-width: screen-md-min) {
           padding 47px 75px 0 60px
+          height auto
         }
         @media (min-width: screen-md-max) {
           padding 56px 135px 0 52px
         }
 
-        h3 {
-          font-size 2.6rem
-          line-height 1
-          text-transform uppercase
-          color inherit
-          margin 0
-
-          @media (min-width: screen-md-min) {
-            margin-bottom 24px
-          }
-          @media (min-width: screen-md-max) {
-            margin-bottom 30px
-          }
-        }
         p {
           color inherit
           font-size 1.6rem
@@ -923,6 +920,7 @@
     flex-direction row
     flex-wrap nowrap
     justify-content center
+    align-items flex-end
 
     li {
       display none
@@ -977,7 +975,7 @@
       &:after {
         content ''
         position absolute
-        bottom 0
+        bottom -6px
         right 20px
         left 20px
         height 1px
@@ -6260,7 +6258,11 @@
   .block-info {
     padding 30px 30px 25px
     font-size 1.8rem
+    display none
 
+    @media (min-width: screen-sm-min) {
+      display block
+    }
     @media (min-width: screen-lg-min) {
       padding 39px 40px 36px
     }
@@ -6286,7 +6288,11 @@
       left 62px
       right 62px
       background-color #fff
+      display none
 
+      @media (min-width: screen-sm-min) {
+        display block
+      }
       @media (min-width: screen-lg-min) {
         left 172px
         right 172px
@@ -6296,6 +6302,23 @@
       color rgba(255,255,255,.5)
       position absolute
       top 17px
+      display none
+
+      @media (max-width: screen-xs-max) {
+        left 0 !important
+        right 0 !important
+        margin-left 0 !important
+        width 100%
+        text-align center
+        top 26px
+      }
+      @media (min-width: screen-sm-min) {
+        display block
+
+        &:before {
+          display block
+        }
+      }
 
       &:before {
         position absolute
@@ -6308,10 +6331,12 @@
         border-radius 50%
         border 1px solid #fff
         background-color brand-primary
+        display none
       }
 
       &.active {
         color #fff
+        display block
 
         &:before {
           background-color #fff
@@ -6406,6 +6431,18 @@
       margin 0
       clearfix()
 
+      @media (min-width: screen-sm-min) {
+        dt {
+          float left
+          clear left
+          width 192px
+        }
+        dd {
+          float left
+          display inline
+          width calc(100% - 192px)
+        }
+      }
       @media (min-width: screen-lg-min) {
         font-size 1.4rem
 
@@ -6425,16 +6462,11 @@
 
       dt {
         font-weight normal
-        float left
-        clear left
-        width 192px
+
       }
       dd {
-        float left
-        display inline
         color #15accb
         font-weight bold
-        width calc(100% - 192px)
       }
     }
     &:empty {
@@ -6489,6 +6521,9 @@
         transition border-color .3s ease-in-out
         clearfix()
 
+        @media (max-width: screen-xs-max) {
+          padding-top calc(100% + 56px)
+        }
         @media (min-width: screen-xs-min) and (max-width: scree-xs-max) {
           padding-top 75%
         }
@@ -6536,10 +6571,12 @@
         align-content center
         justify-content center
 
+        @media (max-width: screen-xs-max) {
+          bottom 96px
+        }
         @media (min-width: screen-xs-min) and (max-width: screen-xs-max) {
           bottom 64px
         }
-
         @media (min-width: screen-sm-min) and (max-width: screen-sm-max) {
           position static
           margin-left 15px
@@ -6577,12 +6614,27 @@
         font-family font-family-alt
         color #38a9c0
 
+        @media (max-width: screen-xs-max) {
+          bottom 56px
+        }
         @media (min-width: screen-xs-min) and (max-width: screen-sm-max) {
           font-size 2.4rem
           line-height 64px
         }
         @media (min-width: screen-md-min) and (max-width: screen-md-max) {
           font-size 1.8rem
+        }
+        + .btn {
+          display block
+          bottom 12px
+          position absolute
+          width 50%
+          left 50%
+          margin-left -25%
+
+          @media (min-width: screen-sm-min) {
+            display none
+          }
         }
       }
       .overlap-link {
@@ -6713,12 +6765,16 @@
     font-size 2.4rem
     font-weight 300
     margin-bottom 38px
+    display none
 
     strong {
       font-weight 300
       color brand-primary
     }
 
+    @media (min-width: screen-sm-min) {
+      display block
+    }
     @media (min-width: screen-md-min) {
       display none
     }
@@ -6731,7 +6787,11 @@
       background-color #fff
       border 1px solid #d9d9d9
       margin-bottom 12px
+      display none
 
+      @media (min-width: screen-sm-min) {
+        display block
+      }
       @media (min-width: screen-md-min) {
         float left
         width 406px
@@ -6919,8 +6979,11 @@
       background-color #fff
       border 1px solid brand-primary
       position relative
-      padding 20px 52px 47px
+      padding 20px 20px 27px
 
+      @media (min-width: screen-sm-min) {
+        padding 20px 52px 47px
+      }
       @media (min-width: screen-md-min) {
         float right
         width 406px
@@ -6935,6 +6998,11 @@
       .block-header {
         margin-bottom 25px
 
+        @media (min-width: screen-sm-min) {
+          h3 {
+            font-size 3rem
+          }
+        }
         @media (min-width: screen-md-min) {
           display block
           height 57px
@@ -6975,7 +7043,7 @@
         }
 
         h3 {
-          font-size 3rem
+          font-size 2rem
           text-transform uppercase
           margin 0
 
@@ -6986,8 +7054,11 @@
         }
       }
       .block-body {
-        font-size 1.8rem
+        font-size 1.6rem
 
+        @media (min-width: screen-sm-min) {
+          font-size 1.8rem
+        }
         @media (min-width: screen-md-min) {
           font-size 1.6rem
 
@@ -7023,7 +7094,7 @@
       }
     }
     .or-decoration {
-      display block
+      display none
       background-color brand-primary
       width 82px
       height 82px
@@ -7037,6 +7108,9 @@
       color #fff
       text-transform uppercase
 
+      @media (min-width: screen-sm-min) {
+        display block
+      }
       @media (min-width: screen-md-min) {
         float left
         position relative
@@ -7078,6 +7152,14 @@
         font-weight 300
       }
 
+      @media (max-width: screen-xs-max) {
+        font-size 1.8rem
+        font-weight bold
+
+        strong {
+          font-weight bold
+        }
+      }
       @media (min-width: screen-md-min) {
         margin-bottom 0
         font-size 2.4rem
@@ -7095,8 +7177,25 @@
     }
     .form-group {
       position relative
+      display none
       clearfix()
 
+      @media (min-width: screen-sm-min) {
+        display block
+
+        select,
+        .select2-container {
+          width 220px
+          min-width 220px
+          max-width 220px
+          float right
+        }
+        label {
+          font-size 1.8rem
+          line-height 47px
+          margin-bottom 0
+        }
+      }
       @media (min-width: screen-md-min) and (max-width: screen-md-max) {
         float right
         width 195px
@@ -7144,15 +7243,33 @@
 
       select,
       .select2-container {
-        width 220px
-        min-width 220px
-        max-width 220px
-        float right
+        width 100%
+        min-width 100%
+        max-width 100%
       }
       label {
-        font-size 1.8rem
-        line-height 47px
-        margin-bottom 0
+        font-size 1.6rem
+      }
+    }
+  }
+  .block-footer {
+    margin-bottom 27px
+
+    @media (min-width: screen-sm-min) {
+      display none
+    }
+    .form-group {
+      position relative
+
+      select,
+      .select2-container {
+        width 100%
+        min-width 100%
+        max-width 100%
+        left 0
+      }
+      label {
+        font-size 1.6rem
       }
     }
   }
@@ -7177,6 +7294,10 @@
     border 1px solid brand-primary
     margin-bottom 39px
     clearfix()
+
+    &:last-child {
+      margin-bottom 27px
+    }
 
     @media (min-width: screen-md-min) {
       margin-bottom 27px
@@ -7206,6 +7327,17 @@
   .preparation-holder {
     clearfix()
 
+    @media (min-width: screen-sm-min) {
+      width 248px
+      float left
+
+      .image-col:before {
+        right 0
+        top 12px
+        height 143px
+        width 1px
+      }
+    }
     @media (min-width: screen-md-min) {
       float left
       width 274px
@@ -7216,9 +7348,7 @@
 
     .image-col {
       position relative
-      width 248px
       height 168px
-      float left
       display flex
       justify-content center
       align-items center
@@ -7248,21 +7378,37 @@
       &:before {
         content ''
         position absolute
-        right 0
-        top 12px
+        height 1px
+        width 142px
+        left 50%
+        right auto
+        top auto
+        bottom 0
+        margin-left -71px
         background-color #c6c6c6
-        height 143px
-        width 1px
       }
     }
     .descr-col {
-      float left
-      width 330px
-      padding 30px 11px 0 15px
+      padding-top 20px
       text-align center
       font-weight 300
       font-size 1.8rem
+      margin-bottom 5px
 
+      @media (min-width: screen-sm-min) {
+        float left
+        width 330px
+        padding 30px 11px 0 15px
+        margin-bottom 0
+
+        .preparation-info {
+          padding 0 40px
+        }
+        .preparation-price {
+          height 31px
+          padding 0
+        }
+      }
       @media (min-width: screen-md-min) {
         float none
         width 100%
@@ -7301,11 +7447,12 @@
 
       .preparation-info {
         margin-bottom 12px
+        padding 0 30px
       }
       .preparation-price {
         display block
+        padding 0 40px
         line-height 31px
-        height 31px
         background-color #e6e6e6
         margin-bottom 5px
       }
@@ -7322,8 +7469,11 @@
   .discounts-holder {
     background-color brand-primary
     text-align center
-    padding 20px 54px 20px
+    padding 20px
 
+    @media (min-width: screen-sm-min) {
+      padding 20px 54px 20px
+    }
     @media (min-width: screen-md-min) {
       width 444px
       float left
@@ -7342,9 +7492,17 @@
 
     .block-header {
       position relative
-      padding 0 50px 12px
+      padding-bottom 12px
       margin-bottom 18px
 
+      @media (min-width: screen-sm-min) {
+        padding 0 50px 12px
+
+        &:before {
+          width 282px
+          margin-left -141px
+        }
+      }
       @media (min-width: screen-md-min) {
         padding-left 0
         padding-right 0
@@ -7371,19 +7529,42 @@
       &:before {
         content ''
         position absolute
-        width 282px
+        width 100%
         height 1px
         bottom 0
         left 50%
-        margin-left -141px
+        margin-left -50%
         background-color #a8e8f5
       }
     }
     .block-body {
+      @media (max-width: screen-sm-max) {
+        table,
+        tbody,
+        table tr,
+        table td {
+          display block
+          text-align center !important
+        }
+        .total-cost {
+          margin-bottom 20px
+        }
+        .btn {
+          display block
+          white-space normal
+
+          .btn-icon {
+            display none
+          }
+        }
+      }
+
       table {
-        margin-left 17px
         margin-bottom 14px
 
+        @media (min-width: screen-sm-min) {
+          margin-left 17px
+        }
         @media (min-width: screen-md-min) {
           margin-left 0
           margin-bottom 10px
