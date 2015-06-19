@@ -1,0 +1,246 @@
+//
+// Modals
+// --------------------------------------------------
+
+
+// Поиск аптеки
+
+.location-search-modal {
+  width calc(100vw - 50px)
+  height 70vh
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
+
+  @media (min-width: screen-md-min) {
+    width 780px
+    height 440px
+  }
+
+  &.is-city {
+    h3 {
+      font 300 2.4rem/1.2 font-family-alt
+      margin 0 0 68px
+      text-transform uppercase
+      text-align center
+
+      @media (min-width: screen-sm-min) {
+        font-size 3rem
+        line-height 1
+      }
+
+      strong {
+        color brand-primary
+        font-weight 300
+      }
+    }
+    .modal-btn-group {
+      text-align center
+
+      .btn {
+        min-width 100px
+
+        @media (min-width: screen-sm-min) {
+          min-width 130px
+
+          & + .btn {
+            margin-left 68px
+          }
+        }
+        @media (min-width: screen-sm-min) {
+          button-size(15px, 22px, 1.8rem, 1.6)
+        }
+
+        & + .btn {
+          margin-left 18px
+        }
+      }
+    }
+  }
+
+  &.is-extended-city {
+    .form-group {
+      text-align center
+      position relative
+      margin-bottom 30px
+    }
+    label {
+      display block
+      font 300 2.4rem/1 font-family-alt
+      text-transform uppercase
+      margin-bottom 15px
+      text-align center
+    }
+    select,
+    .select2-container {
+      width 252px
+      min-width 252px
+      max-width 252px
+      left 0
+      text-align left
+    }
+    .form-actions {
+      text-align center
+    }
+  }
+
+  &.is-preparation {
+    @extend .location-search-modal.is-extended-city
+  }
+}
+
+
+// Подтверджение телефона пациента
+
+.patient-phone-confirm-modal {
+  padding 20px 0 20px 20px
+  width calc(100vw - 50px)
+
+  @media (min-width: screen-md-min) {
+    padding 50px 0 20px 35px
+    width 740px
+  }
+
+  form {
+    clearfix()
+
+    .form-group {
+      @media (min-width: screen-md-min) {
+        float left
+        width 464px
+        margin-right 22px
+      }
+
+      label {
+        font-weight bold
+        font-size 1.4rem
+        line-height 1.3
+        display block
+        position relative
+        margin-bottom 10px
+
+        @media (min-width: screen-md-min) {
+          width 210px
+          float left
+          margin-bottom 0
+
+          &:before {
+            content ''
+            position absolute
+            width 7px
+            height 7px
+            border-radius 50%
+            background-color #a5be27
+            top 6px
+            left -16px
+          }
+        }
+      }
+      .form-control {
+        @media (min-width: screen-md-min) {
+          width 252px
+          float left
+        }
+      }
+    }
+    .form-actions {
+      font-size 1.3rem
+
+      @media (max-width: screen-sm-max) {
+        .btn {
+          display block
+          width 100%
+          button-size(15px, 22px, 1.8rem, 1.6)
+        }
+      }
+
+      @media (min-width: screen-md-min) {
+        float left
+        width 148px
+      }
+
+      .btn {
+        margin-bottom 12px
+      }
+    }
+  }
+}
+
+
+// Изменить статус заказа
+
+.update-order-status-modal {
+  padding 20px 0 20px 20px
+  width calc(100vw - 50px)
+
+  @media (min-width: screen-md-min) {
+    padding 25px 0 30px 35px
+    width 740px
+  }
+
+  form {
+    clearfix()
+
+    .form-group {
+      @media (min-width: screen-md-min) {
+        float left
+        width 252px
+        margin-right 22px
+      }
+
+      label {
+        font-weight bold
+        font-size 1.4rem
+        line-height 1.3
+        display block
+        position relative
+        margin-bottom 15px
+
+        @media (min-width: screen-md-min) {
+          padding-left 16px
+
+          &:before {
+            content ''
+            position absolute
+            width 7px
+            height 7px
+            border-radius 50%
+            background-color #a5be27
+            top 6px
+            left 0
+          }
+        }
+      }
+      select,
+      .select2-container {
+        width 100%
+        min-width 100%
+        max-width 100%
+        left 0
+      }
+      .form-control {
+        @media (min-width: screen-md-min) {
+          width 252px
+          float left
+        }
+      }
+    }
+    .form-actions {
+      font-size 1.3rem
+
+      @media (max-width: screen-sm-max) {
+        .btn {
+          display block
+          width 100%
+          button-size(15px, 22px, 1.8rem, 1.6)
+        }
+      }
+      @media (min-width: screen-md-min) {
+        float left
+        width 148px
+        padding-top 33px
+      }
+    }
+  }
+}

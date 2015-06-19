@@ -1,11 +1,12 @@
 {
   "name": "kurs",
   "dependencies": {
-    "bootstrap": "~3.3.4",
+    "bootstrap": "~3.3.5",
     "jquery": "~2.1.4",
     "normalize.css": "~3.0.3",
     "select2": "~4.0.0",
-    "flickity": "~1.0.2",
-    "owl.carousel": "*"
+    "flickity": "~1.1.0",
+    "owl.carousel": "*",
+    "fancybox": "~2.1.5"
   }
 }

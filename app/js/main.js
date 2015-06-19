@@ -3,8 +3,44 @@ $(function () {
 
   var ymaps = window.ymaps;
 
-  $('select').select2();
 
+  // Функция для изменения формата плейсхолдера кастомного селекта (для вывода флагов в селектах)
+
+  function formatState(state) {
+    if (!state.id) { return state.text; }
+    var $state = $(
+      '<span><i class="inline-icon icon-flag icon-flag-' + state.element.value.toLowerCase() + '"></i>' + state.text + '</span>'
+    );
+    return $state;
+  }
+
+  // Стилизация селектов на страницах
+
+  $('select').not('[data-type="status"]').select2();
+  $('select[data-type="status"]').select2({
+    templateResult: formatState,
+    templateSelection: formatState
+  });
+
+  // Модальные окна
+
+  $('.js-show-modal').fancybox({
+    type: 'ajax',
+    margin: 10,
+    autoResize: true,
+    helpers: {
+      overlay: {
+        locked: false
+      }
+    },
+    beforeShow: function () {
+       $(this.skin).find('select').not('[data-type="status"]').select2();
+       $(this.skin).find('select[data-type="status"]').select2({
+         templateResult: formatState,
+         templateSelection: formatState
+       });
+    }
+  });
 
   $('.js-our-advantages-slider-nav a').on('click', function (event) {
     var index = $(this).attr('href').slice(1);
@@ -16,6 +52,7 @@ $(function () {
 
 
   // Показать категории препаратов
+
   $('.js-show-items-toggle').on('click', function (event) {
     event.preventDefault();
     $('.category-row').removeClass('show-preparates-col');
@@ -23,6 +60,7 @@ $(function () {
   });
 
   // Слайдер дозировок препарата на странице "Препараты"
+
   $('.js-preparates-slider').flickity({
     cellAlign: 'left',
     draggable: false,
@@ -33,7 +71,6 @@ $(function () {
 
   $('.js-show-more-preparates-toggle').on('click', function (event) {
     event.preventDefault();
-
     $(this).prev('.js-preparates-slider').flickity('next', true);
   });
 

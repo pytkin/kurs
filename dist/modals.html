@@ -9,10 +9,7 @@
     <title>Курс на выздороаление</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900,400italic,300,400|Roboto+Condensed:700,300&subset=cyrillic,latin,latin-ext">
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- endbuild -->
   </head>
   <body class="inner-page"> <!-- <- .inner-page -->
 
@@ -69,9 +66,9 @@
               </form>
               <nav class="main-nav-mobile">
                 <ul>
-                  <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+                  <li class="active"><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
                   <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
-                  <li class="active"><a href="cost-calculator-step-01.html"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
+                  <li><a href="cost-calculator-step-01.html"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
                   <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
                 </ul>
               </nav>
@@ -90,82 +87,21 @@
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
+            <li class="active"><a href="preparations.html"><i class="main-nav-icon preparations"></i>Препараты</a></li>
             <li><a href="where-to-buy.html"><i class="main-nav-icon where-to-buy"></i>Где купить?</a></li>
-            <li class="active"><a href="cost-calculator-step-01.html"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
+            <li><a href="#"><i class="main-nav-icon price"></i>Сколько стоит лечение?</a></li>
             <li><a href="#"><i class="main-nav-icon questions"></i>Вопросы</a></li>
           </ul>
         </nav>
         <section class="page-wrap">
-          <ol class="breadcrumb">
-            <li><a href="index.html">Главная</a></li>
-            <li class="active">Сколько стоит лечение?</li>
-          </ol>
-          <div class="page-header">
-            <h1>Сколько стоит лечение?</h1>
-          </div>
-          <section class="cost-calculator-steps">
-            <div class="block-info">
-              <p>Покупая препараты в большей фасовке заранее Вы значительно сократите общую стоимость лечения. Посчитайте сами с помощью нашего калькулятора.</p>
-            </div>
-            <div class="steps-wrap">
-              <span class="step-1">1й шаг<span class="step-descr">. Выберите препарат</span></span>
-              <span class="step-2 active">2й шаг<span class="step-descr">. Определите дозировку</span></span>
-              <span class="step-3">3й шаг<span class="step-descr">. Определите стоимость</span></span>
-            </div>
-            <div class="block-footer">
-              <dl>
-                <dt>1. Вы выбрали препарат:</dt>
-                <dd>Альгерон</dd>
-              </dl>
-            </div>
-          </section>
-          <section class="cost-calculator-preparation-dosage">
-            <div class="mobile-note">Вы можете выбрать нужную дозировку <strong>рассчитав самостоятельно</strong> указав Ваш вес или <strong>выбрать дозировку назначенную врачом</strong>.</div>
-            <div class="weight-or-dosage-wrap">
-              <div class="weight-col">
-                <div class="top-panel">
-                  <div class="block-header">
-                    <h3>Укажите<span class="visible-md-inline visible-lg-inline"><br></span> <strong>Ваш вес</strong></h3>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="cost-calculator-weight" id="_id-cost-calculator-weight" class="form-control" value="75">
-                    <label for="_id-cost-calculator-weight">кг.</label>
-                  </div>
-                  <button class="btn btn-secondary">Расчитать <i class="btn-icon btn-icon-default icon-check"></i></button>
-                </div>
-                <div class="bottom-panel">
-                  <p><strong>Вам подходит дозировка:</strong></p>
-                  <div class="checkbox">
-                    <label for="_id-weight-chekcbox-01"><input type="checkbox" name="weight-chekcbox-01" id="_id-weight-chekcbox-01"><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                </div>
-              </div>
-              <i class="or-decoration">Или</i>
-              <div class="dosage-col">
-                <div class="block-header">
-                  <h3>выберите<br><strong>назначенную врачом</strong> дозировку</h3>
-                </div>
-                <div class="block-body">
-                  <div class="checkbox">
-                    <label for="_id-dosage-chekcbox-01"><input type="checkbox" name="dosage-chekcbox-01" id="_id-dosage-chekcbox-01" checked><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                  <div class="checkbox">
-                    <label for="_id-dosage-chekcbox-02"><input type="checkbox" name="dosage-chekcbox-01" id="_id-dosage-chekcbox-02"><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                  <div class="checkbox">
-                    <label for="_id-dosage-chekcbox-03"><input type="checkbox" name="dosage-chekcbox-01" id="_id-dosage-chekcbox-03"><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                  <div class="checkbox">
-                    <label for="_id-dosage-chekcbox-04"><input type="checkbox" name="dosage-chekcbox-01" id="_id-dosage-chekcbox-04"><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                  <div class="checkbox">
-                    <label for="_id-dosage-chekcbox-05"><input type="checkbox" name="dosage-chekcbox-01" id="_id-dosage-chekcbox-05"><span class="checkbox-replace"></span> Альгерон раствор для подкожного введения 200мкг/мл шприц 0,4 мл (80мкг)</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <p>Поиск местоположения (где купить?)</p>
+          <p><a href="modals/location-search-city.html" class="js-show-modal">Выбор города</a></p>
+          <p><a href="modals/location-search-extended-city.html" class="js-show-modal">Расширенный выбор города</a></p>
+          <p><a href="modals/location-search-preparation.html" class="js-show-modal">Выбор препарата</a></p>
+          <p>ЛК врача: пациенты</p>
+          <p><a href="modals/patient-phone-confirm.html" class="js-show-modal">Подтверждение телефона пациента</a></p>
+          <p>Страница администратора аптеки: заказы</p>
+          <p><a href="modals/update-order-status.html" class="js-show-modal">Обновление статуса заказа</a></p>
         </section>
       </main>
       <footer class="site-footer">
@@ -196,24 +132,12 @@
       </footer>
     </div><!-- /.site-wrapper -->
 
-    <!-- build:js js/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="js/vendor.js"></script>
 
-    <!-- build:js js/plugins.js -->
-    <script src="/bower_components/select2/dist/js/select2.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
-    <script src="/bower_components/fancybox/source/jquery.fancybox.js"></script>
-    <!-- endbuild -->
+    <script src="js/plugins.js"></script>
 
-    <!-- build:js js/main.js -->
+    <!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+
     <script src="js/main.js"></script>
-    <!-- endbuild -->
 </body>
 </html>
