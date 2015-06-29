@@ -55,13 +55,13 @@ $(function () {
 
   $('.js-show-items-toggle').on('click', function (event) {
     event.preventDefault();
-    $('.category-row').removeClass('show-preparates-col');
-    $(this).closest('.category-row').addClass('show-preparates-col');
+    $('.category-row').removeClass('show-preparations-col');
+    $(this).closest('.category-row').addClass('show-preparations-col');
   });
 
   // Слайдер дозировок препарата на странице "Препараты"
 
-  $('.js-preparates-slider').flickity({
+  $('.js-preparations-slider').flickity({
     cellAlign: 'left',
     draggable: false,
     wrapAround: true,
@@ -69,9 +69,9 @@ $(function () {
     pageDots: false
   });
 
-  $('.js-show-more-preparates-toggle').on('click', function (event) {
+  $('.js-show-more-preparations-toggle').on('click', function (event) {
     event.preventDefault();
-    $(this).prev('.js-preparates-slider').flickity('next', true);
+    $(this).prev('.js-preparations-slider').flickity('next', true);
   });
 
 
